@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    top: 0;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    padding: 20px;
+}
