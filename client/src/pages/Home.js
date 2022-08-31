@@ -28,7 +28,7 @@ const Home = () => {
       <div className="examples"><h2>examples sections here</h2></div>
       <div className="card-example">
         <img src={carded} alt="card" class="card" />
-        <text> example card </text>
+        example card
       </div>
 
       <div className="in-depth">in depth info here</div>

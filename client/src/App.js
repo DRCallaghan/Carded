@@ -72,7 +72,7 @@ function App() {
           </div>
 
         <Footer />
-
+        <ScrollButton />
       </Router>
     
     </ApolloProvider>
