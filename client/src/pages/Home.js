@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import Header from '../components/Header';
 import ProfileList from '../components/ProfileList';
-import Carded from "../../public/carded.png";
+// import Carded from "../../public/carded.png";
 import { QUERY_PROFILES } from '../utils/queries';
 
 const Home = () => {
@@ -29,11 +29,11 @@ const Home = () => {
       </div>
       <div className="examples">
         examples sections here
-          <img
+          {/* <img
               src={Carded}
               alt="card"
               class="card"
-            />
+            /> */}
             
             </div> 
         
@@ -46,7 +46,90 @@ const Home = () => {
         <p>eample text</p>
         <span>SPAN1</span><br/>
         <span>SPAN2</span>
-
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
+          laborum praesentium, neque provident reiciendis harum recusandae
+          excepturi aliquam repellat laboriosam facere.
+        </p>
       </div>
     </main>
   );
