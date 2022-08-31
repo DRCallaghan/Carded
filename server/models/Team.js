@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Profile = require('./Profile');
 
 const teamSchema = new Schema({
     name: {
@@ -8,10 +9,14 @@ const teamSchema = new Schema({
         trim: true,
     },
     manager: {
-        profileSchema
+        type: Schema.Types.ObjectId,
+        ref: 'Profile'
     },
     members: [
-        profileSchema
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Profile'
+        }
     ],
 });
 
