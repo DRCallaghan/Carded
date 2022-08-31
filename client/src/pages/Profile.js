@@ -7,6 +7,7 @@ import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 import Drop from '../components/Bootstrap/dropdown';
 import HomeFooter from '../components/Footer/homefoot';
+import SearchModal from '../components/Bootstrap/searchModal';
 
 const Profile = () => {
   const { profileId } = useParams();
@@ -43,6 +44,7 @@ const Profile = () => {
   return (
     <div>
       <nav>
+        <SearchModal />
         <Drop />
       </nav>
 
