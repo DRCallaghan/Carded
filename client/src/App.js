@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollButton from '../src/components/Scroll/ScrollButton';
 import {
   ApolloClient,
   InMemoryCache,
@@ -7,6 +8,8 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
 
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -38,7 +41,9 @@ const client = new ApolloClient({
 
 function App() {
   return (
+  
     <ApolloProvider client={client}>
+   
       <Router>
           <div className="container">
             <Routes>
@@ -63,10 +68,16 @@ function App() {
                 element={<Profile />}
               />
             </Routes>
+         
           </div>
+
         <Footer />
+
       </Router>
+    
     </ApolloProvider>
+    
+   
   );
 }
 

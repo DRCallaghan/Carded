@@ -1,5 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
+const { Profile, Team } = require('../models');
+const { update } = require('../models/Profile');
+const auth = require('../utils/auth');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -17,6 +19,13 @@ const resolvers = {
         return Profile.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    teams: async () => {
+      return Team.find();
+    },
+
+    team: async (parent, { teamId }) => {
+      return Team.findOne({ id: teamId });
     },
   },
 
@@ -45,14 +54,12 @@ const resolvers = {
     },
 
     // Add a third argument to the resolver to access data in our `context`
-    addSkill: async (parent, { profileId, skill }, context) => {
+    addPhone: async (parent, { profileId, phone }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
         return Profile.findOneAndUpdate(
           { _id: profileId },
-          {
-            $addToSet: { skills: skill },
-          },
+          { phoneNumber: phone },
           {
             new: true,
             runValidators: true,
@@ -62,6 +69,18 @@ const resolvers = {
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
     },
+    addTeam: async (parent, { name, managerId }) => {
+      const team = await Team.create({ name: name, manager: { _id: managerId } });
+      return team;
+    },
+    addMember: async (parent, { teamId, memberId }) => {
+      const updatedTeam = await Team.findOneAndUpdate(
+        { _id: teamId },
+        { $push: { members: memberId } },
+        { new: true },
+      );
+      return updatedTeam;
+    },
     // Set up mutation so a logged in user can only remove their profile and no one else's
     removeProfile: async (parent, args, context) => {
       if (context.user) {
@@ -70,11 +89,11 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     // Make it so a logged in user can only remove a skill from their own profile
-    removeSkill: async (parent, { skill }, context) => {
+    removePhone: async (parent, { phone }, context) => {
       if (context.user) {
         return Profile.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { skills: skill } },
+          { $unset: { phoneNumber: phone } },
           { new: true }
         );
       }
