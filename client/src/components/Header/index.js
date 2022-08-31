@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css'
 import Auth from '../../utils/auth';
+import placeholder from '../../images/placeholder.png'
 
 const Header = () => {
   const logout = (event) => {
@@ -11,24 +12,37 @@ const Header = () => {
 
   const styles = {
     headerStyle: {
-        background: 'rgb(122, 235, 229)',
+        background: '#d7eaf3',
         height: '10vh',
         width: '100%',
         position: 'sticky',
-        top: '0'
+        top: '0',
+        boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+        
     },
+    logoStyle: {
+      position: 'relative',
+      paddingTop: '10px',
+      fontSize: '2.87vw',
+      color: '#14397d'
+    },
+    logoIcon: {
+      objectFit: 'contain',
+      width: '150px',
+    },
+  
   };
 
 
   return (
     <header style={styles.headerStyle}>
-      <div  className="header">
+      <div style={styles.headerStyle} className="header">
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
-            Get Carded
-          </h1>
+          <h1 style={styles.logoStyle} className="m-0">
+          Carded
+          </h1> 
         </Link>
-        
+        <img style={styles.logoIcon} src={placeholder} alt="placeholder" class="placeholder" />
         <div>
           {Auth.loggedIn() ? (
             <>
@@ -41,10 +55,10 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link to="/login">
+              <Link className="btn btn-light m-2" to="/login">
                 Login
               </Link>
-              <Link to="/signup">
+              <Link className="btn btn-light m-2" to="/signup">
                 Signup
               </Link>
             </>

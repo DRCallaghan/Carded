@@ -70,8 +70,9 @@ function App() {
             </Routes>
          
           </div>
-
-        <Footer />
+          
+          <ScrollButton/>
+        <Footer/>
 
       </Router>
     
