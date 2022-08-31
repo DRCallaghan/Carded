@@ -30,12 +30,6 @@ const profileSchema = new Schema(
         ref: 'Team',
       },
     ],
-  },
-  {
-    toJSON: {
-      getters: true,
-    },
-    id: false,
   }
 );
 

@@ -5,6 +5,14 @@ export const QUERY_PROFILES = gql`
     profiles {
       _id
       name
+
+      email
+      phoneNumber
+      team {
+        _id
+        name
+      }
+
     }
   }
 `;
@@ -14,6 +22,20 @@ export const QUERY_SINGLE_PROFILE = gql`
     profile(profileId: $profileId) {
       _id
       name
+
+      email
+      phoneNumber
+      team {
+        _id
+        name
+        manager {
+          _id
+        }
+        members {
+          _id
+        }
+      }
+
     }
   }
 `;
@@ -23,6 +45,50 @@ export const QUERY_ME = gql`
     me {
       _id
       name
+
+      email
+      phoneNumber
+      team {
+        _id
+        name
+        manager {
+          _id
+        }
+        members {
+          _id
+        }
+      }
+    }
+  }
+`;
+
+export const QUERY_TEAMS = gql`
+  query allTeams {
+    teams {
+      _id
+      name
+      manager {
+        _id
+      }
+      members {
+        _id
+      }
+    }
+  }
+`;
+
+export const QUERY_SINGLE_TEAM = gql`
+  query singleTeam($teamId: ID!) {
+    team(teamId: $teamId) {
+      _id
+      name
+      manager {
+        _id
+      }
+      members {
+        _id
+      }
+
     }
   }
 `;

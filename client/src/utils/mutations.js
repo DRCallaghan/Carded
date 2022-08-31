@@ -12,12 +12,39 @@ export const ADD_PROFILE = gql`
   }
 `;
 
-export const ADD_SKILL = gql`
-  mutation addSkill($profileId: ID!, $skill: String!) {
-    addSkill(profileId: $profileId, skill: $skill) {
+export const ADD_PHONE = gql`
+  mutation addPhone($profileId: ID!, $phone: String!) {
+    addPhone(profileId: $profileId, phone: $phone) {
       _id
       name
-      skills
+      phoneNumber
+    }
+  }
+`;
+
+export const ADD_TEAM = gql`
+  mutation addTeam($name: String!, $managerId: ID!) {
+    addTeam(name: $name, managerId: $managerId) {
+      _id
+      name
+      manager {
+        _id
+      }
+      members {
+        _id
+      }
+    }
+  }
+`;
+
+export const ADD_MEMBER = gql`
+  mutation addMember($teamId: ID!, $memberId: ID!) {
+    addMember(teamId: $teamId, memberId: $memberId) {
+      _id
+      name
+      members {
+        _id
+      }
     }
   }
 `;
@@ -34,12 +61,26 @@ export const LOGIN_USER = gql`
   }
 `;
 
-export const REMOVE_SKILL = gql`
-  mutation removeSkill($skill: String!) {
-    removeSkill(skill: $skill) {
+export const REMOVE_PROFILE = gql`
+  mutation removeProfile {
+    removeProfile {
       _id
       name
-      skills
+      email
+      phoneNumber
+      team {
+        _id
+      }
+    }
+  }
+`;
+
+export const REMOVE_PHONE = gql`
+  mutation removePhone($phone: String!) {
+    removePhone(phone: $phone) {
+      _id
+      name
+      phoneNumber
     }
   }
 `;
