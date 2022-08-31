@@ -1,5 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Profile, Team } = require('../models');
+const { update } = require('../models/Profile');
+const auth = require('../utils/auth');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -66,6 +68,18 @@ const resolvers = {
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
+    },
+    addTeam: async (parent, { name, managerId }) => {
+      const team = await Team.create({ name: name, manager: { _id: managerId } });
+      return team;
+    },
+    addMember: async (parent, { teamId, memberId }) => {
+      const updatedTeam = await Team.findOneAndUpdate(
+        { _id: teamId },
+        { $push: { members: memberId } },
+        { new: true },
+      );
+      return updatedTeam;
     },
     // Set up mutation so a logged in user can only remove their profile and no one else's
     removeProfile: async (parent, args, context) => {
