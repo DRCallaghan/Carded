@@ -11,6 +11,7 @@ const Signup = () => {
     name: '',
     email: '',
     password: '',
+    confirm: ''
   });
   const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
 
@@ -22,14 +23,24 @@ const Signup = () => {
       ...formState,
       [name]: value,
     });
+
+    
   };
 
   const navigate = useNavigate()
   // submit form
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
+   
     navigate('/profiles')
+  
+
     console.log(formState);
+      
+      if (formState.password !== formState.confirm) {
+        alert("Passwords don't match.");
+        event.preventDefault();
+      }
+  
 
     try {
       const { data } = await addProfile({
@@ -76,6 +87,14 @@ const Signup = () => {
                   name="password"
                   type="password"
                   value={formState.password}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="confirm password"
+                  name="confirm"
+                  type="password"
+                  value={formState.confirm}
                   onChange={handleChange}
                 />
              

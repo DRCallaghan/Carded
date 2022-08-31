@@ -88,7 +88,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    // Make it so a logged in user can only remove a skill from their own profile
+    // Make it so a logged in user can only remove a phone from their own profile
     removePhone: async (parent, { phone }, context) => {
       if (context.user) {
         return Profile.findOneAndUpdate(
