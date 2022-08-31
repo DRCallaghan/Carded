@@ -8,15 +8,25 @@ const Header = () => {
     event.preventDefault();
     Auth.logout();
   };
+
+  const styles = {
+    headerStyle: {
+        background: 'rgb(122, 235, 229)',
+        height: '10vh',
+        width: '100%',
+        position: 'sticky',
+        top: '0'
+    },
+  };
+
   return (
-    <header>
-      <div className="container header">
+    <header style={styles.headerStyle}>
+      <div  className="header">
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
+          <h1 className="m-0" style={{ fontSize: '3.8vw' }}>
             Get Carded
           </h1>
         </Link>
-        
         <div>
           {Auth.loggedIn() ? (
             <>
