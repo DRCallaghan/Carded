@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import Header from '../components/Header';
 import ProfileList from '../components/ProfileList';
-
+import Carded from "../../public/carded.png";
 import { QUERY_PROFILES } from '../utils/queries';
 
 const Home = () => {
@@ -23,6 +23,30 @@ const Home = () => {
             />
           )}
         </div>
+      </div>
+      <div className="summary">
+        summary section here
+      </div>
+      <div className="examples">
+        examples sections here
+          <img
+              src={Carded}
+              alt="card"
+              class="card"
+            />
+            
+            </div> 
+        
+      
+      <div className="in-depth">
+        in depth info here
+      </div>
+      <div className="management">
+        management details here
+        <p>eample text</p>
+        <span>SPAN1</span><br/>
+        <span>SPAN2</span>
+
       </div>
     </main>
   );

@@ -71,12 +71,13 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="******"
+                  placeholder="enter password"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
+             
                 <button
                   className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
