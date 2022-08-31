@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-
+import Header from '../components/Header';
 import ProfileList from '../components/ProfileList';
 
 import { QUERY_PROFILES } from '../utils/queries';
@@ -11,6 +11,7 @@ const Home = () => {
 
   return (
     <main>
+      <Header />
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
           {loading ? (
