@@ -60,7 +60,7 @@ function App() {
                 element={<Signup />}
               />
               <Route 
-                path="/me" 
+                path="/profiles" 
                 element={<Profile />}
               />
               <Route 
@@ -70,7 +70,9 @@ function App() {
             </Routes>
          
           </div>
-          <ScrollButton />
+
+        <Footer />
+
       </Router>
     
     </ApolloProvider>

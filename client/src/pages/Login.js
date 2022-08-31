@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
@@ -19,9 +19,11 @@ const Login = (props) => {
     });
   };
 
+  const navigate = useNavigate()
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    navigate('/profiles')
     console.log(formState);
     try {
       const { data } = await login({
@@ -48,8 +50,7 @@ const Login = (props) => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                Success
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
