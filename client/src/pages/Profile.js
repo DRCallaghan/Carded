@@ -5,6 +5,7 @@ import PhoneList from '../components/PhoneList';
 import PhoneForm from '../components/PhoneForm';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
+import Drop from '../components/Bootstrap/dropdown';
 import HomeFooter from '../components/Footer/homefoot';
 
 const Profile = () => {
@@ -41,10 +42,9 @@ const Profile = () => {
 
   return (
     <div>
-      <h2 className="card-header">
-        {profileId ? `${profile.name}'s` : 'Your'} friends have endorsed these
-        skills...
-      </h2>
+      <nav>
+        <Drop />
+      </nav>
 
       {profile.phoneNumber?.length > 0 && (
         <PhoneList
