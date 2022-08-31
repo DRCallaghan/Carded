@@ -12,7 +12,7 @@ function SearchModal() {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Search for a Team
       </Button>
 
       <Modal show={show} onHide={handleClose}>
