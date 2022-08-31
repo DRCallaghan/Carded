@@ -5,7 +5,7 @@ const profileSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
     trim: true,
   },
   email: {
@@ -19,10 +19,14 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  skills: [
+  phoneNumber: {
+    type: String,
+    match: [/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, 'Must be a valid phone number!'],
+  },
+  team: [
     {
-      type: String,
-      trim: true,
+      type: Schema.Types.ObjectId,
+      ref: 'Team',
     },
   ],
 });
