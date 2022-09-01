@@ -16,7 +16,6 @@ import TeamPage from './pages/TeamPage';
 import Header from './components/Header';
 
 
-
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
