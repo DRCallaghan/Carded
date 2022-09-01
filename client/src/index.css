@@ -345,12 +345,35 @@ END NORMALIZE CSS
 */
 
 /*            home page styling            */
+.summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.summary-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 500px;
+  width:  40%;
+}
+
+.summary-text h3{
+ line-height: 1.8;
+}
 
 .examples {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #b7c5cc;
+  height: 600px;
+  width:  100%;
+  
+
 }
 
 .in-depth {
@@ -361,12 +384,14 @@ END NORMALIZE CSS
 
 .in-depth p {  
   font-size: 3rem;
+  color: #14397d;
 }
 
 .in-depth-title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  color: #14397d;
 }
 
 .in-depth-text {
@@ -377,7 +402,8 @@ END NORMALIZE CSS
 }
 
 .in-depth-text p {
-  color: #14397d;
+  color: #448ab3;
+  line-height: 1.8;
 }
 
 *,

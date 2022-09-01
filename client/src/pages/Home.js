@@ -5,6 +5,7 @@ import ProfileList from "../components/ProfileList";
 import carded1 from "../images/carded1.png";
 import carded2 from "../images/carded2.png";
 import carded3 from "../images/carded3.png";
+import team from "../images/team.jpeg";
 import { QUERY_PROFILES } from "../utils/queries";
 
 import "../index.css";
@@ -23,32 +24,39 @@ const Home = () => {
         <div className="col-12 col-md-10 my-3"></div>
       </div>
       <div className="summary">
-        <h2>summary section here</h2>
-        <p>
-          {" "}
-          Carded is your online solution to creating teams of individuals based
-          upon any grouping that fits your needs. <br />
-          Teams can be used to organize, plan, or structure any business or
-          social goal you may have - with business cards generated to represent
-          your Teams.
-        </p>
+        <div className="summary-text">
+          <h3>
+            Carded is your online solution to creating teams of individuals
+            based upon any grouping that fits your needs.
+          </h3>
+        </div>
+        <div>
+          <img src={team} alt="card" class="card" />
+        </div>
       </div>
-      <h2>examples sections here</h2>
+      <div className="summary2">
+      <div className="summary-text2">
+      <h3>
+        Teams can be used to organize, plan, or structure any business or social
+        goal you may have - with business cards generated to represent your
+        Teams.
+      </h3>
+
+
+      </div>
+      
       <div className="examples">
-    
-      <div className="card-example">
-        <img src={carded1} alt="card" class="card" />
-        
+        <div className="card-example">
+          <img src={carded1} alt="card" class="card" />
+        </div>
+        <div className="card-example">
+          <img src={carded2} alt="card" class="card" />
+        </div>
+        <div className="card-example">
+          <img src={carded3} alt="card" class="card" />
+        </div>
       </div>
-      <div className="card-example">
-        <img src={carded2} alt="card" class="card" />
-        
-      </div>
-      <div className="card-example">
-        <img src={carded3} alt="card" class="card" />
-       
-      </div>
-      </div>
+
       <div className="details">
         <h2>in depth info here</h2>
         <div className="in-depth">
@@ -62,9 +70,17 @@ const Home = () => {
           <p> Build A Card. </p>
         </div>
         <div className="in-depth-text">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ut, quidem voluptatibus aliquam, expedita natus placeat accusamus numquam magni sequi repellat vero, accusantium doloribus quod fugiat repellendus. Magni, animi at?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nemo cum. Impedit, culpa? Maxime neque ipsam sint repudiandae accusamus! Repellat tempora facere deleniti cumque repellendus fugiat corrupti doloremque doloribus voluptas?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, fuga placeat ea velit quasi quam cupiditate. Blanditiis dolor atque fugit sunt, accusamus sequi, enim maiores nam autem cum error voluptatibus?</p>
+          <p>Simply login or sign up to get started</p>
+          <p>
+            Once you are in you can join an existing group if you have an
+            invitation from the team manager. No invitation? Thats ok, you can
+            form your own team!
+          </p>
+          <p>
+            Once you are apart of a team you will recieve a business card
+            associated with that team, or you can design your own personal card
+            if you started your won team.{" "}
+          </p>
         </div>
       </div>
       <div className="management">
