@@ -6,6 +6,7 @@ import carded1 from "../images/carded1.png";
 import carded2 from "../images/carded2.png";
 import carded3 from "../images/carded3.png";
 import team from "../images/team.jpeg";
+import handing from "../images/handing.jpeg";
 import { QUERY_PROFILES } from "../utils/queries";
 
 import "../index.css";
@@ -23,6 +24,7 @@ const Home = () => {
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3"></div>
       </div>
+
       <div className="summary">
         <div className="summary-text">
           <h3>
@@ -30,45 +32,52 @@ const Home = () => {
             based upon any grouping that fits your needs.
           </h3>
         </div>
-        <div>
+        <div className="summary1-pic">
           <img src={team} alt="card" class="card" />
         </div>
       </div>
+
       <div className="summary2">
-      <div className="summary-text2">
-      <h3>
-        Teams can be used to organize, plan, or structure any business or social
-        goal you may have - with business cards generated to represent your
-        Teams.
-      </h3>
+        <div className="summary2-pic">
+          <img src={handing} alt="card" class="card" />
+        </div>
 
-
+        <div className="summary-text2">
+          <h3>
+            Teams can be used to organize, plan, or structure any business or
+            social goal you may have - with business cards generated to
+            represent your Teams.
+          </h3>
+        </div>
       </div>
-      
+
       <div className="examples">
-        <div className="card-example">
+        <div className="example1">
           <img src={carded1} alt="card" class="card" />
         </div>
-        <div className="card-example">
+
+        <div className="example2">
           <img src={carded2} alt="card" class="card" />
         </div>
-        <div className="card-example">
+
+        <div className="example3">
           <img src={carded3} alt="card" class="card" />
         </div>
       </div>
 
       <div className="details">
-        <h2>in depth info here</h2>
         <div className="in-depth">
           <p>1. </p>
           <p>2. </p>
           <p>3. </p>
         </div>
+
         <div className="in-depth-title">
-          <p> Sign Up </p>
+          <p> Just Sign Up </p>
           <p> Join Or Create A Team </p>
           <p> Build A Card. </p>
         </div>
+        
         <div className="in-depth-text">
           <p>Simply login or sign up to get started</p>
           <p>
