@@ -30,7 +30,8 @@ const TeamPage = () => {
         return <div>Loading...</div>;
     }
 
-    if (!profile?.team) {
+    const team = profile.team;
+    if (!team[0].name) {
         return (
             <h4>
                 You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
@@ -41,9 +42,17 @@ const TeamPage = () => {
     return (
         <div>
             <Header />
+            <div className="flex-row justify-center">
+                <div className="col-12 col-md-10 my-3">
 
-            <div>
-                <CardExample />
+                </div>
+            </div>
+
+            <div className="flex-row justify-center">
+                <div className="col-12 col-md-10 my-3 text-center">
+                    <h1>{team[0].name}</h1>
+                </div>
+                <div className="col-12 col-md-10 my-3"></div>
             </div>
 
             <Footer />

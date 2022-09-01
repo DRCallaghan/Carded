@@ -13,13 +13,13 @@ const Header = () => {
 
   const styles = {
     headerStyle: {
-        background: '#d7eaf3',
-        height: '10vh',
-        width: '100%',
-        position: 'sticky',
-        top: '0',
-        boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
-        
+      background: '#d7eaf3',
+      height: '10vh',
+      width: '100%',
+      position: 'sticky',
+      top: '0',
+      boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+
     },
     logoStyle: {
       position: 'relative',
@@ -34,7 +34,7 @@ const Header = () => {
       marginRight: '1300px',
       marginTop: '15px'
     },
-  
+
   };
 
   
@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <header style={styles.headerStyle}>
       <div style={styles.headerStyle} className="header">
-        <div className="text-dark" to="/">
+        <div className="text-dark">
           <h1 style={styles.logoStyle} className="m-0">
           Carded
           </h1> 
