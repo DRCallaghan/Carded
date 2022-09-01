@@ -4,25 +4,25 @@ import Header from "../components/Header";
 import ProfileList from "../components/ProfileList";
 import carded from "../images/carded.png";
 import { QUERY_PROFILES } from "../utils/queries";
+
 import "../index.css"
 
+import Footer from "../components/Footer";
+
+
 const Home = () => {
-  // const { loading, data } = useQuery(QUERY_PROFILES);
-  // const profiles = data?.profiles || [];
+  const styles = {
+    homeStyle: {
+        
+    },
+  };
+
 
   return (
-    <main>
+    <main style={styles.homeStyle}>
       <Header />
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
-          {/* {loading ? (
-            <div>Loading...</div>
-          ) : (
-            // <ProfileList
-            //   profiles={profiles}
-            //   title="Here's the current roster of friends..."
-            // />
-          )} */}
         </div>
       </div>
       <div className="summary">
@@ -130,6 +130,7 @@ const Home = () => {
           excepturi aliquam repellat laboriosam facere.
         </p>
       </div>
+      <Footer />
     </main>
   );
 };

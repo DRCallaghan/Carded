@@ -1,12 +1,12 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const Footer = () => {
+const HomeFooter = () => {
   const styles = {
     footerStyle: {
         background: '#d7eaf3',
         height: '12vh',
-        position: 'relative',
+        position: 'fixed',
         bottom: '0'
         
         
@@ -36,4 +36,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default HomeFooter;
