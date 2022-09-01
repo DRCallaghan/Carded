@@ -30,11 +30,10 @@ const TeamPage = () => {
         return <div>Loading...</div>;
     }
 
-    if (!profile?.name) {
+    if (!profile?.team) {
         return (
             <h4>
-                You need to be logged in to see your profile page. Use the navigation
-                links above to sign up or log in!
+                You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
             </h4>
         );
     }
