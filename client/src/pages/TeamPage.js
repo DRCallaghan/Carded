@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import CardExample from '../components/Bootstrap/card';
 import Drop from '../components/Bootstrap/dropdown';
-import HomeFooter from '../components/Footer/homefoot';
+import Footer from '../components/Footer/homefoot';
 import SearchModal from '../components/Bootstrap/searchModal';
 import Header from "../components/Header";
 import Auth from '../utils/auth';
@@ -30,11 +30,10 @@ const TeamPage = () => {
         return <div>Loading...</div>;
     }
 
-    if (!profile?.name) {
+    if (!profile?.team) {
         return (
             <h4>
-                You need to be logged in to see your profile page. Use the navigation
-                links above to sign up or log in!
+                You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
             </h4>
         );
     }
@@ -47,7 +46,7 @@ const TeamPage = () => {
                 <CardExample />
             </div>
 
-            <HomeFooter />
+            <Footer />
         </div>
     );
 };

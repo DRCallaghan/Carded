@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import HomeFooter from '../components/Footer/homefoot';
+import Footer from '../components/Footer';
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -23,7 +23,6 @@ const Login = (props) => {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    navigate('/profiles')
     console.log(formState);
     try {
       const { data } = await login({
@@ -34,6 +33,8 @@ const Login = (props) => {
     } catch (e) {
       console.error(e);
     }
+
+    navigate('/profiles');
 
     // clear form values
     setFormState({
@@ -88,7 +89,7 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-      <HomeFooter />
+      <Footer />
     </main>
   );
 };

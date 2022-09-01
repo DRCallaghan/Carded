@@ -9,7 +9,7 @@ import { QUERY_PROFILES } from "../utils/queries";
 
 import "../index.css";
 
-import Footer from "../components/Footer";
+import HomeFooter from "../components/Footer/homefoot";
 
 const Home = () => {
   const styles = {
@@ -35,19 +35,19 @@ const Home = () => {
       </div>
       <h2>examples sections here</h2>
       <div className="examples">
-    
-      <div className="card-example">
-        <img src={carded1} alt="card" class="card" />
-        
-      </div>
-      <div className="card-example">
-        <img src={carded2} alt="card" class="card" />
-        
-      </div>
-      <div className="card-example">
-        <img src={carded3} alt="card" class="card" />
-       
-      </div>
+
+        <div className="card-example">
+          <img src={carded1} alt="card" class="card" />
+
+        </div>
+        <div className="card-example">
+          <img src={carded2} alt="card" class="card" />
+
+        </div>
+        <div className="card-example">
+          <img src={carded3} alt="card" class="card" />
+
+        </div>
       </div>
       <div className="details">
         <h2>in depth info here</h2>
@@ -139,7 +139,7 @@ const Home = () => {
           excepturi aliquam repellat laboriosam facere.
         </p>
       </div>
-      <Footer />
+      <HomeFooter />
     </main>
   );
 };
