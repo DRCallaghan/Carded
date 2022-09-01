@@ -6,18 +6,18 @@ import "./footer.css"
 const Footer = () => {
   const styles = {
     footerStyle: {
-        position: 'fixed',
-        bottom: '0',
-        display: 'flex',
-        justifyContent: "space-between",
-        height: '15vh',
-        fontSize: '2.87vw',
-        color: '#14397d',
-        background: '#d7eaf3',
-        flexWrap: 'wrap'
+      position: 'fixed',
+      bottom: '0',
+      display: 'flex',
+      justifyContent: "space-between",
+      height: '15vh',
+      fontSize: '2.87vw',
+      color: '#14397d',
+      background: '#d7eaf3',
+      flexWrap: 'wrap'
     },
     logoStyle: {
-     
+
     },
   };
 
@@ -33,7 +33,7 @@ const Footer = () => {
           <p>pbnj1</p>
         </div>
       </div>
-        <h4>&copy; {new Date().getFullYear()} -Get Carded</h4>
+      <h4>&copy; {new Date().getFullYear()} - Carded</h4>
       <div className='center'>
         <div><a href='https://github.com/Ckratz17'><FaGithub /></a><a href='https://www.linkedin.com/in/christopher-kratz-2a0714247/'><FaLinkedin /></a>
           <p>Ckratz17</p>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  
+
   );
 };
 
