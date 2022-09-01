@@ -22,7 +22,11 @@ const Profile = () => {
       variables: { profileId: profileId },
     }
   );
-
+  //Set up logout button to send the user back to the homepage after signing out
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
   const profile = data?.me || data?.profile || {};
 
@@ -56,7 +60,11 @@ const Profile = () => {
       // boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
     },
     goBack: {
-      alignContent: 'center'
+
+      alignContent: 'center',
+      display: 'flex',
+      justifyContent: 'space-between'
+
     }
   }
 
@@ -64,6 +72,10 @@ const Profile = () => {
     <div>
       <nav style={styles.navbar} className='header'>
         <SearchModal/>
+        <button className="btn btn-md btn-light m-2" onClick={logout}>
+          Logout
+        </button>
+
         <Drop/>
       </nav>
       <div>
@@ -79,7 +91,7 @@ const Profile = () => {
         <PhoneForm profileId={profile._id} />
       </div>
       <div style={styles.goBack}>
-      <BackButton/>
+        <BackButton/>
       </div>
       <Footer />
     </div>

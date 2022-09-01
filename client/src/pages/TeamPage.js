@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import CardExample from '../components/Bootstrap/card';
 import Drop from '../components/Bootstrap/dropdown';
-import Footer from '../components/Footer/homefoot';
+import Footer from '../components/Footer';
 import SearchModal from '../components/Bootstrap/searchModal';
 import Header from "../components/Header";
 import Auth from '../utils/auth';
