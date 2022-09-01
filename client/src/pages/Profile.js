@@ -38,7 +38,7 @@ const Profile = () => {
   if (!profile?.name) {
     return (
       <div className="flex-row justify-center">
-        <Header />
+       
         <div className="col-12 col-md-10 my-3"></div>
         <h4>
           Email or password not found! Use the navigation links above to sign up or log in!
