@@ -23,7 +23,7 @@ const TeamPage = () => {
     const profile = data?.me || data?.profile || {};
     // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
     if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
-        return <Navigate to="/profiles" />;
+        return <Navigate to="/team" />;
     }
 
     if (loading) {
@@ -31,11 +31,18 @@ const TeamPage = () => {
     }
 
     const team = profile.team;
-    if (!team[0].name) {
+    if (!team[0]?.name) {
         return (
-            <h4>
-                You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
-            </h4>
+            <div>
+                <Header />
+                <div className="flex-row justify-center">
+                    <div className="col-12 col-md-10 my-3 text-center">
+                        <h4>
+                            You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
+                        </h4>
+                    </div>
+                </div>
+            </div>
         );
     }
 
@@ -52,7 +59,12 @@ const TeamPage = () => {
                 <div className="col-12 col-md-10 my-3 text-center">
                     <h1>{team[0].name}</h1>
                 </div>
-                <div className="col-12 col-md-10 my-3"></div>
+                <div className="col-12 col-md-10 my-3 text-left">
+                    <h3>{team[0].address}</h3>
+                </div>
+                <div className="col-12 col-md-10 my-3 text-right">
+                    <h3>{team[0].website}</h3>
+                </div>
             </div>
 
             <Footer />
