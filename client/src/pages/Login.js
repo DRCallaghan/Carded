@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Footer from '../components/Footer';
 import Auth from '../utils/auth';
+import BackButton from '../components/Bootstrap/backButton';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -54,6 +55,7 @@ const Login = (props) => {
                 Success
               </p>
             ) : (
+            
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
@@ -79,6 +81,7 @@ const Login = (props) => {
                   Submit
                 </button>
               </form>
+           
             )}
 
             {error && (
@@ -87,6 +90,9 @@ const Login = (props) => {
               </div>
             )}
           </div>
+        </div>
+        <div className='backBtn'>
+            <BackButton />
         </div>
       </div>
       <Footer />
