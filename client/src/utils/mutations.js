@@ -30,6 +30,8 @@ export const ADD_TEAM = gql`
     addTeam(name: $name, managerId: $managerId) {
       _id
       name
+      address
+      website
       manager {
         _id
         name
@@ -51,6 +53,8 @@ export const ADD_MEMBER = gql`
     addMember(teamId: $teamId, memberId: $memberId) {
       _id
       name
+      address
+      website
       members {
         _id
         name
