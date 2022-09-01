@@ -8,10 +8,9 @@ import carded3 from "../images/carded3.png";
 import team from "../images/team.jpeg";
 import handing from "../images/handing.jpeg";
 import { QUERY_PROFILES } from "../utils/queries";
-
 import "../index.css";
-
 import Footer from "../components/Footer";
+
 
 const Home = () => {
   const styles = {
@@ -27,10 +26,10 @@ const Home = () => {
 
       <div className="summary">
         <div className="summary-text">
-          <h3>
+          <h4>
             Carded is your online solution to creating teams of individuals
             based upon any grouping that fits your needs.
-          </h3>
+          </h4>
         </div>
         <div className="summary1-pic">
           <img src={team} alt="card" class="card" />
@@ -43,11 +42,11 @@ const Home = () => {
         </div>
 
         <div className="summary-text2">
-          <h3>
+          <h4>
             Teams can be used to organize, plan, or structure any business or
             social goal you may have - with business cards generated to
             represent your Teams.
-          </h3>
+          </h4>
         </div>
       </div>
 
@@ -168,5 +167,7 @@ const Home = () => {
     </main>
   );
 };
+
+
 
 export default Home;
