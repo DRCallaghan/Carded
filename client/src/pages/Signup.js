@@ -24,23 +24,20 @@ const Signup = () => {
       [name]: value,
     });
 
-    
+
   };
 
   const navigate = useNavigate()
   // submit form
   const handleFormSubmit = async (event) => {
-   
-    navigate('/profiles')
-  
+    if (formState.password !== formState.confirm) {
+      alert("Passwords don't match.");
+      return;
+    }
+
+    navigate('/profiles');
 
     console.log(formState);
-      
-      if (formState.password !== formState.confirm) {
-        alert("Passwords don't match.");
-        event.preventDefault();
-      }
-  
 
     try {
       const { data } = await addProfile({
@@ -61,7 +58,7 @@ const Signup = () => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! 
+                Success!
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -97,7 +94,7 @@ const Signup = () => {
                   value={formState.confirm}
                   onChange={handleChange}
                 />
-             
+
                 <button
                   className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
