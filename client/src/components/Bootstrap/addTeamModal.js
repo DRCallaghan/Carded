@@ -69,11 +69,7 @@ function Team() {
             <Button variant="primary" onClick={handleShow}>
                 Add Team
             </Button>
-
             <Modal className={modal} show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Create a Team</Modal.Title>
-                </Modal.Header>
                 <Modal.Body>
                     <Form className='textbox'>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -105,10 +101,10 @@ function Team() {
                             {errorMessage && (<div className="error-text">{errorMessage}</div>)}
                         </div>
                         <Modal.Footer className='buttons'>
-                            <Button className='button-close' variant="secondary" onClick={handleClose}>
+                            <Button className='button-close btn btn-danger m-2' variant="secondary" onClick={handleClose}>
                                 Close
                             </Button>
-                            <Button className='button-save' variant="primary" onClick={handleClose} onSubmit={handleSubmit}>
+                            <Button className='button-save btn btn-light m-2' variant="primary" onClick={handleClose} onSubmit={handleSubmit}>
                                 Save Changes
                             </Button>
                         </Modal.Footer>

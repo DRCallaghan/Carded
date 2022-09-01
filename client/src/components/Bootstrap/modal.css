@@ -9,7 +9,8 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  
+  padding: 10vh;
+ 
 }
 
 .textbox{
@@ -21,10 +22,12 @@ border-radius: 25px;
   width: 30vw;
   min-width: 308px;
   text-align: center;
+  box-shadow: 0 0px 10px 5px rgba(0,0,0,.2);
 }
 
 .buttons{
     padding: 30px;
+    
 }
 
 .button-close{
@@ -44,8 +47,6 @@ border-radius: 25px;
 .info{
    padding: 25px;
    font-weight: bolder;
-   
-
 }
 
 .input{
@@ -58,4 +59,10 @@ border-radius: 25px;
 
 .mb-3{
     text-shadow: #888;
+}
+
+@media screen {
+    .buttons{
+        min-width: 128px;
+    }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './footer.css'
 
@@ -19,7 +20,6 @@ const HomeFooter = () => {
     },
   };
 
- 
   return (
     <footer style={styles.footerStyle} className="w-100 mt-auto text-dark p-4">
     <div className='center'>
@@ -41,6 +41,7 @@ const HomeFooter = () => {
     <div className='center'>
       <div ><a href='https://github.com/StevenBolc'><FaGithub /></a><a href='www.linkedin.com/in/StevenBolc'><FaLinkedin /></a>
         <p>StevenBolc</p>
+
       </div>
     </div>
   </footer>
