@@ -48,6 +48,26 @@ export const ADD_TEAM = gql`
   }
 `;
 
+export const UPDATE_TEAM_ADDRESS = gql`
+  mutation updateTeamAddress($teamId: ID!, $address: String!) {
+    updateTeamAddress(teamId: $teamId, address: $address) {
+      _id
+      name
+      address
+    }
+  }
+`;
+
+export const UPDATE_TEAM_WEBSITE = gql`
+  mutation updateTeamWebsite($teamId: ID!, $website: String!) {
+    updateTeamWebsite(teamId: $teamId, website: $website) {
+      _id
+      name
+      website
+    }
+  }
+`;
+
 export const ADD_MEMBER = gql`
   mutation addMember($teamId: ID!, $memberId: ID!) {
     addMember(teamId: $teamId, memberId: $memberId) {
