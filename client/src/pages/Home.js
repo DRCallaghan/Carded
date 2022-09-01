@@ -2,28 +2,25 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import Header from "../components/Header";
 import ProfileList from "../components/ProfileList";
-import carded from "../images/carded.png";
+import carded1 from "../images/carded1.png";
+import carded2 from "../images/carded2.png";
+import carded3 from "../images/carded3.png";
 import { QUERY_PROFILES } from "../utils/queries";
 
-import "../index.css"
+import "../index.css";
 
 import Footer from "../components/Footer";
 
-
 const Home = () => {
   const styles = {
-    homeStyle: {
-        
-    },
+    homeStyle: {},
   };
-
 
   return (
     <main style={styles.homeStyle}>
       <Header />
       <div className="flex-row justify-center">
-        <div className="col-12 col-md-10 my-3">
-        </div>
+        <div className="col-12 col-md-10 my-3"></div>
       </div>
       <div className="summary">
         <h2>summary section here</h2>
@@ -36,30 +33,42 @@ const Home = () => {
           your Teams.
         </p>
       </div>
+      <h2>examples sections here</h2>
       <div className="examples">
-        <h2>examples sections here</h2>
+    
+      <div className="card-example">
+        <img src={carded1} alt="card" class="card" />
+        
       </div>
       <div className="card-example">
-        <img src={carded} alt="card" class="card" />
-        example card
+        <img src={carded2} alt="card" class="card" />
+        
       </div>
-<div className="details">
-      <h2>in depth info here</h2>
-      <div className="in-depth">
-
-        <p>1.  </p> 
-        <p>2.  </p>
-        <p>3.  </p>
+      <div className="card-example">
+        <img src={carded3} alt="card" class="card" />
+       
       </div>
-      <div className="in-depth-text">
-      <p> Just Sign Up </p> 
-        <p> Join Or Create A Team </p>
-        <p> Build A Card. </p>
       </div>
-      </div> 
+      <div className="details">
+        <h2>in depth info here</h2>
+        <div className="in-depth">
+          <p>1. </p>
+          <p>2. </p>
+          <p>3. </p>
+        </div>
+        <div className="in-depth-title">
+          <p> Sign Up </p>
+          <p> Join Or Create A Team </p>
+          <p> Build A Card. </p>
+        </div>
+        <div className="in-depth-text">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ut, quidem voluptatibus aliquam, expedita natus placeat accusamus numquam magni sequi repellat vero, accusantium doloribus quod fugiat repellendus. Magni, animi at?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nemo cum. Impedit, culpa? Maxime neque ipsam sint repudiandae accusamus! Repellat tempora facere deleniti cumque repellendus fugiat corrupti doloremque doloribus voluptas?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, fuga placeat ea velit quasi quam cupiditate. Blanditiis dolor atque fugit sunt, accusamus sequi, enim maiores nam autem cum error voluptatibus?</p>
+        </div>
+      </div>
       <div className="management">
         <h2>management details here</h2>
- 
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
