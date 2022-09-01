@@ -344,21 +344,40 @@ END NORMALIZE CSS
 =================
 */
 
+/*            home page styling            */
+
+.examples {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
 .in-depth {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.in-depth p{ 
+.in-depth p {  
   font-size: 3rem;
 }
-.in-depth-text {
 
+.in-depth-title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
 
+.in-depth-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: black, 2px, solid
+}
+
+.in-depth-text p {
+  color: #14397d;
 }
 
 *,
