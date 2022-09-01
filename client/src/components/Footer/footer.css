@@ -1,0 +1,16 @@
+.footer {
+    background-color: #d7eaf3;
+    border-top: solid 2px;
+    box-shadow: 0 0 10px 5px;
+    margin-top: 20px;
+  
+    position: relative;
+    bottom: 0;
+
+  }
+  
+  
+.center{
+  align-items: center;
+  text-align: center;
+}
