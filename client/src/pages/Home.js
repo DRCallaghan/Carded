@@ -35,19 +35,19 @@ const Home = () => {
       </div>
       <h2>examples sections here</h2>
       <div className="examples">
-    
-      <div className="card-example">
-        <img src={carded1} alt="card" class="card" />
-        
-      </div>
-      <div className="card-example">
-        <img src={carded2} alt="card" class="card" />
-        
-      </div>
-      <div className="card-example">
-        <img src={carded3} alt="card" class="card" />
-       
-      </div>
+
+        <div className="card-example">
+          <img src={carded1} alt="card" class="card" />
+
+        </div>
+        <div className="card-example">
+          <img src={carded2} alt="card" class="card" />
+
+        </div>
+        <div className="card-example">
+          <img src={carded3} alt="card" class="card" />
+
+        </div>
       </div>
       <div className="details">
         <h2>in depth info here</h2>

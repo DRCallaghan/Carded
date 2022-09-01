@@ -9,6 +9,7 @@ import CardExample from '../components/Bootstrap/card';
 import Drop from '../components/Bootstrap/dropdown';
 import HomeFooter from '../components/Footer/homefoot';
 import SearchModal from '../components/Bootstrap/searchModal';
+import Header from "../components/Header";
 
 const Profile = () => {
   const { profileId } = useParams();
@@ -35,10 +36,13 @@ const Profile = () => {
 
   if (!profile?.name) {
     return (
-      <h4>
-        You need to be logged in to see your profile page. Use the navigation
-        links above to sign up or log in!
-      </h4>
+      <div className="flex-row justify-center">
+        <Header />
+        <div className="col-12 col-md-10 my-3"></div>
+        <h4>
+          Email or password not found! Use the navigation links above to sign up or log in!
+        </h4>
+      </div>
     );
   }
 
