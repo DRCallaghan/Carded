@@ -5,7 +5,8 @@ import Team from './addTeamModal';
 
 function Drop() {
     return (
-        <DropdownButton
+        
+        <DropdownButton 
             align="end"
             title="Team Pages"
             id="dropdown-menu-align-end"

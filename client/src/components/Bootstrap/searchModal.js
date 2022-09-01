@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import modal from './modal.css'
 
 function SearchModal() {
   const [show, setShow] = useState(false);
@@ -11,41 +12,30 @@ function SearchModal() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button className='btn btn-light m-2' variant="primary" onClick={handleShow}>
         Search for a Team
       </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
+      <Modal className={modal} show={show} onHide={handleClose}>
         <Modal.Body>
-          <Form>
+          <Form className='textbox'>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
+              <Form.Label className='info'>Search for a Team</Form.Label>
+              <Form.Control className='input'
                 type="email"
                 placeholder="name@example.com"
                 autoFocus
               />
             </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
+            <Modal.Footer className='buttons'>
+              <Button className='button-close btn btn-danger m-2' variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button className='button-save btn btn-light m-2' variant="primary" onClick={handleClose}>
+                Save Changes
+              </Button>
+            </Modal.Footer>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );

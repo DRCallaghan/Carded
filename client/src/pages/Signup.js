@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
-
+import BackButton from '../components/Bootstrap/backButton';
 import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -111,6 +111,9 @@ const Signup = () => {
               </div>
             )}
           </div>
+        </div>
+        <div className='backBtn'>
+            <BackButton />
         </div>
       </div>
       <Footer />

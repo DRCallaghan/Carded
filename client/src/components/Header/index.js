@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css'
 import Auth from '../../utils/auth';
-import placeholder from '../../images/placeholder.png'
+import placeholder from '../../images/placeholder.png';
+
 
 const Header = () => {
   const logout = (event) => {
@@ -24,7 +25,8 @@ const Header = () => {
       position: 'relative',
       paddingTop: '10px',
       fontSize: '2.87vw',
-      color: '#14397d'
+      color: '#14397d',
+      left: '25px'
     },
     logoIcon: {
       objectFit: 'contain',
@@ -33,15 +35,16 @@ const Header = () => {
   
   };
 
-
+  
+  
   return (
     <header style={styles.headerStyle}>
       <div style={styles.headerStyle} className="header">
-        <Link className="text-dark" to="/">
+        <div className="text-dark" to="/">
           <h1 style={styles.logoStyle} className="m-0">
           Carded
           </h1> 
-        </Link>
+        </div>
         <img style={styles.logoIcon} src={placeholder} alt="placeholder" class="placeholder" />
         <div>
           {Auth.loggedIn() ? (
