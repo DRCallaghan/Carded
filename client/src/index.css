@@ -343,6 +343,24 @@ template {
 END NORMALIZE CSS
 =================
 */
+
+.in-depth {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.in-depth p{ 
+  font-size: 3rem;
+}
+.in-depth-text {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
 *,
 *::before,
 *::after {
