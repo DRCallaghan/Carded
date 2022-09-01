@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import TeamPage from './pages/TeamPage';
 import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -39,40 +40,43 @@ const client = new ApolloClient({
 
 function App() {
   return (
-  
+
     <ApolloProvider client={client}>
-   
+
       <Router>
-          <div>
-            <Routes>
-              <Route 
-                path="/" 
-                element={<Home />}
-              />
-              <Route 
-                path="/login" 
-                element={<Login />}
-              />
-              <Route 
-                path="/signup" 
-                element={<Signup />}
-              />
-              <Route 
-                path="/profiles" 
-                element={<Profile />}
-              />
-              <Route 
-                path="/profiles/:profileId"
-                element={<Profile />}
-              />
-              
-            </Routes>
-          </div>
-          <ScrollButton/>
+        <div>
+          <Routes>
+            <Route
+              path="/"
+              element={<Home />}
+            />
+            <Route
+              path="/login"
+              element={<Login />}
+            />
+            <Route
+              path="/signup"
+              element={<Signup />}
+            />
+            <Route
+              path="/profiles"
+              element={<Profile />}
+            />
+            <Route
+              path="/profiles/:profileId"
+              element={<Profile />}
+            />
+            <Route
+              path="/team"
+              element={<TeamPage />}
+            />
+          </Routes>
+        </div>
+        <ScrollButton />
       </Router>
     </ApolloProvider>
-    
-   
+
+
   );
 }
 
