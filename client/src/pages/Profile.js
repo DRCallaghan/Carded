@@ -5,6 +5,7 @@ import PhoneList from '../components/PhoneList';
 import PhoneForm from '../components/PhoneForm';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
+import CardExample from '../components/Bootstrap/card';
 import Drop from '../components/Bootstrap/dropdown';
 import HomeFooter from '../components/Footer/homefoot';
 import SearchModal from '../components/Bootstrap/searchModal';
@@ -48,6 +49,9 @@ const Profile = () => {
         <Drop />
       </nav>
 
+      <div>
+        <CardExample />
+      </div>
       {profile.phoneNumber?.length > 0 && (
         <PhoneList
           phone={profile.phoneNumber}
