@@ -38,7 +38,6 @@ const Profile = () => {
   if (!profile?.name) {
     return (
       <div className="flex-row justify-center">
-       
         <div className="col-12 col-md-10 my-3"></div>
         <h4>
           Email or password not found! Use the navigation links above to sign up or log in!
@@ -49,15 +48,22 @@ const Profile = () => {
 
   const styles = {
     navbar:{
-      alignItems: 'center'
+      // background: '#d7eaf3',
+      height: '10vh',
+      // width: '100%',
+      // position: 'sticky',
+      // top: '0',
+      // boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+    },
+    goBack: {
+      alignContent: 'center'
     }
   }
 
   return (
     <div>
-      <nav style={styles.navbar}>
-        <SearchModal />
-        <BackButton/>
+      <nav style={styles.navbar} className='header'>
+        <SearchModal/>
         <Drop/>
       </nav>
       <div>
@@ -71,6 +77,9 @@ const Profile = () => {
       )}
       <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <PhoneForm profileId={profile._id} />
+      </div>
+      <div style={styles.goBack}>
+      <BackButton/>
       </div>
       <Footer />
     </div>
