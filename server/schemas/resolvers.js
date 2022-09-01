@@ -89,6 +89,23 @@ const resolvers = {
       );
       return updatedTeam;
     },
+    updateTeamAddress: async (parent, { teamId, address }) => {
+      return await Team.findOneAndUpdate(
+        { _id: teamId },
+        { address: address },
+        { new: true }
+      );
+    },
+    updateTeamWebsite: async (parent, { teamId, website }) => {
+      return await Team.findOneAndUpdate(
+        { _id: teamId },
+        { website: website },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
     // Set up mutation so a logged in user can only remove their profile and no one else's
     removeProfile: async (parent, args, context) => {
       if (context.user) {

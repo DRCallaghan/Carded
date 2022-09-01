@@ -39,6 +39,8 @@ const typeDefs = gql`
     addPhone(profileId: ID!, phone: String!): Profile
     addTeam(name: String!, managerId: ID!): Team
     addMember(teamId: ID!, memberId: ID!): Team
+    updateTeamAddress(teamId: ID!, address: String!): Team
+    updateTeamWebsite(teamId: ID!, website: String!): Team
     removeProfile: Profile
     removePhone(phone: String!): Profile
     removeMember(teamId: ID!, memberId: ID!): Team
