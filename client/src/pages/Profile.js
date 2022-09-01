@@ -7,7 +7,7 @@ import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 import CardExample from '../components/Bootstrap/card';
 import Drop from '../components/Bootstrap/dropdown';
-import HomeFooter from '../components/Footer/homefoot';
+import Footer from '../components/Footer';
 import SearchModal from '../components/Bootstrap/searchModal';
 
 const Profile = () => {
@@ -62,7 +62,7 @@ const Profile = () => {
       <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <PhoneForm profileId={profile._id} />
       </div>
-      <HomeFooter />
+      <Footer />
     </div>
   );
 };
