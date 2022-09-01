@@ -18,6 +18,8 @@ const typeDefs = gql`
   type Team {
     _id: ID
     name: String
+    address: String
+    website: String
     manager: Profile
     members: [Profile]
   }

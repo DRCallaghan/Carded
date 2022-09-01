@@ -14,7 +14,7 @@ import BackButton from '../components/Bootstrap/backButton';
 
 const Profile = () => {
   const { profileId } = useParams();
- 
+
   // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
   const { loading, data } = useQuery(
     profileId ? QUERY_SINGLE_PROFILE : QUERY_ME,
@@ -51,7 +51,7 @@ const Profile = () => {
   }
 
   const styles = {
-    navbar:{
+    navbar: {
       // background: '#d7eaf3',
       height: '10vh',
       // width: '100%',
@@ -71,12 +71,12 @@ const Profile = () => {
   return (
     <div>
       <nav style={styles.navbar} className='header'>
-        <SearchModal/>
+        <SearchModal />
         <button className="btn btn-md btn-light m-2" onClick={logout}>
           Logout
         </button>
 
-        <Drop/>
+        <Drop />
       </nav>
       <div>
         <CardExample />
@@ -91,7 +91,7 @@ const Profile = () => {
         <PhoneForm profileId={profile._id} />
       </div>
       <div style={styles.goBack}>
-        <BackButton/>
+        <BackButton />
       </div>
       <Footer />
     </div>
