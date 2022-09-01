@@ -12,13 +12,13 @@ const Header = () => {
 
   const styles = {
     headerStyle: {
-        background: '#d7eaf3',
-        height: '10vh',
-        width: '100%',
-        position: 'sticky',
-        top: '0',
-        boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
-        
+      background: '#d7eaf3',
+      height: '10vh',
+      width: '100%',
+      position: 'sticky',
+      top: '0',
+      boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+
     },
     logoStyle: {
       position: 'relative',
@@ -30,7 +30,7 @@ const Header = () => {
       objectFit: 'contain',
       width: '150px',
     },
-  
+
   };
 
 
@@ -39,8 +39,8 @@ const Header = () => {
       <div style={styles.headerStyle} className="header">
         <Link className="text-dark" to="/">
           <h1 style={styles.logoStyle} className="m-0">
-          Carded
-          </h1> 
+            Carded
+          </h1>
         </Link>
         <img style={styles.logoIcon} src={placeholder} alt="placeholder" class="placeholder" />
         <div>
