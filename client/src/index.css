@@ -1062,8 +1062,9 @@ a:hover {
 }
 
 .btn.btn-danger {
+  border-color: #ac0f0f;
   background-color: #e64c66;
-  color: #ffffff;
+  color: #741515;
 }
 
 .btn.btn-danger:hover {
