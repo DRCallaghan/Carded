@@ -11,7 +11,7 @@ import { QUERY_PROFILES } from "../utils/queries";
 
 import "../index.css";
 
-import Footer from "../components/Footer";
+import HomeFooter from "../components/Footer/homefoot";
 
 const Home = () => {
   const styles = {
@@ -26,6 +26,7 @@ const Home = () => {
       </div>
 
       <div className="summary">
+
         <div className="summary-text">
           <h3>
             Carded is your online solution to creating teams of individuals
@@ -62,6 +63,31 @@ const Home = () => {
 
         <div className="example3">
           <img src={carded3} alt="card" class="card" />
+
+        <h2>summary section here</h2>
+        <p>
+          {" "}
+          Carded is your online solution to creating teams of individuals based
+          upon any grouping that fits your needs. <br />
+          Teams can be used to organize, plan, or structure any business or
+          social goal you may have - with business cards generated to represent
+          your Teams.
+        </p>
+      </div>
+      <h2>examples sections here</h2>
+      <div className="examples">
+
+        <div className="card-example">
+          <img src={carded1} alt="card" class="card" />
+
+        </div>
+        <div className="card-example">
+          <img src={carded2} alt="card" class="card" />
+
+        </div>
+        <div className="card-example">
+          <img src={carded3} alt="card" class="card" />
+
         </div>
       </div>
 
@@ -164,7 +190,7 @@ const Home = () => {
           excepturi aliquam repellat laboriosam facere.
         </p>
       </div>
-      <Footer />
+      <HomeFooter />
     </main>
   );
 };
