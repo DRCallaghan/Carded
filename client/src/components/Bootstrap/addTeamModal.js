@@ -1,54 +1,68 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import {Modal, Button} from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
 
- function Team() {
-  const [show, setShow] = useState(false);
+function Team() {
+    const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
-  return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
+    const styles = {
+        center: {
+            textAlign: 'center',
+            
+        }
+    }
+        return (
+            <>
+                <Button variant="primary" onClick={handleShow}>
+                    Add Team
+                </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="name@example.com"
-                autoFocus
-              />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
-}
+                <Modal style={styles.center} show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Create a Team</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Add your Team name</Form.Label>
+                                <Form.Control
+                                    type="email"
+                                    placeholder="name@example.com"
+                                    autoFocus
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Add your Company Address</Form.Label>
+                                <Form.Control
+                                    type="email"
+                                    placeholder="name@example.com"
+                                    autoFocus
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Add a Link to your Website</Form.Label>
+                                <Form.Control
+                                    type="email"
+                                    placeholder="name@example.com"
+                                    autoFocus
+                                />
+                            </Form.Group>
+                        </Form>
+                    </Modal.Body>
+                    <Modal.Footer style={styles.center}>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        <Button variant="primary" onClick={handleClose}>
+                            Save Changes
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </>
+        );
+    }
 
 export default Team;
