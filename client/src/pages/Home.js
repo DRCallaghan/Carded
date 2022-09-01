@@ -18,12 +18,15 @@ import HomeFooter from "../components/Footer/homefoot";
 
 const Home = () => {
   const styles = {
-    homeStyle: {},
+    exampleStyle: {
+      width: '100%',
+      height: '100%'
+    },
   };
 
   return (
     <main style={styles.homeStyle}>
-      <Header />
+      <Header/>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3"></div>
       </div>
@@ -37,13 +40,13 @@ const Home = () => {
           </h4>
         </div>
         <div className="summary1-pic">
-          <img src={team} alt="card" class="card" />
+          <img src={team} alt="card" className="card" />
         </div>
       </div>
 
       <div className="summary2">
         <div className="summary2-pic">
-          <img src={handing} alt="card" class="card" />
+          <img src={handing} alt="card" className="card" />
         </div>
 
         <div className="summary-text2">
@@ -57,15 +60,15 @@ const Home = () => {
 
       <div className="examples">
         <div className="example1">
-          <img src={carded1} alt="card" class="card" />
+          <img style={styles.exampleStyle} src={carded1} alt="card" className="card" />
         </div>
 
         <div className="example2">
-          <img src={carded2} alt="card" class="card" />
+          <img style={styles.exampleStyle} src={carded2} alt="card" className="card" />
         </div>
 
         <div className="example3">
-          <img src={carded3} alt="card" class="card" />
+          <img style={styles.exampleStyle} src={carded3} alt="card" className="card" />
         </div>    
        
       </div>
@@ -169,7 +172,7 @@ const Home = () => {
           excepturi aliquam repellat laboriosam facere.
         </p>
       </div>
-      <HomeFooter />
+      <HomeFooter/>
     </main>
   );
 };

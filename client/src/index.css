@@ -154,7 +154,6 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -400,7 +399,7 @@ END NORMALIZE CSS
   justify-content: space-evenly;
   align-items: center;
   background-color: #b7c5cc;
-  height: 600px;
+  height: auto;
   width:  100%;
   
 }
