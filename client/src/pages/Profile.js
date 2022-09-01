@@ -60,9 +60,11 @@ const Profile = () => {
       // boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
     },
     goBack: {
+
       alignContent: 'center',
       display: 'flex',
       justifyContent: 'space-between'
+
     }
   }
 
@@ -73,6 +75,7 @@ const Profile = () => {
         <button className="btn btn-md btn-light m-2" onClick={logout}>
           Logout
         </button>
+
         <Drop/>
       </nav>
       <div>
