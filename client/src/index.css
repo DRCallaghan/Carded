@@ -346,39 +346,120 @@ END NORMALIZE CSS
 
 /*            home page styling            */
 
+/*         summary section       */
+.summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.summary-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 500px;
+  width:  40%;
+}
+
+.summary-text h3{
+ line-height: 1.8;
+}
+
+.summary1-pic {
+  align-self: flex-end;
+}
+.summary2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.summary-text2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 500px;
+  width:  40%;
+}
+
+.summary-text2 h3{
+ line-height: 1.8;
+}
+
+.summary2-pic {
+  align-self: flex-start;
+}
+
+/*         examples section         */
+
 .examples {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #b7c5cc;
+  height: 600px;
+  width:  100%;
+  
 }
 
+.example1 {
+  align-self: flex-end;
+}
+
+.example2 {
+  align-self: flex-start;
+  padding-top: 20px;
+}
+
+.example3 {
+  align-self: flex-end;
+}
+
+
+/*     in depth section     */
 .in-depth {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: end;
+  height: 300px;
 }
 
 .in-depth p {  
   font-size: 3rem;
+  color: #14397d;
+  height: 100px;
+  
 }
 
 .in-depth-title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  color: #14397d;
+  height: 100px;
+  
+  
 }
+
 
 .in-depth-text {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: black, 2px, solid
+ 
+}
+.in-depth-text p {
+  display: flex;
+  justify-content: center;
+  color: #448ab3;
+  line-height: 1.8;
+  width: 33%;
 }
 
-.in-depth-text p {
-  color: #14397d;
-}
 
 *,
 *::before,
@@ -1062,8 +1143,9 @@ a:hover {
 }
 
 .btn.btn-danger {
+  border-color: #ac0f0f;
   background-color: #e64c66;
-  color: #ffffff;
+  color: #741515;
 }
 
 .btn.btn-danger:hover {

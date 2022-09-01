@@ -39,6 +39,7 @@ const typeDefs = gql`
     addMember(teamId: ID!, memberId: ID!): Team
     removeProfile: Profile
     removePhone(phone: String!): Profile
+    removeMember(teamId: ID!, memberId: ID!): Team
   }
 `;
 

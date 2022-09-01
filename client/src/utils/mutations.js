@@ -7,6 +7,8 @@ export const ADD_PROFILE = gql`
       profile {
         _id
         name
+        email
+        phoneNumber
       }
     }
   }
@@ -17,6 +19,7 @@ export const ADD_PHONE = gql`
     addPhone(profileId: $profileId, phone: $phone) {
       _id
       name
+      email
       phoneNumber
     }
   }
@@ -31,9 +34,15 @@ export const ADD_TEAM = gql`
       website
       manager {
         _id
+        name
+        email
+        phoneNumber
       }
       members {
         _id
+        name
+        email
+        phoneNumber
       }
     }
   }
@@ -48,6 +57,9 @@ export const ADD_MEMBER = gql`
       website
       members {
         _id
+        name
+        email
+        phoneNumber
       }
     }
   }
@@ -86,6 +98,21 @@ export const REMOVE_PHONE = gql`
       _id
       name
       phoneNumber
+    }
+  }
+`;
+
+export const REMOVE_MEMBER = gql`
+  mutation removeMember($teamId: ID!, $memberId: ID!) {
+    removeMember(teamId: $teamId, memberId: $memberId) {
+      _id
+      name
+      members {
+        _id
+        name
+        email
+        phoneNumber
+      }
     }
   }
 `;

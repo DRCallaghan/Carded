@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './footer.css'
 
@@ -18,7 +19,6 @@ const HomeFooter = () => {
       color: '#14397d'
     },
   };
-
 
   return (
     <footer style={styles.footerStyle} className="w-100 mt-auto text-dark p-4">
