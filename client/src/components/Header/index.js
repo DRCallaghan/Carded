@@ -31,8 +31,6 @@ const Header = () => {
     logoIcon: {
       objectFit: 'contain',
       width: '150px',
-      marginRight: '1300px',
-      marginTop: '15px'
     },
 
   };
