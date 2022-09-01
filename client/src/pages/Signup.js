@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import HomeFooter from '../components/Footer/homefoot';
+import Footer from '../components/Footer';
 import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
 
@@ -32,7 +32,6 @@ const Signup = () => {
   const handleFormSubmit = async (event) => {
     if (formState.password !== formState.confirm) {
       alert("Passwords don't match.");
-      event.preventDefault();
       return;
     }
 
@@ -114,7 +113,7 @@ const Signup = () => {
           </div>
         </div>
       </div>
-      <HomeFooter />
+      <Footer />
     </main>
   );
 };

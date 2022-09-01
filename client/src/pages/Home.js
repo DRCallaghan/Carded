@@ -9,7 +9,7 @@ import { QUERY_PROFILES } from "../utils/queries";
 
 import "../index.css";
 
-import Footer from "../components/Footer";
+import HomeFooter from "../components/Footer/homefoot";
 
 const Home = () => {
   const styles = {
@@ -139,7 +139,7 @@ const Home = () => {
           excepturi aliquam repellat laboriosam facere.
         </p>
       </div>
-      <Footer />
+      <HomeFooter />
     </main>
   );
 };
