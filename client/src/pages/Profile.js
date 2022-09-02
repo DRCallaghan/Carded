@@ -59,8 +59,10 @@ const Profile = () => {
       // top: '0',
       // boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
     },
+    cardSection: {
+      paddingTop: '20vh'
+    },
     goBack: {
-
       alignContent: 'center',
       display: 'flex',
       justifyContent: 'space-between'
@@ -70,18 +72,19 @@ const Profile = () => {
 
   return (
     <div>
+      <div>
       <nav style={styles.navbar} className='header'>
-        <SearchModal />
+      <SearchModal />
         <button className="btn btn-md btn-light m-2" onClick={logout}>
           Logout
         </button>
-
         <Drop />
       </nav>
-      <div>
+      <div style={styles.cardSection}>
         <CardExample />
+        </div>
       </div>
-      {profile.phoneNumber?.length > 0 && (
+      {/* {profile.phoneNumber?.length > 0 && (
         <PhoneList
           phone={profile.phoneNumber}
           isLoggedInUser={!profileId && true}
@@ -89,7 +92,7 @@ const Profile = () => {
       )}
       <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <PhoneForm profileId={profile._id} />
-      </div>
+      </div> */}
       <div style={styles.goBack}>
         <BackButton />
       </div>
