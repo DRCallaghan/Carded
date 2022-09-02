@@ -79,50 +79,65 @@ const Home = () => {
 
       <div className="details">
         <div className="in-depth">
-          <p>1. </p>
-          <p>2. </p>
-          <p>3. </p>
+          <p>1 </p>
+          <p>2 </p>      
         </div>
 
         <div className="in-depth-title">
           <p> Just Sign Up </p>
           <p> Join Or Create A Team </p>
-          <p> Build A Card. </p>
+         
         </div>
         
         <div className="in-depth-text">
           <p>Simply login or sign up to get started</p>
           <p>
-            Once you are in you can join an existing group if you have an
+            Once you are in, you can join an existing group if you have an
             invitation from the team manager. No invitation? Thats ok, you can
             form your own team!
-          </p>
-          <p>
-            Once you are apart of a team you will recieve a business card
-            associated with that team, or you can design your own personal card
-            if you started your won team.{" "}
           </p>
         </div>
       </div>
 
       <div class="profile-area">
         <div class="outer-circle">
-          {/* <!-- ============== FLOATING ICONS TO BE CHANGED LATER ======= --> */}
+        
           <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
           <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
           <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
           <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
-          {/* <span class="material-symbols-sharp">javascript</span> */}
+        
 
         </div>
         <div class="inner-circle">
-          {/* <!-- ============== PROFILE PIC TO BE CHANGED LATER  ============= --> */}
+         
           <img src={hand} style = {{width: "100%"}} alt="card" className="card" />
         </div>
       </div>
     
 
-      
+      <div className="details">
+        <div className="in-depth">
+          <p>3 </p>
+          <p>4 </p>
+        </div>
+
+        <div className="in-depth-title">
+          <p> Build A Card </p>
+          <p> Network </p>
+        </div>
+        
+        <div className="in-depth-text">
+          <p>
+            Once you are apart of a team you will recieve a business card
+            associated with that team, or you can design your own personal card
+            if you started your won team.
+          </p>
+          <p>
+            Now you can organize or expanding your team and network with other teams!
+          </p>
+        </div>
+      </div>
       <div className="management">
        
         <p>
