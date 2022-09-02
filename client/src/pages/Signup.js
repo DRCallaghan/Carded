@@ -50,11 +50,34 @@ const Signup = () => {
     }
   };
 
+  const styles = {
+    borderStyle: {
+      paddingTop: '15vh',
+      borderRadius: '50px',
+      paddingRight: '2vw'
+    },
+    buttonStyle: {
+      margin: 'auto',
+      cursor: 'pointer',
+      fontSize: 'calc(8px + .5vw)',
+      display: 'flex'
+    },
+    goBack: {
+      paddingTop: '2vh',
+      paddingLeft: '2vw'
+    },
+    cardStyle: {
+      background: 'linear-gradient(20deg, #77b5d9, #d7eaf3, #d7eaf3,#77b5d9)',
+    }
+  }
+
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <div style={styles.goBack} className='backBtn'>
+    <BackButton />
+    <main style={styles.borderStyle} className="flex-row justify-center mb-4">
+      <div className="">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 style={styles.cardStyle} className="card-header bg-custom text-sign-in p-2">Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -95,9 +118,8 @@ const Signup = () => {
                   onChange={handleChange}
                 />
 
-                <button
-                  className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
+                <button style={styles.buttonStyle}
+                  className="btn btn-light"
                   type="submit"
                 >
                   Submit
@@ -112,12 +134,10 @@ const Signup = () => {
             )}
           </div>
         </div>
-        <div className='backBtn'>
-            <BackButton />
-        </div>
       </div>
       <Footer />
     </main>
+    </div>
   );
 };
 

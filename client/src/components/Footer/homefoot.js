@@ -12,7 +12,7 @@ const HomeFooter = () => {
       height: '15vh',
       fontSize: '2.87vw',
       color: '#14397d',
-      background: '#d7eaf3',
+      background: 'linear-gradient(20deg, #77b5d9, #d7eaf3, #d7eaf3,#77b5d9)',
     },
     logoStyle: {
       fontSize: '2.87vw',

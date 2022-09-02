@@ -5,7 +5,6 @@ import modal from './modal.css'
 
 function Team() {
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [name, setName] = useState('')
