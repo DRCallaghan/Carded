@@ -10,6 +10,7 @@ const Signup = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
+    phoneNumber: '',
     password: '',
     confirm: ''
   });
@@ -73,78 +74,78 @@ const Signup = () => {
 
   return (
     <div style={styles.goBack} className='backBtn'>
-    <BackButton />
-    <main style={styles.borderStyle} className="flex-row justify-center mb-4">
-      <div className="">
-        <div className="card">
-          <h4 style={styles.cardStyle} className="card-header bg-custom text-sign-in p-2">Sign Up</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success!
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your username"
-                  name="name"
-                  type="text"
-                  value={formState.name}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="Your Business Number"
-                  name="phoneNumber"
-                  type="text"
-                  value={formState.phoneNumber}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="enter password"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="confirm password"
-                  name="confirm"
-                  type="password"
-                  value={formState.confirm}
-                  onChange={handleChange}
-                />
+      <BackButton />
+      <main style={styles.borderStyle} className="flex-row justify-center mb-4">
+        <div className="">
+          <div className="card">
+            <h4 style={styles.cardStyle} className="card-header bg-custom text-sign-in p-2">Sign Up</h4>
+            <div className="card-body">
+              {data ? (
+                <p>
+                  Success!
+                </p>
+              ) : (
+                <form onSubmit={handleFormSubmit}>
+                  <input
+                    className="form-input"
+                    placeholder="Your Full Name"
+                    name="name"
+                    type="text"
+                    value={formState.name}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="Your Email"
+                    name="email"
+                    type="email"
+                    value={formState.email}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="Your Business Phone Number"
+                    name="phoneNumber"
+                    type="text"
+                    value={formState.phoneNumber}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="Enter Password"
+                    name="password"
+                    type="password"
+                    value={formState.password}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="Confirm Password"
+                    name="confirm"
+                    type="password"
+                    value={formState.confirm}
+                    onChange={handleChange}
+                  />
 
-                <button style={styles.buttonStyle}
-                  className="btn btn-light"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
+                  <button style={styles.buttonStyle}
+                    className="btn btn-light"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </form>
+              )}
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
+              {error && (
+                <div className="my-3 p-3 bg-danger text-white">
+                  {error.message}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-      <Footer />
-    </main>
+        <Footer />
+      </main>
     </div>
   );
 };
