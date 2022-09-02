@@ -19,7 +19,7 @@ function Drop() {
     // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
     const profile = data?.me || data?.profile || {};
     return (
-        <DropdownButton className='btn-dropdown m-2' align="end" title="Team Pages" id="dropdown-menu-align-end">
+        <DropdownButton className='btn-dropdown m-2' variant='btn btn-md btn-light m-2' align="end" title="Team Pages" id="dropdown-menu-align-end">
             <Dropdown.Item eventKey="1"><Team /></Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item eventKey="4">{profile.team[0] ? (
