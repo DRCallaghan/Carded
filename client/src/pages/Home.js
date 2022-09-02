@@ -64,15 +64,15 @@ const Home = () => {
       <div className="examples">
       
         <div className="example1">
-          <img src={carded1} alt="card" className="card" />
+          <img src={carded1} style={{maxWidth: "100%"}} alt="card" className="card" />
         </div>
 
         <div className="example2">
-          <img src={carded2} alt="card" className="card" />
+          <img src={carded2} style={{maxWidth: "100%"}} alt="card" className="card" />
         </div>
 
         <div className="example3">
-          <img src={carded3} alt="card" className="card" />
+          <img src={carded3} style={{maxWidth: "100%"}} alt="card" className="card" />
         </div>    
        
       </div>
