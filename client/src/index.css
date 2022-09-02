@@ -397,6 +397,7 @@ END NORMALIZE CSS
 /*         examples section         */
 
 .examples {
+  z-index: -1;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -481,6 +482,7 @@ END NORMALIZE CSS
   border: 1px solid #143976;;
   border-radius: 50%;
   position: relative;
+  z-index: -1;
   animation: move 30s linear infinite;
 }
 
@@ -498,12 +500,10 @@ END NORMALIZE CSS
   height: 4rem;
   border-radius: 50%;
   position: absolute;
-  /* background: #143976; */
-  /* color: #143976; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* box-shadow: 0 0 1rem #143976; */
+
 }
 
 /* positions the static icons around the picture */
@@ -533,6 +533,7 @@ END NORMALIZE CSS
 /* does the picture in the animation  */
 .profile-area .inner-circle {
   position: absolute;
+  z-index: -1;
   width: 18rem;
   height: 18rem;
   border-radius: 50%;

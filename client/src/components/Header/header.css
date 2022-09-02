@@ -1,4 +1,6 @@
 .header {
+    z-index: 100;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
