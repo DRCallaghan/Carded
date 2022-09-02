@@ -10,6 +10,7 @@ import Drop from '../components/Bootstrap/dropdown';
 import Footer from '../components/Footer';
 import SearchModal from '../components/Bootstrap/searchModal';
 import BackButton from '../components/Bootstrap/backButton';
+import Team from '../components/Bootstrap/addTeamModal';
 
 
 const Profile = () => {
@@ -73,15 +74,18 @@ const Profile = () => {
   return (
     <div>
       <div>
-      <nav style={styles.navbar} className='header'>
-      <SearchModal />
-        <button className="btn btn-md btn-light m-2" onClick={logout}>
-          Logout
-        </button>
-        <Drop />
-      </nav>
-      <div style={styles.cardSection}>
-        <CardExample />
+        <nav style={styles.navbar} className='header'>
+          <div>
+            <SearchModal />
+            <Team />
+          </div>
+          <button className="btn btn-md btn-light m-2" onClick={logout}>
+            Logout
+          </button>
+          <Drop />
+        </nav>
+        <div style={styles.cardSection}>
+          <CardExample />
         </div>
       </div>
       {/* {profile.phoneNumber?.length > 0 && (

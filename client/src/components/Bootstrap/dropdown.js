@@ -18,10 +18,19 @@ function Drop() {
     );
     // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
     const profile = data?.me || data?.profile || {};
+
+        const styles= {
+            dividerPadding:{
+                paddingBottom:'10px'
+            }
+        }
+
     return (
-        <DropdownButton className='btn-dropdown m-2' variant='btn btn-md btn-light m-2' align="end" title="Team Pages" id="dropdown-menu-align-end">
-            <Dropdown.Item eventKey="1"><Team /></Dropdown.Item>
+        <DropdownButton className='btn-dropdown m-2' variant='btn btn-md btn-light m-2' align="end" title="My Teams" id="dropdown-menu-align-end">
+            <Dropdown.Item eventKey="1"></Dropdown.Item>
+            <div style={styles.dividerPadding}>
             <Dropdown.Divider />
+            </div>
             <Dropdown.Item eventKey="4">{profile.team[0] ? (
                 <Link to="/team">{profile.team[0].name}</Link>
             ) : (
