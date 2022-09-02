@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import CardExample from '../components/Bootstrap/card';
@@ -8,8 +8,14 @@ import Footer from '../components/Footer';
 import SearchModal from '../components/Bootstrap/searchModal';
 import Header from "../components/Header";
 import Auth from '../utils/auth';
+import Member from '../components/Bootstrap/addMemberModal';
+import Profile from './Profile'
 
 const TeamPage = () => {
+    const logout = (event) => {
+        event.preventDefault();
+        Auth.logout();
+    };
     const { profileId } = useParams();
 
     // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
@@ -46,9 +52,22 @@ const TeamPage = () => {
         );
     }
 
+
+
+
     return (
         <div>
-            <Header />
+            <nav className='header'>
+                <Link className="btn btn-md btn-light m-2" to='/profiles'>
+                    Back to Profile
+                    </Link>
+                <button className="btn btn-md btn-light m-2" onClick={logout}>
+                    Logout
+                </button>
+                <div className='m-2'>
+                <Member />
+                </div>
+            </nav>
             <div className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3">
 
@@ -57,13 +76,13 @@ const TeamPage = () => {
 
             <div className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3 text-center">
-                    <h1>{team[0].name}</h1>
+                    {/* <h1>{team[0].name}</h1> */}
                 </div>
                 <div className="col-12 col-md-10 my-3 text-left">
-                    <h3>{team[0].address}</h3>
+                    {/* <h3>{team[0].address}</h3> */}
                 </div>
                 <div className="col-12 col-md-10 my-3 text-right">
-                    <h3>{team[0].website}</h3>
+                    {/* <h3>{team[0].website}</h3> */}
                 </div>
             </div>
 
