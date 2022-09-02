@@ -1277,6 +1277,11 @@ a:hover {
   
 }
 
+.btn-dropdown {
+  font-size:calc(6px + 1.0vw);
+}
+
+
 .btn.btn-light:hover {
   background-color:  #d7eaf3;
 }
