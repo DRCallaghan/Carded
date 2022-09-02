@@ -19,13 +19,7 @@ import HomeFooter from "../components/Footer/homefoot";
 
 
 const Home = () => {
-  // const styles = {
-  //   exampleStyle: {
-  //     width: '100%',
-  //     height: '100%'
-  //   },
-  // };
-
+  
   return (
     <main>
     {/* <main style={styles.homeStyle}> */}
@@ -37,7 +31,7 @@ const Home = () => {
       <div className="summary">
 
         <div className="summary-text">
-          <h5 style={{lineHeight: "1.8", fontFamily:"Poppins"}}>
+          <h5 style={{lineHeight: "1.8",  color:"#143976"}}>
             Carded is your online solution to creating teams of individuals
             based upon any grouping that fits your needs.
           </h5>
@@ -53,7 +47,7 @@ const Home = () => {
         </div>
 
         <div className="summary-text2">
-          <h5 style={{lineHeight: "1.8", maxHeight: "100%", fontFamily:"Poppins"}}>
+          <h5 style={{lineHeight: "1.8", maxHeight: "100%", fontFamily:"Poppins", color:"#143976"}}>
             Teams can be used to organize, plan, or structure any business or
             social goal you may have - with business cards generated to
             represent your Teams.
@@ -64,15 +58,15 @@ const Home = () => {
       <div className="examples">
       
         <div className="example1">
-          <img src={carded1} style={{maxWidth: "100%"}} alt="card" className="card" />
+          <img src={carded1} alt="card" className="img" />
         </div>
 
         <div className="example2">
-          <img src={carded2} style={{maxWidth: "100%"}} alt="card" className="card" />
+          <img src={carded2} alt="card" className="img" />
         </div>
 
         <div className="example3">
-          <img src={carded3} style={{maxWidth: "100%"}} alt="card" className="card" />
+          <img src={carded3} alt="card" className="img" />
         </div>    
        
       </div>
@@ -139,13 +133,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="managers"><h4>Team Managers</h4></div>
+      <div className="managers"><h4 style={{color:"#031b43"}}>Team Managers</h4></div>
       <div className="management">
        
-        <p style={{width: "25%"}}>
+        <p style={{width: "25%", color:"#143976"}}>
           As a manager you can send out invitations to new team members, design new business cards, and create new teams.
         </p>
-        <p style={{width: "25%"}}>
+        <p style={{width: "25%", color:"#143976"}}>
           You can also network with other team managers, build team connections, and increase your company or team visibility.
         </p>
     
