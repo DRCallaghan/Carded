@@ -1173,6 +1173,8 @@ a:hover {
   border-color: #77b5d9;
   background-color: #77b5d9;
   color: #14397d;
+  font-size:calc(6px + 1.0vw);
+  
 }
 
 .btn.btn-light:hover {
