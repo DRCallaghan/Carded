@@ -453,13 +453,13 @@ END NORMALIZE CSS
   
 }
 
-
 .in-depth-text {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
  
 }
+
 .in-depth-text p {
   display: flex;
   justify-content: center;
@@ -468,6 +468,13 @@ END NORMALIZE CSS
   width: 33%;
 }
 
+/*       management section       */
+
+.management {
+  display:flex;
+  align-items: center;
+  height: 80vh;
+}
 
 *,
 *::before,

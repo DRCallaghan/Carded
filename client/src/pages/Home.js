@@ -103,8 +103,7 @@ const Home = () => {
         </div>
       </div>
       <div className="management">
-        <h2>management details here</h2>
-
+       
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
           ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
