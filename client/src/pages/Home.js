@@ -8,6 +8,7 @@ import carded3 from "../images/carded3.png";
 import team from "../images/team.jpeg";
 import handing from "../images/handing.jpeg";
 import logo from "../images/logo.png";
+import hand from "../images/hand.jpeg";
 import { QUERY_PROFILES } from "../utils/queries";
 import "../index.css";
 
@@ -116,7 +117,7 @@ const Home = () => {
         </div>
         <div class="inner-circle">
           {/* <!-- ============== PROFILE PIC TO BE CHANGED LATER  ============= --> */}
-          <img src={carded3}  alt="card" className="card" />
+          <img src={hand} style = {{width: "100%"}} alt="card" className="card" />
         </div>
       </div>
     
