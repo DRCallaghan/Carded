@@ -411,23 +411,21 @@ END NORMALIZE CSS
 .example1 {
   align-self: flex-end;
   display: flex;
-  height:auto;
-  max-width:100%
 }
 
 .example2 {
   align-self: flex-start;
   padding-top: 20px;
   display: flex;
-  height:auto;
-  max-width:100%
 }
 
 .example3 {
   align-self: flex-end;
   display: flex;
-  height:auto;
-  max-width:100%
+}
+
+.img {
+  max-width: 100%;
 }
 
 /*     in depth section     */
@@ -450,7 +448,7 @@ END NORMALIZE CSS
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  color: #14397d;
+  color: #031b43;
   height: 100px;
   
   
@@ -466,7 +464,7 @@ END NORMALIZE CSS
 .in-depth-text p {
   display: flex;
   justify-content: center;
-  color: #448ab3;
+  color: #143976;
   line-height: 1.8;
   width: 33%;
 }
@@ -482,7 +480,7 @@ END NORMALIZE CSS
 .profile-area .outer-circle {
   width: 26rem;
   height: 26rem;
-  border: 1px solid #143976;;
+  border: 1px solid #031b43;
   border-radius: 50%;
   position: relative;
   z-index: -1;
@@ -1950,14 +1948,16 @@ label form [type='radio'] {
 @media screen and (max-width: 900px) {
   .examples {
     flex-direction: column;
+    /* overflow: scroll; */
   }
-  .example1{
-    height: 100%;
+
+  .example1 {
+   display: flex;
   }
-  .example2{
-    height: 100%;
+  
+  .img {
+   /* max-height: auto; */
+   max-height: 100%;
   }
-  .example3{
-    height: 100%;
-  }
+
 }
