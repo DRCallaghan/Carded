@@ -20,8 +20,6 @@ function Member() {
         const inputType = target.name;
         const inputValue = target.value;
 
-
-
         if (inputType === 'name') {
             setName(inputValue);
             return;
