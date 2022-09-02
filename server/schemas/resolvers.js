@@ -13,6 +13,9 @@ const resolvers = {
     profile: async (parent, { profileId }) => {
       return Profile.findOne({ _id: profileId }).populate('team');
     },
+    profileByName: async (parent, { profileName }) => {
+      return Profile.findOne({ name: profileName }).populate('team');
+    },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
       if (context.user) {
@@ -30,8 +33,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, phoneNumber, password }) => {
-      const profile = await Profile.create({ name, email, phoneNumber, password });
+    addProfile: async (parent, { name, email, phoneNumber, position, password }) => {
+      const profile = await Profile.create({ name, email, phoneNumber, position, password });
       const token = signToken(profile);
 
       return { token, profile };
@@ -77,14 +80,14 @@ const resolvers = {
       );
       return team;
     },
-    addMember: async (parent, { teamId, memberId }) => {
+    addMember: async (parent, { teamId, memberName }) => {
       const updatedTeam = await Team.findOneAndUpdate(
         { _id: teamId },
-        { $push: { members: memberId } },
+        { $push: { members: memberName } },
         { new: true },
       );
       await Profile.findOneAndUpdate(
-        { _id: memberId },
+        { name: memberName },
         { $push: { team: updatedTeam } }
       );
       return updatedTeam;

@@ -2,58 +2,72 @@ import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import modal from './modal.css';
+import { useQuery, useMutation } from '@apollo/client';
+import { ADD_MEMBER } from '../../utils/mutations';
+import { QUERY_PROFILE_BY_NAME } from '../../utils/queries';
 import { CollapsibleLabelDivider, LabelDivider } from "mui-label-divider";
-
+import Auth from '../../utils/auth';
 
 function Member() {
+    // state variables for whether to show the modal or close it
     const [show, setShow] = useState(false);
     const [open, setOpen] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [name, setName] = useState('')
-    const [position, setPosition] = useState('')
-    const [errorMessage, setErrorMessage] = useState('')
+    const [addMember, { error, data }] = useMutation(ADD_MEMBER);
+    const [formState, setFormState] = useState({ name: '', position: '' });
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         e.preventDefault();
-        const { target } = e;
-        const inputType = target.name;
-        const inputValue = target.value;
+        const { name, value } = e.target;
 
-        if (inputType === 'name') {
-            setName(inputValue);
-            return;
-        } else if (inputType === 'position') {
-            setPosition(inputValue);
-            return;
-        }
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
     };
 
     const handleBlur = (e) => {
         e.preventDefault();
 
-        const { target } = e;
-        const inputType = target.name;
-        const inputValue = target.value;
+        const { name, value } = e.target;
 
-        if ((inputType === 'name') && (!inputValue.length)) {
-            setErrorMessage('Please enter a team name')
-            console.log(setErrorMessage)
-        }
-        if ((inputType === 'position') && (!inputValue.length)) {
-            setErrorMessage('Please include your company')
-            console.log(setErrorMessage)
-        }
-    }
+        if ((name === 'name') && (!value.length)) {
+            setErrorMessage("Please enter your team member's full name.");
+            console.log(setErrorMessage);
+        };
+        if ((name === 'position') && (!value.length)) {
+            setErrorMessage("Please enter your team member's position.");
+            console.log(setErrorMessage);
+        };
+    };
 
-    const handleSubmit = (e) => {
+    const team = JSON.parse(localStorage.getItem('team'));
+    const teamId = team[0]._id;
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            await addMember({
+                variables: {
+                    ...formState,
+                    teamId: teamId
+                }
+            });
+        } catch (e) {
+            console.error(e);
+        };
+    };
 
-        setName('');
-        setPosition('');
-        setErrorMessage('');
-    }
-
+    const useSearch = async (e) => {
+        useQuery(
+            QUERY_PROFILE_BY_NAME,
+            {
+                variables: { profileName: formState.name }
+            }
+        );
+    };
 
     return (
         <>
@@ -63,39 +77,34 @@ function Member() {
             <Modal className={modal} show={show} onHide={handleClose}>
                 <Modal.Body>
                     <Form className='textbox'>
-                        <Form.Group  controlId="exampleForm.ControlInput1">
-                            <Form.Label value={name} className='team-info' onChange={handleChange} onBlur={handleBlur}>Add a Team Member</Form.Label>
+                        <Form.Group controlId="exampleForm.ControlInput1">
+                            <Form.Label className='team-info'>Add a Team Member</Form.Label>
                             <Form.Control className='input'
                                 type="text"
-                                placeholder="Name"
+                                placeholder="Member Name"
                                 autoFocus
+                                value={formState.name}
+                                name='name'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
                             />
                         </Form.Group>
-                        <Form.Group  controlId="exampleForm.ControlInput1">
-                            <Form.Label value={position} className='team-info' onChange={handleChange} onBlur={handleBlur}>Add a Position</Form.Label>
+                        <Form.Group controlId="exampleForm.ControlInput1">
+                            <Form.Label className='team-info'>What is their position?</Form.Label>
                             <Form.Control className='input'
                                 type="text"
                                 placeholder="Position"
                                 autoFocus
+                                value={formState.position}
+                                name='position'
+                                onChange={handleChange}
+                                onBlur={handleBlur}
                             />
                         </Form.Group>
                         <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label className='info'>
-                                Add Business Card Informtaion
-
-                                    <Form.Control className='additional-input'
-                                        type="text"
-                                        placeholder="Email"
-                                        autoFocus
-                                    />
-                                    <Form.Control className='additional-input'
-                                        type="text-box"
-                                        placeholder="Phone Number"
-                                        autoFocus
-                                    />
-                                    <div className='collapse'>
-                                    Additional Information
-                                <CollapsibleLabelDivider 
+                            <div className='collapse'>
+                                <Form.Label className='team-info'>Additional Information</Form.Label>
+                                <CollapsibleLabelDivider
                                     label={`${open ? "CLOSE" : "EXPAND"} `}
                                     open={open}
                                     onClick={() => setOpen((x) => !x)}
@@ -111,14 +120,13 @@ function Member() {
                                         autoFocus
                                     />
                                 </CollapsibleLabelDivider>
-                                </div>
-                            </Form.Label>
+                            </div>
                         </Form.Group>
                         <div>
                             {errorMessage && (<div className="error-text">{errorMessage}</div>)}
                         </div>
                         <Modal.Footer className='buttons '>
-                        <Button className='button-save btn btn-light m-2' variant="primary" onClick={handleClose} onSubmit={handleSubmit}>
+                            <Button className='button-save btn btn-light m-2' variant="primary" onClick={handleSubmit}>
                                 Add Member
                             </Button>
                             <Button className='button-close btn btn-danger m-2' variant="secondary" onClick={handleClose}>
