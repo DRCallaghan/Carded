@@ -4,12 +4,12 @@ import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import CardExample from '../components/Bootstrap/card';
 import Drop from '../components/Bootstrap/dropdown';
-import Footer from '../components/Footer';
 import SearchModal from '../components/Bootstrap/searchModal';
 import Header from "../components/Header";
 import Auth from '../utils/auth';
 import Member from '../components/Bootstrap/addMemberModal';
 import Profile from './Profile'
+import HomeFooter from '../components/Footer/homefoot'
 
 const TeamPage = () => {
     const logout = (event) => {
@@ -53,13 +53,32 @@ const TeamPage = () => {
         );
     }
 
+const styles = {
+    navbarStyle:{
+        background: '#14397d',
+      height: '10vh',
+      width: '100%',
+      position: 'sticky',
+      top: '0',
+      boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
 
+    },
+    headerStyle:{
+     background: '#d7eaf3'
+    },
+    paddingStyle:{
+        background: "#77b5d9",
+        height: '2vh',
+        width: '100%',
+        marginBottom: '18px'
+    }
+}
 
 
     return (
         <div>
-            <nav className='header'>
-                <Link className="btn btn-md btn-light m-2" to='/profiles'>
+            <nav style={styles.navbarStyle} className='header'>
+                <Link  className="btn btn-md btn-light m-2" to='/profiles'>
                     Back to Profile
                 </Link>
                 <button className="btn btn-md btn-light m-2" onClick={logout}>
@@ -69,25 +88,39 @@ const TeamPage = () => {
                     <Member />
                 </div>
             </nav>
-            <div className="flex-row justify-center">
-                <div className="col-12 col-md-10 my-3">
+            {/* <div className="flex-row justify-center">
+                <div className="col-12 col-lg-10 my-3">
 
                 </div>
-            </div>
-
-            <div className="flex-row justify-center">
+            </div> */}
+            <div style={styles.headerStyle} className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3 text-center">
                     <h1>{team[0].name}</h1>
                 </div>
-                <div className="col-12 col-md-10 my-3 text-left">
-                    <h3>{team[0].address}</h3>
+                <div className="flex-row justify-content my-3 text-left">
+                    <h4 className='col-12'>{team[0].address}</h4>
                 </div>
-                <div className="col-12 col-md-10 my-3 text-right">
-                    <h3>{team[0].website}</h3>
+                <div className="flex-row justify-content my-3 text-right">
+                    <h4 className='col-12'>{team[0].website}</h4>
                 </div>
             </div>
+            <div style={styles.paddingStyle}>
 
-            <Footer />
+            </div>
+            <container>
+               <div>
+                <CardExample/>
+               </div>
+            </container>
+            <div style={styles.paddingStyle}>
+
+            </div>
+            <container>
+                 <div>
+                <CardExample/>
+               </div>
+            </container>
+            <HomeFooter/>
         </div>
     );
 };

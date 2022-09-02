@@ -71,7 +71,7 @@ function Member() {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="btn btn-md btn-light m-2" onClick={handleShow}>
                 Add a Team Member
             </Button>
             <Modal className={modal} show={show} onHide={handleClose}>

@@ -72,7 +72,7 @@ function Team() {
     // returning the add team button which displays the modal with form inside
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="btn btn-md btn-light m-2" onClick={handleShow}>
                 Add Team
             </Button>
             <Modal show={show} onHide={handleClose}>
