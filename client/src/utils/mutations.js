@@ -1,14 +1,15 @@
 import { gql } from '@apollo/client';
 
 export const ADD_PROFILE = gql`
-  mutation addProfile($name: String!, $email: String!, $phoneNumber: String!, $password: String!) {
-    addProfile(name: $name, email: $email, phoneNumber: $phoneNumber, password: $password) {
+  mutation addProfile($name: String!, $email: String!, $phoneNumber: String!, $position: String!, $password: String!) {
+    addProfile(name: $name, email: $email, phoneNumber: $phoneNumber, position: $position, password: $password) {
       token
       profile {
         _id
         name
         email
         phoneNumber
+        position
       }
     }
   }
@@ -69,8 +70,8 @@ export const UPDATE_TEAM_WEBSITE = gql`
 `;
 
 export const ADD_MEMBER = gql`
-  mutation addMember($teamId: ID!, $memberId: ID!) {
-    addMember(teamId: $teamId, memberId: $memberId) {
+  mutation addMember($teamId: ID!, $memberName: String!) {
+    addMember(teamId: $teamId, memberName: $memberName) {
       _id
       name
       address

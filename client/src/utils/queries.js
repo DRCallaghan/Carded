@@ -36,8 +36,29 @@ export const QUERY_SINGLE_PROFILE = gql`
           _id
         }
       }
+    }
+  }
+`;
 
-
+export const QUERY_PROFILE_BY_NAME = gql`
+  query profileByName($profileName: String!) {
+    profileByName(profileName: $profileName) {
+      _id
+      name
+      email
+      phoneNumber
+      team {
+        _id
+        name
+        address
+        website
+        manager {
+          _id
+        }
+        members {
+          _id
+        }
+      }
     }
   }
 `;
