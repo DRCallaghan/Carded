@@ -411,6 +411,7 @@ END NORMALIZE CSS
 .example1 {
   align-self: flex-end;
   display: flex;
+  padding-bottom: 20px;
 }
 
 .example2 {
@@ -422,10 +423,13 @@ END NORMALIZE CSS
 .example3 {
   align-self: flex-end;
   display: flex;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .img {
-  max-width: 100%;
+  max-width: 90%;
+  border: 3px solid #14397d;
 }
 
 /*     in depth section     */
@@ -504,7 +508,6 @@ END NORMALIZE CSS
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 /* positions the static icons around the picture */
@@ -587,7 +590,7 @@ h4,
 h5,
 h6,
 a {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Open Sans';
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -1323,7 +1326,7 @@ a:hover {
 }
 
 .card {
-  border: 10px solid #14397d;
+  border: 3px solid #14397d;
   border-radius: 25px;
   box-shadow: 0 0px 10px 5px rgba(0,0,0,.2);
   margin-bottom: 1rem;
@@ -1953,7 +1956,6 @@ label form [type='radio'] {
 @media screen and (max-width: 900px) {
   .examples {
     flex-direction: column;
-    /* overflow: scroll; */
   }
 
   .example1 {
@@ -1961,8 +1963,15 @@ label form [type='radio'] {
   }
   
   .img {
-   /* max-height: auto; */
-   max-height: 100%;
+   max-width: 250px;
+  }
+
+  .summary {
+    flex-direction: column-reverse;
+  }
+
+  .summary2 {
+    flex-direction: column;
   }
 
 }
