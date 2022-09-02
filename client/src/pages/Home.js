@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import Header from "../components/Header";
 import ProfileList from "../components/ProfileList";
-import carded1 from "../images/carded1.png";
+import carded01 from "../images/carded01.png";
 import carded2 from "../images/carded2.png";
 import carded3 from "../images/carded3.png";
 import team from "../images/team.jpeg";
@@ -58,7 +58,7 @@ const Home = () => {
       <div className="examples">
       
         <div className="example1">
-          <img src={carded1} alt="card" className="img" />
+          <img src={carded01} alt="card" className="img" />
         </div>
 
         <div className="example2">
@@ -96,10 +96,10 @@ const Home = () => {
       <div class="profile-area">
         <div class="outer-circle">
         
-          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="" /></span>
         
 
         </div>
