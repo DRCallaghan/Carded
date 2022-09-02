@@ -52,7 +52,7 @@ const Signup = () => {
 
   const styles = {
     borderStyle: {
-      paddingTop: '15vh',
+      paddingTop: '10vh',
       borderRadius: '50px',
       paddingRight: '2vw'
     },
@@ -99,6 +99,14 @@ const Signup = () => {
                   name="email"
                   type="email"
                   value={formState.email}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Your Business Number"
+                  name="phoneNumber"
+                  type="text"
+                  value={formState.phoneNumber}
                   onChange={handleChange}
                 />
                 <input
