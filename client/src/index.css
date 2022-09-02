@@ -508,7 +508,6 @@ END NORMALIZE CSS
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 /* positions the static icons around the picture */
@@ -591,7 +590,7 @@ h4,
 h5,
 h6,
 a {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Open Sans';
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -1960,6 +1959,14 @@ label form [type='radio'] {
   
   .img {
    max-width: 250px;
+  }
+
+  .summary {
+    flex-direction: column-reverse;
+  }
+
+  .summary2 {
+    flex-direction: column;
   }
 
 }

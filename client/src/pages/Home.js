@@ -11,7 +11,6 @@ import logo from "../images/logo.png";
 import hand from "../images/hand.jpeg";
 import { QUERY_PROFILES } from "../utils/queries";
 import "../index.css";
-
 import Footer from "../components/Footer";
 
 import HomeFooter from "../components/Footer/homefoot";
@@ -47,11 +46,12 @@ const Home = () => {
         </div>
 
         <div className="summary-text2">
-          <h5 style={{lineHeight: "1.8", maxHeight: "100%", fontFamily:"Poppins", color:"#143976"}}>
+          <h5 style={{lineHeight: "1.8", maxHeight: "100%",  color:"#143976"}}>
             Teams can be used to organize, plan, or structure any business or
             social goal you may have - with business cards generated to
             represent your Teams.
           </h5>
+         
         </div>
       </div>
 
@@ -78,13 +78,13 @@ const Home = () => {
         </div>
 
         <div className="in-depth-title">
-          <p> Just Sign Up </p>
+          <p style ={{paddingLeft:"30px"}}> Just Sign Up </p>
           <p> Join Or Create A Team </p>
          
         </div>
         
         <div className="in-depth-text">
-          <p>Simply login or sign up to get started</p>
+          <p>Simply login or sign up to get started.</p>
           <p>
             Once you are in, you can join an existing group if you have an
             invitation from the team manager. No invitation? Thats ok, you can
@@ -118,7 +118,7 @@ const Home = () => {
 
         <div className="in-depth-title">
           <p> Build A Card </p>
-          <p> Network </p>
+          <p style ={{paddingRight:"10px"}}> Network </p>
         </div>
         
         <div className="in-depth-text">
@@ -133,13 +133,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="managers"><h4 style={{color:"#031b43"}}>Team Managers</h4></div>
+      <div className="managers"><h4 style={{color:"#143976"}}>Team Managers</h4></div>
       <div className="management">
        
-        <p style={{width: "25%", color:"#143976"}}>
+        <p style={{width: "25%", color:"#143976",  lineHeight: "1.8"}}>
           As a manager you can send out invitations to new team members, design new business cards, and create new teams.
         </p>
-        <p style={{width: "25%", color:"#143976"}}>
+        <p style={{width: "25%", color:"#143976", lineHeight: "1.8"}}>
           You can also network with other team managers, build team connections, and increase your company or team visibility.
         </p>
     
