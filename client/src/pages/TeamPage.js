@@ -37,6 +37,7 @@ const TeamPage = () => {
     }
 
     const team = profile.team;
+    localStorage.setItem('team', JSON.stringify(team));
     if (!team[0]?.name) {
         return (
             <div>
@@ -60,12 +61,12 @@ const TeamPage = () => {
             <nav className='header'>
                 <Link className="btn btn-md btn-light m-2" to='/profiles'>
                     Back to Profile
-                    </Link>
+                </Link>
                 <button className="btn btn-md btn-light m-2" onClick={logout}>
                     Logout
                 </button>
                 <div className='m-2'>
-                <Member />
+                    <Member />
                 </div>
             </nav>
             <div className="flex-row justify-center">

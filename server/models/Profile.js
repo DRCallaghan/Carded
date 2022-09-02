@@ -22,7 +22,13 @@ const profileSchema = new Schema(
     },
     phoneNumber: {
       type: String,
-      match: [/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, 'Must be a valid phone number!'],
+      required: true,
+      unique: true,
+      // match: [/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, 'Must be a valid phone number!'],
+    },
+    position: {
+      type: String,
+      required: true
     },
     team: [
       {

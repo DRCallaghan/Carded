@@ -87,6 +87,7 @@ function Team() {
                                 onBlur={handleBlur}
                                 onChange={handleChange}
                                 value={formState.name}
+                                autoFocus
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -98,6 +99,7 @@ function Team() {
                                 onBlur={handleBlur}
                                 onChange={handleChange}
                                 value={formState.address}
+                                autoFocus
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -109,6 +111,7 @@ function Team() {
                                 onBlur={handleBlur}
                                 onChange={handleChange}
                                 value={formState.website}
+                                autoFocus
                             />
 
                         </Form.Group>

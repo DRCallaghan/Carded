@@ -112,6 +112,14 @@ const Signup = () => {
                   />
                   <input
                     className="form-input"
+                    placeholder="Your Position"
+                    name="position"
+                    type="text"
+                    value={formState.position}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input"
                     placeholder="Enter Password"
                     name="password"
                     type="password"
