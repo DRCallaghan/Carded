@@ -49,16 +49,39 @@ border-radius: 25px;
    font-weight: bolder;
 }
 
+.team-info{
+    padding: 10px;
+   font-weight: bolder;
+   
+}
+
 .input{
     background-color: #d7eaf3;
     border-radius: 8px;
     align-items: center;
     padding: 7px;
+    width: 20.9vw;
+}
+
+.additional-input{
+    background-color: #d7eaf3;
+    border-radius: 8px;
+    align-items: center;
+    padding: 7px;
+    margin: 10px;
     width: 20vw;
+}
+
+.collapse{
+    margin: 20px;
 }
 
 .mb-3{
     text-shadow: #888;
+}
+
+.team-button{
+    display: flex;
 }
 
 @media screen {

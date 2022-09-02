@@ -13,7 +13,7 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import TeamPage from './pages/TeamPage';
-import Header from './components/Header';
+
 
 
 const httpLink = createHttpLink({
