@@ -76,13 +76,13 @@ const TeamPage = () => {
 
             <div className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3 text-center">
-                    {/* <h1>{team[0].name}</h1> */}
+                    <h1>{team[0].name}</h1>
                 </div>
                 <div className="col-12 col-md-10 my-3 text-left">
-                    {/* <h3>{team[0].address}</h3> */}
+                    <h3>{team[0].address}</h3>
                 </div>
                 <div className="col-12 col-md-10 my-3 text-right">
-                    {/* <h3>{team[0].website}</h3> */}
+                    <h3>{team[0].website}</h3>
                 </div>
             </div>
 

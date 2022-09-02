@@ -1122,6 +1122,11 @@ a:hover {
   color: #14397d !important;
 }
 
+.text-sign-in {
+  color: #14397d !important;
+  text-align: center;
+}
+
 .text-dark {
   color: #1a1a1a !important;
 }
@@ -1155,8 +1160,13 @@ a:hover {
   background-color: #14397d !important;
 }
 
+.bg-custom {
+  border-radius: 12px 12px 0px 0px;
+}
+
 .bg-dark {
   background-color: #1a1a1a !important;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .bg-white {
@@ -1310,8 +1320,11 @@ a:hover {
 }
 
 .card {
-  border: 1px solid #14397d;
+  border: 10px solid #14397d;
+  border-radius: 25px;
+  box-shadow: 0 0px 10px 5px rgba(0,0,0,.2);
   margin-bottom: 1rem;
+  
 }
 
 .card .card-header {
@@ -1322,6 +1335,7 @@ a:hover {
 
 .card .card-body {
   padding: 0.375rem;
+  
 }
 
 .card .card-footer {
