@@ -1,5 +1,5 @@
 import React from 'react';
-import placeholder from '../../images/placeholder.png';
+import logo from '../../images/logo.png';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './footer.css'
 
@@ -44,7 +44,7 @@ const HomeFooter = () => {
       </div>
 
       <div className='logo'>
-        <img style={styles.logoIcon} src={placeholder} alt="placeholder" className="placeholder" />
+        <img style={styles.logoIcon} src={logo} alt="logo" className="logo" />
         <h4 style={styles.logoStyle}>Carded</h4>
       </div>
 

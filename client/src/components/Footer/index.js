@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import "./footer.css"
-import placeholder from '../../images/placeholder.png';
+import logo from '../../images/logo.png';
 
 const Footer = () => {
   const styles = {
@@ -22,14 +22,14 @@ const Footer = () => {
       paddingTop: '10px',
       paddingBottom: '10px',
       fontSize: 'max(2.5vh + 1.5vw)',
-      textShadow: ' 2px 2px  rgba(0,0,0,.2)',
+      textShadow: '2px 2px  rgba(0,0,0,.2)',
       color: '#14397d',
     },
     logoIcon: {
       objectFit: 'contain',
       width: '10vw',
       marginTop: '7px',
-      minWidth: '120px'
+      fontSize: 'min(2.5vh + 1.5vw)',
     },
     
   };
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <div className='logo'>
-        <img style={styles.logoIcon} src={placeholder} alt="placeholder" className="placeholder" />
+        <img style={styles.logoIcon} src={logo} alt="logo" className="logo" />
         <h4 style={styles.logoStyle}>Carded</h4>
       </div>
 

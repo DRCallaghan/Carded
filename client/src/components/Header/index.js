@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css'
 import Auth from '../../utils/auth';
-import placeholder from '../../images/placeholder.png';
+import logo from '../../images/logo.png';
 
 
 const Header = () => {
@@ -50,7 +50,7 @@ const Header = () => {
           Carded
           </h1> 
         </div>
-        <img style={styles.logoIcon} src={placeholder} alt="placeholder" className="placeholder" />
+        <img style={styles.logoIcon} src={logo} alt="logo" className="logo" />
         <div>
           {Auth.loggedIn() ? (
             <>

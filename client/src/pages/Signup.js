@@ -10,6 +10,7 @@ const Signup = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
+    phoneNumber: '',
     password: '',
     confirm: ''
   });
@@ -52,9 +53,9 @@ const Signup = () => {
 
   const styles = {
     borderStyle: {
-      paddingTop: '10vh',
+      paddingTop: '5vh',
       borderRadius: '50px',
-      paddingRight: '2vw'
+      paddingRight: '2vw',
     },
     buttonStyle: {
       margin: 'auto',
@@ -103,7 +104,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your Business Number"
+                  placeholder="Business Phone Number"
                   name="phoneNumber"
                   type="text"
                   value={formState.phoneNumber}
