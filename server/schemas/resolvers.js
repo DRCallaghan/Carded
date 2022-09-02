@@ -69,8 +69,8 @@ const resolvers = {
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
     },
-    addTeam: async (parent, { name, managerId }) => {
-      const team = await Team.create({ name: name, manager: { _id: managerId } });
+    addTeam: async (parent, { name, address, website, managerId }) => {
+      const team = await Team.create({ name: name, address: address, website: website, manager: { _id: managerId } });
       await Profile.findOneAndUpdate(
         { _id: managerId },
         { $push: { team: team } }
