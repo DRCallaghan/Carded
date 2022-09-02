@@ -427,6 +427,10 @@ END NORMALIZE CSS
 }
 
 
+
+
+
+
 /*     in depth section     */
 .in-depth {
   display: flex;
@@ -467,6 +471,79 @@ END NORMALIZE CSS
   line-height: 1.8;
   width: 33%;
 }
+
+.profile-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* the outer circle where the icons attach and animation there */
+.profile-area .outer-circle {
+  width: 26rem;
+  height: 26rem;
+  border: 1px solid #143976;;
+  border-radius: 50%;
+  position: relative;
+  animation: move 30s linear infinite;
+}
+
+/* part of the animation */
+@keyframes move {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* styles the outer span where the icons are */
+.profile-area .outer-circle span {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  /* background: #143976; */
+  /* color: #143976; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 0 1rem #143976; */
+}
+
+/* positions the static icons around the picture */
+.profile-area .outer-circle span:nth-child(1) {
+  left: calc(50% - 2rem);
+  top: -2rem;
+  transform: rotate(180deg);
+}
+
+.profile-area .outer-circle span:nth-child(2) {
+  right: -2rem;
+  top: calc(50% - 2rem);
+  transform: rotate(270deg);
+}
+
+.profile-area .outer-circle span:nth-child(3) {
+  left: -2rem;
+  top: calc(50% - 2rem);
+  transform: rotate(90deg);
+}
+
+.profile-area .outer-circle span:nth-child(4) {
+  left: calc(50% - 2rem);
+  bottom: -2rem;
+}
+
+/* does the picture in the animation  */
+.profile-area .inner-circle {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
 
 /*       management section       */
 
