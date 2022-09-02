@@ -411,20 +411,23 @@ END NORMALIZE CSS
 .example1 {
   align-self: flex-end;
   display: flex;
-  height:auto
+  height:auto;
+  max-width:100%
 }
 
 .example2 {
   align-self: flex-start;
   padding-top: 20px;
   display: flex;
-  height:auto
+  height:auto;
+  max-width:100%
 }
 
 .example3 {
   align-self: flex-end;
   display: flex;
   height:auto;
+  max-width:100%
 }
 
 /*     in depth section     */
@@ -1925,5 +1928,20 @@ label form [type='radio'] {
   }
   .align-content-center-xl {
     align-content: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .examples {
+    flex-direction: column;
+  }
+  .example1{
+    height: 100%;
+  }
+  .example2{
+    height: 100%;
+  }
+  .example3{
+    height: 100%;
   }
 }
