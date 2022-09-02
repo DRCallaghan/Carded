@@ -53,9 +53,9 @@ const Signup = () => {
 
   const styles = {
     borderStyle: {
-      paddingTop: '10vh',
+      paddingTop: '5vh',
       borderRadius: '50px',
-      paddingRight: '2vw'
+      paddingRight: '2vw',
     },
     buttonStyle: {
       margin: 'auto',
@@ -74,6 +74,7 @@ const Signup = () => {
 
   return (
     <div style={styles.goBack} className='backBtn'>
+
       <BackButton />
       <main style={styles.borderStyle} className="flex-row justify-center mb-4">
         <div className="">
@@ -126,6 +127,7 @@ const Signup = () => {
                     value={formState.confirm}
                     onChange={handleChange}
                   />
+
 
                   <button style={styles.buttonStyle}
                     className="btn btn-light"
