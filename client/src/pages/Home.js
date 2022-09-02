@@ -37,10 +37,10 @@ const Home = () => {
       <div className="summary">
 
         <div className="summary-text">
-          <h4 style={{lineHeight: "1.8"}}>
+          <h5 style={{lineHeight: "1.8", fontFamily:"Poppins"}}>
             Carded is your online solution to creating teams of individuals
             based upon any grouping that fits your needs.
-          </h4>
+          </h5>
         </div>
         <div className="summary1-pic">
           <img src={team} style={{maxWidth: "100%"}} alt="card" className="card" />
@@ -49,15 +49,15 @@ const Home = () => {
 
       <div className="summary2">
         <div className="summary2-pic">
-          <img src={handing} style={{maxWidth: "100%"}} alt="card" className="card" />
+          <img src={handing} style={{maxWidth: "100%", }} alt="card" className="card" />
         </div>
 
         <div className="summary-text2">
-          <h4 style={{lineHeight: "1.8", maxHeight: "100%"}}>
+          <h5 style={{lineHeight: "1.8", maxHeight: "100%", fontFamily:"Poppins"}}>
             Teams can be used to organize, plan, or structure any business or
             social goal you may have - with business cards generated to
             represent your Teams.
-          </h4>
+          </h5>
         </div>
       </div>
 
@@ -138,19 +138,15 @@ const Home = () => {
           </p>
         </div>
       </div>
+
+      <div className="managers"><h4>Team Managers</h4></div>
       <div className="management">
        
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
+        <p style={{width: "25%"}}>
+          As a manager you can send out invitations to new team members, design new business cards, and create new teams.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
+        <p style={{width: "25%"}}>
+          You can also network with other team managers, build team connections, and increase your company or team visibility.
         </p>
     
        
