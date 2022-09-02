@@ -17,15 +17,16 @@ import HomeFooter from "../components/Footer/homefoot";
 
 
 const Home = () => {
-  const styles = {
-    exampleStyle: {
-      width: '100%',
-      height: '100%'
-    },
-  };
+  // const styles = {
+  //   exampleStyle: {
+  //     width: '100%',
+  //     height: '100%'
+  //   },
+  // };
 
   return (
-    <main style={styles.homeStyle}>
+    <main>
+    {/* <main style={styles.homeStyle}> */}
       <Header/>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3"></div>
@@ -34,23 +35,23 @@ const Home = () => {
       <div className="summary">
 
         <div className="summary-text">
-          <h4>
+          <h4 style={{lineHeight: "1.8"}}>
             Carded is your online solution to creating teams of individuals
             based upon any grouping that fits your needs.
           </h4>
         </div>
         <div className="summary1-pic">
-          <img src={team} alt="card" className="card" />
+          <img src={team} style={{maxWidth: "100%"}} alt="card" className="card" />
         </div>
       </div>
 
       <div className="summary2">
         <div className="summary2-pic">
-          <img src={handing} alt="card" className="card" />
+          <img src={handing} style={{maxWidth: "100%"}} alt="card" className="card" />
         </div>
 
         <div className="summary-text2">
-          <h4>
+          <h4 style={{lineHeight: "1.8"}}>
             Teams can be used to organize, plan, or structure any business or
             social goal you may have - with business cards generated to
             represent your Teams.
@@ -59,16 +60,17 @@ const Home = () => {
       </div>
 
       <div className="examples">
+      
         <div className="example1">
-          <img style={styles.exampleStyle} src={carded1} alt="card" className="card" />
+          <img src={carded1} style={{maxWidth: "100%"}} alt="card" className="card" />
         </div>
 
         <div className="example2">
-          <img style={styles.exampleStyle} src={carded2} alt="card" className="card" />
+          <img src={carded2} style={{maxWidth: "100%"}} alt="card" className="card" />
         </div>
 
         <div className="example3">
-          <img style={styles.exampleStyle} src={carded3} alt="card" className="card" />
+          <img src={carded3} style={{maxWidth: "100%"}} alt="card" className="card" />
         </div>    
        
       </div>
@@ -115,62 +117,9 @@ const Home = () => {
           laborum praesentium, neque provident reiciendis harum recusandae
           excepturi aliquam repellat laboriosam facere.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Maxime, ratione. Qui quod, dolores,
-          veritatis itaque voluptates quaerat odit laborum praesentium, neque
-          provident reiciendis harum recusandae excepturi aliquam repellat
-          laboriosam facere.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Maxime, ratione. Qui quod, dolores,
-          veritatis itaque voluptates quaerat odit laborum praesentium, neque
-          provident reiciendis harum recusandae excepturi aliquam repellat
-          laboriosam facere.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
-        </p>
+    
+       
+      
       </div>
       <HomeFooter/>
     </main>
