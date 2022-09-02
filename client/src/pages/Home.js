@@ -51,7 +51,7 @@ const Home = () => {
         </div>
 
         <div className="summary-text2">
-          <h4 style={{lineHeight: "1.8"}}>
+          <h4 style={{lineHeight: "1.8", maxHeight: "100%"}}>
             Teams can be used to organize, plan, or structure any business or
             social goal you may have - with business cards generated to
             represent your Teams.
