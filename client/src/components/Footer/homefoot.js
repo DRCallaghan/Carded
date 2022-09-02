@@ -1,5 +1,5 @@
 import React from 'react';
-
+import logo from '../../images/logo.png';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './footer.css'
 
@@ -9,14 +9,24 @@ const HomeFooter = () => {
       bottom: '0',
       display: 'flex',
       justifyContent: "space-between",
-      height: '15vh',
+      height: '20vh',
       fontSize: '2.87vw',
       color: '#14397d',
       background: 'linear-gradient(20deg, #77b5d9, #d7eaf3, #d7eaf3,#77b5d9)',
     },
     logoStyle: {
-      fontSize: '2.87vw',
-      color: '#14397d'
+      position: 'relative',
+      paddingTop: '10px',
+      paddingBottom: '10px',
+      fontSize: 'max(2.5vh + 1.5vw)',
+      textShadow: ' 2px 2px  rgba(0,0,0,.2)',
+      color: '#14397d',
+    },
+    logoIcon: {
+      objectFit: 'contain',
+      width: '10vw',
+      marginTop: '7px',
+      minWidth: '120px'
     },
   };
 
@@ -32,7 +42,12 @@ const HomeFooter = () => {
           <p>pbnj1</p>
         </div>
       </div>
-      <h4>&copy; {new Date().getFullYear()} - Carded</h4>
+
+      <div className='logo'>
+        <img style={styles.logoIcon} src={logo} alt="logo" className="logo" />
+        <h4 style={styles.logoStyle}>Carded</h4>
+      </div>
+
       <div className='center'>
         <div><a href='https://github.com/Ckratz17'><FaGithub /></a><a href='https://www.linkedin.com/in/christopher-kratz-2a0714247/'><FaLinkedin /></a>
           <p>Ckratz17</p>
