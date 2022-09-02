@@ -4,7 +4,6 @@ import { Modal, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { ADD_TEAM } from '../../utils/mutations';
-import modal from './modal.css';
 import Auth from '../../utils/auth';
 
 
@@ -76,7 +75,7 @@ function Team() {
             <Button variant="primary" onClick={handleShow}>
                 Add Team
             </Button>
-            <Modal className={modal} show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose}>
                 <Modal.Body>
                     <Form className='textbox'>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
