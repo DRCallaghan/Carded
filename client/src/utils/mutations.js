@@ -26,8 +26,8 @@ export const ADD_PHONE = gql`
 `;
 
 export const ADD_TEAM = gql`
-  mutation addTeam($name: String!, $managerId: ID!) {
-    addTeam(name: $name, managerId: $managerId) {
+  mutation addTeam($name: String!, $address: String!, $website: String!, $managerId: ID!) {
+    addTeam(name: $name, address: $address, website: $website, managerId: $managerId) {
       _id
       name
       address
