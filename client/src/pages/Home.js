@@ -7,6 +7,7 @@ import carded2 from "../images/carded2.png";
 import carded3 from "../images/carded3.png";
 import team from "../images/team.jpeg";
 import handing from "../images/handing.jpeg";
+import logo from "../images/logo.png";
 import { QUERY_PROFILES } from "../utils/queries";
 import "../index.css";
 
@@ -102,6 +103,25 @@ const Home = () => {
           </p>
         </div>
       </div>
+
+      <div class="profile-area">
+        <div class="outer-circle">
+          {/* <!-- ============== FLOATING ICONS TO BE CHANGED LATER ======= --> */}
+          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
+          {/* <span class="material-symbols-sharp">javascript</span> */}
+
+        </div>
+        <div class="inner-circle">
+          {/* <!-- ============== PROFILE PIC TO BE CHANGED LATER  ============= --> */}
+          <img src={carded3}  alt="card" className="card" />
+        </div>
+      </div>
+    
+
+      
       <div className="management">
        
         <p>
