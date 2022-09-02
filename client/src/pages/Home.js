@@ -37,10 +37,10 @@ const Home = () => {
       <div className="summary">
 
         <div className="summary-text">
-          <h4 style={{lineHeight: "1.8"}}>
+          <h5 style={{lineHeight: "1.8", fontFamily:"Poppins"}}>
             Carded is your online solution to creating teams of individuals
             based upon any grouping that fits your needs.
-          </h4>
+          </h5>
         </div>
         <div className="summary1-pic">
           <img src={team} style={{maxWidth: "100%"}} alt="card" className="card" />
@@ -49,15 +49,15 @@ const Home = () => {
 
       <div className="summary2">
         <div className="summary2-pic">
-          <img src={handing} style={{maxWidth: "100%"}} alt="card" className="card" />
+          <img src={handing} style={{maxWidth: "100%", }} alt="card" className="card" />
         </div>
 
         <div className="summary-text2">
-          <h4 style={{lineHeight: "1.8", maxHeight: "100%"}}>
+          <h5 style={{lineHeight: "1.8", maxHeight: "100%", fontFamily:"Poppins"}}>
             Teams can be used to organize, plan, or structure any business or
             social goal you may have - with business cards generated to
             represent your Teams.
-          </h4>
+          </h5>
         </div>
       </div>
 
@@ -79,63 +79,74 @@ const Home = () => {
 
       <div className="details">
         <div className="in-depth">
-          <p>1. </p>
-          <p>2. </p>
-          <p>3. </p>
+          <p>1 </p>
+          <p>2 </p>      
         </div>
 
         <div className="in-depth-title">
           <p> Just Sign Up </p>
           <p> Join Or Create A Team </p>
-          <p> Build A Card. </p>
+         
         </div>
         
         <div className="in-depth-text">
           <p>Simply login or sign up to get started</p>
           <p>
-            Once you are in you can join an existing group if you have an
+            Once you are in, you can join an existing group if you have an
             invitation from the team manager. No invitation? Thats ok, you can
             form your own team!
-          </p>
-          <p>
-            Once you are apart of a team you will recieve a business card
-            associated with that team, or you can design your own personal card
-            if you started your won team.{" "}
           </p>
         </div>
       </div>
 
       <div class="profile-area">
         <div class="outer-circle">
-          {/* <!-- ============== FLOATING ICONS TO BE CHANGED LATER ======= --> */}
+        
           <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
           <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
           <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
           <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="card" /></span>
-          {/* <span class="material-symbols-sharp">javascript</span> */}
+        
 
         </div>
         <div class="inner-circle">
-          {/* <!-- ============== PROFILE PIC TO BE CHANGED LATER  ============= --> */}
+         
           <img src={hand} style = {{width: "100%"}} alt="card" className="card" />
         </div>
       </div>
     
 
-      
+      <div className="details">
+        <div className="in-depth">
+          <p>3 </p>
+          <p>4 </p>
+        </div>
+
+        <div className="in-depth-title">
+          <p> Build A Card </p>
+          <p> Network </p>
+        </div>
+        
+        <div className="in-depth-text">
+          <p>
+            Once you are apart of a team you will recieve a business card
+            associated with that team, or you can design your own personal card
+            if you started your won team.
+          </p>
+          <p>
+            Now you can organize or expanding your team and network with other teams!
+          </p>
+        </div>
+      </div>
+
+      <div className="managers"><h4>Team Managers</h4></div>
       <div className="management">
        
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
+        <p style={{width: "25%"}}>
+          As a manager you can send out invitations to new team members, design new business cards, and create new teams.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          ratione. Qui quod, dolores, veritatis itaque voluptates quaerat odit
-          laborum praesentium, neque provident reiciendis harum recusandae
-          excepturi aliquam repellat laboriosam facere.
+        <p style={{width: "25%"}}>
+          You can also network with other team managers, build team connections, and increase your company or team visibility.
         </p>
     
        
