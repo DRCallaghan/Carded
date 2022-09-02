@@ -1,37 +1,52 @@
+import { useMutation } from '@apollo/client';
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
+import { ADD_TEAM } from '../../utils/mutations';
 import modal from './modal.css'
+
 
 function Team() {
     const [show, setShow] = useState(false);
-
+    const [addTeam, {error, data }] = useMutation(ADD_TEAM)
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [name, setName] = useState('')
-    const [address, setAddress] = useState('')
-    const [website, setWebsite] = useState('')
+    const [formState, setFormState] = useState({ name: '', address: '', website: ''})
     const [errorMessage, setErrorMessage] = useState('')
 
     const handleChange = (e) => {
         e.preventDefault();
-        const { target } = e;
-        const inputType = target.name;
-        const inputValue = target.value;
+        const { name, value } = e.target
 
+        setFormState({
+            ...formState,
+            [name]: value,
+        })
 
-
-        if (inputType === 'name') {
-            setName(inputValue);
-            return;
-        } else if (inputType === 'address') {
-            setAddress(inputValue);
-            return;
-        } else if (inputType === 'website') {
-            setWebsite(inputValue);
-            return;
-        }
     };
+
+    const navigate = useNavigate()
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(formState)
+        try {
+             await addTeam({
+                variables: { ...formState}
+            })
+        } catch (e) {
+            console.error(e)
+        }
+        navigate('/team')
+
+       setFormState({
+        name: '',
+        email: '',
+        website: '',
+        })
+        setErrorMessage('');
+    }
 
     const handleBlur = (e) => {
         e.preventDefault();
@@ -54,16 +69,6 @@ function Team() {
         }
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setName('');
-        setAddress('');
-        setWebsite('');
-        setErrorMessage('');
-    }
-
-
     return (
         <>
             <Button variant="primary" onClick={handleShow}>
@@ -71,9 +76,9 @@ function Team() {
             </Button>
             <Modal className={modal} show={show} onHide={handleClose}>
                 <Modal.Body>
-                    <Form className='textbox'>
+                    <Form onSubmit={handleSubmit} className='textbox'>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label value={name} className='info' onChange={handleChange} onBlur={handleBlur}>Add your Team name</Form.Label>
+                            <Form.Label value={formState.name} className='info' onChange={handleChange} onBlur={handleBlur}>Add your Team name</Form.Label>
                             <Form.Control className='input'
                                 type="text"
                                 placeholder="Team Name"
@@ -81,7 +86,7 @@ function Team() {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label value={address} className='info' onChange={handleChange} onBlur={handleBlur}>Add your Company Address</Form.Label>
+                            <Form.Label value={formState.address} className='info' onChange={handleChange} onBlur={handleBlur}>Add your Company Address</Form.Label>
                             <Form.Control className='input'
                                 type="text"
                                 placeholder="Address"
@@ -89,7 +94,7 @@ function Team() {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label value={website} className='info' onChange={handleChange} onBlur={handleBlur}>Add a Link to your Website</Form.Label>
+                            <Form.Label value={formState.website} className='info' onChange={handleChange} onBlur={handleBlur}>Add a Link to your Website</Form.Label>
                             <Form.Control className='input'
                                 type="text"
                                 placeholder="website@example.com"
