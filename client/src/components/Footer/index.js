@@ -55,7 +55,7 @@ const Footer = () => {
 
       <div style={styles.extLinks} className='center'>
         <div><a href='https://github.com/Ckratz17'><FaGithub /></a><a href='https://www.linkedin.com/in/christopher-kratz-2a0714247/'><FaLinkedin /></a>
-          <p>Chris Kratz</p>
+          <p>Christopher Kratz</p>
         </div>
       </div>
       <div style={styles.extLinks} className='center'>
