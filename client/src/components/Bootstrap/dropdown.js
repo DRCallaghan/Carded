@@ -1,8 +1,8 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Team from './addTeamModal';
-import { Link, useParams } from 'react-router-dom';
+//import Team from './addTeamModal';
+import { useParams } from 'react-router-dom';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../../utils/queries';
 import { useQuery } from '@apollo/client';
 
@@ -17,13 +17,13 @@ function Drop() {
         }
     );
     // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-    const profile = data?.me || data?.profile || {};
+    // const profile = data?.me || data?.profile || {};
 
-        const styles= {
-            dividerPadding:{
-                paddingBottom:'20px'
-            }
-        }
+    //     // const styles= {
+    //     //     dividerPadding:{
+    //     //         paddingBottom:'20px'
+    //     //     }
+    //     // }
 
     return (
         <DropdownButton className='btn-dropdown m-2' variant='btn btn-md btn-light m-2' align="end" title="My Teams" id="dropdown-menu-align-end">
@@ -31,11 +31,8 @@ function Drop() {
             
             <Dropdown.Divider />
             
-            <Dropdown.Item eventKey="4">{profile.team[0] ? (
-                <Link to="/team">{profile.team[0].name}</Link>
-            ) : (
-                <p>Add a team above!</p>
-            )}
+            <Dropdown.Item  eventKey="4">
+                <p>Add a Team</p>
             </Dropdown.Item>
         </DropdownButton>
     );
