@@ -109,17 +109,17 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="profile-area">
-        <div class="outer-circle">
+      <div className="profile-area">
+        <div className="outer-circle">
 
-          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
 
 
         </div>
-        <div class="inner-circle">
+        <div className="inner-circle">
           <img style={styles.cardImage} src={sponge} alt='tangybobbysauce'/>
           <img src={hand} style={{ width: "100%" }} alt="card"/>         
 
