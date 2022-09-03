@@ -54,7 +54,7 @@ const HomeFooter = () => {
 
       <div style={styles.extLinks} className='center'>
         <div><a  href='https://github.com/Ckratz17'><FaGithub /></a><a href='https://www.linkedin.com/in/christopher-kratz-2a0714247/'><FaLinkedin /></a>
-          <p>Christopher Kratz</p>
+          <p>Chris Kratz</p>
         </div>
       </div>
       <div style={styles.extLinks} className='center'>
