@@ -12,17 +12,33 @@ import hand from "../images/hand.jpeg";
 import { QUERY_PROFILES } from "../utils/queries";
 import "../index.css";
 import Footer from "../components/Footer";
+import sponge from "../images/sponge.png";
 
 import HomeFooter from "../components/Footer/homefoot";
 
 
 
 const Home = () => {
-  
+
+  const styles = {
+    cardImage: {
+      position: 'absolute',
+      top: '0px',
+      left: '0px',
+      height: '64px',
+      width: '195.5px',
+      zIndex: '1',
+      paddingLeft: '84.25px',
+      marginTop: "112px",
+      borderBottomRightRadius: '90px',      
+    }
+
+  }
+
   return (
     <main>
-    {/* <main style={styles.homeStyle}> */}
-      <Header/>
+      {/* <main style={styles.homeStyle}> */}
+      <Header />
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3"></div>
       </div>
@@ -30,33 +46,33 @@ const Home = () => {
       <div className="summary">
 
         <div className="summary-text">
-          <h5 style={{lineHeight: "1.8",  color:"#143976"}}>
+          <h5 style={{ lineHeight: "1.8", color: "#143976" }}>
             Carded is your online solution to creating teams of individuals
             based upon any grouping that fits your needs.
           </h5>
         </div>
         <div className="summary1-pic">
-          <img src={team} style={{maxWidth: "100%"}} alt="card" className="card" />
+          <img src={team} style={{ maxWidth: "100%" }} alt="card" className="card" />
         </div>
       </div>
 
       <div className="summary2">
         <div className="summary2-pic">
-          <img src={handing} style={{maxWidth: "100%", }} alt="card" className="card" />
+          <img src={handing} style={{ maxWidth: "100%", }} alt="card" className="card" />
         </div>
 
         <div className="summary-text2">
-          <h5 style={{lineHeight: "1.8", maxHeight: "100%",  color:"#143976"}}>
+          <h5 style={{ lineHeight: "1.8", maxHeight: "100%", color: "#143976" }}>
             Teams can be used to organize, plan, or structure any business or
             social goal you may have - with business cards generated to
             represent your Teams.
           </h5>
-         
+
         </div>
       </div>
 
       <div className="examples">
-      
+
         <div className="example1">
           <img src={carded01} alt="card" className="img" />
         </div>
@@ -67,22 +83,22 @@ const Home = () => {
 
         <div className="example3">
           <img src={carded3} alt="card" className="img" />
-        </div>    
-       
+        </div>
+
       </div>
 
       <div className="details">
         <div className="in-depth">
           <p>1 </p>
-          <p>2 </p>      
+          <p>2 </p>
         </div>
 
         <div className="in-depth-title">
-          <p style ={{paddingLeft:"30px"}}> Just Sign Up </p>
+          <p style={{ paddingLeft: "30px" }}> Just Sign Up </p>
           <p> Join Or Create A Team </p>
-         
+
         </div>
-        
+
         <div className="in-depth-text">
           <p>Simply login or sign up to get started.</p>
           <p>
@@ -95,20 +111,22 @@ const Home = () => {
 
       <div class="profile-area">
         <div class="outer-circle">
-        
-          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style ={{width:"225%", border:"none", backgroundColor:"white"}}  alt="card" className="" /></span>
-        
+
+          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+
 
         </div>
         <div class="inner-circle">
-         
-          <img src={hand} style = {{width: "100%"}} alt="card" className="card" />
+          <img style={styles.cardImage} src={sponge} alt='tangybobbysauce'/>
+          <img src={hand} style={{ width: "100%" }} alt="card"/> 
+          {/* removed "className='card' from src hand */}
+
         </div>
       </div>
-    
+
 
       <div className="details">
         <div className="in-depth">
@@ -118,9 +136,9 @@ const Home = () => {
 
         <div className="in-depth-title">
           <p> Build A Card </p>
-          <p style ={{paddingRight:"10px"}}> Network </p>
+          <p style={{ paddingRight: "10px" }}> Network </p>
         </div>
-        
+
         <div className="in-depth-text">
           <p>
             Once you are apart of a team you will recieve a business card
@@ -133,20 +151,20 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="managers"><h4 style={{color:"#143976"}}>Team Managers</h4></div>
+      <div className="managers"><h4 style={{ color: "#143976" }}>Team Managers</h4></div>
       <div className="management">
-       
-        <p style={{width: "25%", color:"#143976",  lineHeight: "1.8"}}>
+
+        <p style={{ width: "25%", color: "#143976", lineHeight: "1.8" }}>
           As a manager you can send out invitations to new team members, design new business cards, and create new teams.
         </p>
-        <p style={{width: "25%", color:"#143976", lineHeight: "1.8"}}>
+        <p style={{ width: "25%", color: "#143976", lineHeight: "1.8" }}>
           You can also network with other team managers, build team connections, and increase your company or team visibility.
         </p>
-    
-       
-      
+
+
+
       </div>
-      <HomeFooter/>
+      <HomeFooter />
     </main>
   );
 };
