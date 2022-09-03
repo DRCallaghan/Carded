@@ -19,6 +19,7 @@ const Header = () => {
       position: 'sticky',
       top: '0',
       boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+      zIndex: '400'
 
     },
     logoStyle: {

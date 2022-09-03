@@ -13,8 +13,8 @@ import { QUERY_PROFILES } from "../utils/queries";
 import "../index.css";
 import Footer from "../components/Footer";
 import sponge from "../images/sponge.png";
-
 import HomeFooter from "../components/Footer/homefoot";
+import Divider from "@material-ui/core/Divider";
 
 
 
@@ -30,7 +30,10 @@ const Home = () => {
       zIndex: '1',
       paddingLeft: '81.25px',
       marginTop: "112px",
-      borderBottomRightRadius: '90px',      
+      borderBottomRightRadius: '90px',
+    },
+    dividerStyle: {
+      backgroundColor: '#14397d',
     }
 
   }
@@ -51,7 +54,7 @@ const Home = () => {
             based upon any grouping that fits your needs.
           </h5>
         </div>
-        <div className="summary1-pic">
+        <div className="summary1-pic ">
           <img src={team} style={{ maxWidth: "100%" }} alt="card" className="card" />
         </div>
       </div>
@@ -70,7 +73,9 @@ const Home = () => {
 
         </div>
       </div>
-
+      <div style={styles.dividerStyle}>
+        <Divider />
+      </div>
       <div className="examples">
 
         <div className="example1">
@@ -86,7 +91,9 @@ const Home = () => {
         </div>
 
       </div>
-
+      <div style={styles.dividerStyle}>
+        <Divider />
+      </div>
       <div className="details">
         <div className="in-depth">
           <p>1 </p>
@@ -109,8 +116,10 @@ const Home = () => {
         </div>
       </div>
 
+
       <div className="profile-area">
         <div className="outer-circle">
+
 
           <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
           <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
@@ -119,6 +128,7 @@ const Home = () => {
 
 
         </div>
+
         <div className="inner-circle">
           <img style={styles.cardImage} src={sponge} alt='tangybobbysauce'/>
           <img src={hand} style={{ width: "100%" }} alt="card"/>         
@@ -149,9 +159,11 @@ const Home = () => {
           </p>
         </div>
       </div>
-
+      <div style={styles.dividerStyle}>
+        <Divider />
+      </div>
       <div className="teamManagers">
-        <div className="managers"><h4 style={{ color: "#143976" }}>Team Managers</h4></div>
+        <div className="managers"><h4 style={{ color: "#143976", }}>Team Managers</h4></div>
         <div className="management">
 
           <p style={{ width: "25%", color: "#143976", lineHeight: "1.8" }}>
@@ -162,8 +174,9 @@ const Home = () => {
           </p>
 
         </div>
-        <HomeFooter />
+
       </div>
+      <HomeFooter />
     </main>
   );
 };
