@@ -1258,6 +1258,7 @@ a:hover {
   border-color: #ac0f0f;
   background-color: #e64c66;
   color: #741515;
+  font-size:calc(4px + .8vw);
 }
 
 .btn.btn-danger:hover {
@@ -1277,7 +1278,9 @@ a:hover {
   border-color: #77b5d9;
   background-color: #77b5d9;
   color: #14397d;
-  font-size:calc(6px + 1.0vw);
+  font-size:calc(4px + .8vw);
+  
+ 
   
 }
 

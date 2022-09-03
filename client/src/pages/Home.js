@@ -121,8 +121,7 @@ const Home = () => {
         </div>
         <div class="inner-circle">
           <img style={styles.cardImage} src={sponge} alt='tangybobbysauce'/>
-          <img src={hand} style={{ width: "100%" }} alt="card"/> 
-          {/* removed "className='card' from src hand */}
+          <img src={hand} style={{ width: "100%" }} alt="card"/>         
 
         </div>
       </div>

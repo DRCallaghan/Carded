@@ -10,6 +10,7 @@ import Auth from '../utils/auth';
 import Member from '../components/Bootstrap/addMemberModal';
 import Profile from './Profile'
 import HomeFooter from '../components/Footer/homefoot'
+import { Container } from 'react-bootstrap';
 
 const TeamPage = () => {
     const logout = (event) => {
@@ -107,19 +108,19 @@ const styles = {
             <div style={styles.paddingStyle}>
 
             </div>
-            <container>
+            <Container>
                <div>
                 <CardExample/>
                </div>
-            </container>
+            </Container>
             <div style={styles.paddingStyle}>
 
             </div>
-            <container>
+            <Container>
                  <div>
                 <CardExample/>
                </div>
-            </container>
+            </Container>
             <HomeFooter/>
         </div>
     );
