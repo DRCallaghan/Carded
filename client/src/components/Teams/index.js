@@ -2,7 +2,7 @@ import React from 'react';
 
 const Teams = ({ teams, name }) => {
     if (!teams.length) {
-      return <h3>No Thoughts Yet</h3>;
+      return <h3>No teams yet</h3>;
     }
   
     return (
