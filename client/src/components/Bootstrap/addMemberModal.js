@@ -5,8 +5,8 @@ import modal from './modal.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { ADD_MEMBER } from '../../utils/mutations';
 import { QUERY_PROFILE_BY_NAME } from '../../utils/queries';
-import { CollapsibleLabelDivider, LabelDivider } from "mui-label-divider";
-import Auth from '../../utils/auth';
+import { CollapsibleLabelDivider} from "mui-label-divider";
+//import Auth from '../../utils/auth';
 
 function Member() {
     // state variables for whether to show the modal or close it

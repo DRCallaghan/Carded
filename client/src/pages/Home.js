@@ -1,7 +1,7 @@
 import React from "react";
-import { useQuery } from "@apollo/client";
+//import { useQuery } from "@apollo/client";
 import Header from "../components/Header";
-import ProfileList from "../components/ProfileList";
+//import ProfileList from "../components/ProfileList";
 import carded01 from "../images/carded01.png";
 import carded2 from "../images/carded2.png";
 import carded3 from "../images/carded3.png";
@@ -9,9 +9,9 @@ import team from "../images/team.jpeg";
 import handing from "../images/handing.jpeg";
 import logo from "../images/logo.png";
 import hand from "../images/hand.jpeg";
-import { QUERY_PROFILES } from "../utils/queries";
+//import { QUERY_PROFILES } from "../utils/queries";
 import "../index.css";
-import Footer from "../components/Footer";
+//import Footer from "../components/Footer";
 import sponge from "../images/sponge.png";
 
 import HomeFooter from "../components/Footer/homefoot";
@@ -109,17 +109,17 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="profile-area">
-        <div class="outer-circle">
+      <div className="profile-area">
+        <div className="outer-circle">
 
-          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span class="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
 
 
         </div>
-        <div class="inner-circle">
+        <div className="inner-circle">
           <img style={styles.cardImage} src={sponge} alt='tangybobbysauce'/>
           <img src={hand} style={{ width: "100%" }} alt="card"/>         
 
