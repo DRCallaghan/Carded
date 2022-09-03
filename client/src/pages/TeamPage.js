@@ -56,16 +56,17 @@ const TeamPage = () => {
 
 const styles = {
     navbarStyle:{
-        background: '#14397d',
+        background: 'linear-gradient(20deg, #14397d, #77b5d9, #d7eaf3, #d7eaf3, #77b5d9, #14397d)',
       height: '10vh',
       width: '100%',
       position: 'sticky',
       top: '0',
       boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+      zIndex: '400'
 
     },
     headerStyle:{
-     background: '#d7eaf3'
+     background: '#3c5ff7'
     },
     paddingStyle:{
         background: "#77b5d9",

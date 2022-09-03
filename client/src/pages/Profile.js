@@ -65,12 +65,13 @@ const Profile = () => {
 
   const styles = {
     navbar: {
-      // background: '#d7eaf3',
+      background: 'linear-gradient(20deg, #14397d, #77b5d9, #d7eaf3, #d7eaf3, #77b5d9, #14397d)',
       height: '10vh',
-      // width: '100%',
-      // position: 'sticky',
-      // top: '0',
-      // boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+      width: '100%',
+      boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+      top: '0',
+      zIndex: '400'
+
     },
     cardSection: {
       paddingTop: '20vh'
