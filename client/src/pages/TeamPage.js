@@ -39,20 +39,20 @@ const TeamPage = () => {
 
     const team = profile.team;
     localStorage.setItem('team', JSON.stringify(team));
-    if (!team[0]?.name) {
-        return (
-            <div>
-                <Header />
-                <div className="flex-row justify-center">
-                    <div className="col-12 col-md-10 my-3 text-center">
-                        <h4>
-                            You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    // if (!team[0]?.name) {
+    //     return (
+    //         <div>
+    //             <Header />
+    //             <div className="flex-row justify-center">
+    //                 <div className="col-12 col-md-10 my-3 text-center">
+    //                     <h4>
+    //                         You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
+    //                     </h4>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     );
+    // }
 
 const styles = {
     navbarStyle:{

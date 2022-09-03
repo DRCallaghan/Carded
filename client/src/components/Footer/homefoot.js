@@ -9,7 +9,7 @@ const HomeFooter = () => {
       bottom: '0',
       display: 'flex',
       justifyContent: "space-between",
-      height: '20vh',
+      height: '15%',
       fontSize: 'max(2.5vh + 1.5vw)',
       color: '#14397d',
       background: 'linear-gradient(20deg, #77b5d9, #d7eaf3, #d7eaf3,#77b5d9)',
@@ -20,12 +20,13 @@ const HomeFooter = () => {
       fontSize: 'max(2.5vh + 1.7vw)',
       textShadow: ' 2px 2px  rgba(0,0,0,.2)',
       color: '#14397d',
+      
     },
     logoIcon: {
       objectFit: 'contain',
       width: '10vw',
       marginTop: '7px',
-      minWidth: '120px'
+      minWidth: '120px',
     },
     extLinks:{
       paddingTop: '2.5vh',
@@ -48,7 +49,7 @@ const HomeFooter = () => {
 
       <div className='logo'>
         <img style={styles.logoIcon} src={logo} alt="logo" className="logo" />
-        <h4 style={styles.logoStyle}>Carded</h4>
+        <h1 style={styles.logoStyle}>Carded</h1>
       </div>
 
       <div style={styles.extLinks} className='center'>

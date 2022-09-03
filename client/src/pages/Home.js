@@ -23,12 +23,12 @@ const Home = () => {
   const styles = {
     cardImage: {
       position: 'absolute',
-      top: '0px',
-      left: '0px',
-      height: '64px',
-      width: '195.5px',
+      top: '28px',
+      left: '23px',
+      height: '80px',
+      width: '221.5px',
       zIndex: '1',
-      paddingLeft: '84.25px',
+      paddingLeft: '81.25px',
       marginTop: "112px",
       borderBottomRightRadius: '90px',      
     }
@@ -150,20 +150,20 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="managers"><h4 style={{ color: "#143976" }}>Team Managers</h4></div>
-      <div className="management">
+      <div className="teamManagers">
+        <div className="managers"><h4 style={{ color: "#143976" }}>Team Managers</h4></div>
+        <div className="management">
 
-        <p style={{ width: "25%", color: "#143976", lineHeight: "1.8" }}>
-          As a manager you can send out invitations to new team members, design new business cards, and create new teams.
-        </p>
-        <p style={{ width: "25%", color: "#143976", lineHeight: "1.8" }}>
-          You can also network with other team managers, build team connections, and increase your company or team visibility.
-        </p>
+          <p style={{ width: "25%", color: "#143976", lineHeight: "1.8" }}>
+            As a manager you can send out invitations to new team members, design new business cards, and create new teams.
+          </p>
+          <p style={{ width: "25%", color: "#143976", lineHeight: "1.8" }}>
+            You can also network with other team managers, build team connections, and increase your company or team visibility.
+          </p>
 
-
-
+        </div>
+        <HomeFooter />
       </div>
-      <HomeFooter />
     </main>
   );
 };

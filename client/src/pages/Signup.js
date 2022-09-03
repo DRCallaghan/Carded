@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../components/Footer';
+import HomeFooter from '../components/Footer/homefoot';
 import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
 import BackButton from '../components/Bootstrap/backButton';
@@ -11,6 +11,7 @@ const Signup = () => {
     name: '',
     email: '',
     phoneNumber: '',
+    position: '',
     password: '',
     confirm: ''
   });
@@ -53,9 +54,7 @@ const Signup = () => {
 
   const styles = {
     borderStyle: {
-      paddingTop: '5vh',
       borderRadius: '50px',
-      paddingRight: '2vw',
     },
     buttonStyle: {
       margin: 'auto',
@@ -69,15 +68,18 @@ const Signup = () => {
     },
     cardStyle: {
       background: 'linear-gradient(20deg, #77b5d9, #d7eaf3, #d7eaf3,#77b5d9)',
+    },
+    padding: {
+      paddingBottom: '7vh',
     }
   }
 
   return (
-    <div style={styles.goBack} className='backBtn'>
+    <div className='backBtn'>
 
-      <BackButton />
-      <main style={styles.borderStyle} className="flex-row justify-center mb-4">
-        <div className="">
+      <BackButton style={styles.goBack} />
+      <main style={styles.borderStyle} className="flex-row justify-center">
+        <div style={styles.padding} className="">
           <div className="card">
             <h4 style={styles.cardStyle} className="card-header bg-custom text-sign-in p-2">Sign Up</h4>
             <div className="card-body">
@@ -150,7 +152,7 @@ const Signup = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        <HomeFooter />
       </main>
     </div>
   );
