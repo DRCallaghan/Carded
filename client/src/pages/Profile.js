@@ -29,7 +29,7 @@ const Profile = () => {
     Auth.logout();
   };
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-  const profile = data?.me || data?.profile || {};
+  // const profile = data?.me || data?.profile || {};
 
   // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
@@ -40,16 +40,16 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
-  if (!profile?.name) {
-    return (
-      <div className="flex-row justify-center">
-        <div className="col-12 col-md-10 my-3"></div>
-        <h4>
-          Email or password not found! Use the navigation links above to sign up or log in!
-        </h4>
-      </div>
-    );
-  }
+  // if (!profile?.name) {
+  //   return (
+  //     <div className="flex-row justify-center">
+  //       <div className="col-12 col-md-10 my-3"></div>
+  //       <h4>
+  //         Email or password not found! Use the navigation links above to sign up or log in!
+  //       </h4>
+  //     </div>
+  //   );
+  // }
 
   const styles = {
     navbar: {
@@ -88,16 +88,15 @@ const Profile = () => {
           <CardExample />
         </div>
       </div>
-      {profile.phoneNumber?.length > 0 && (
+      {/* {profile.phoneNumber?.length > 0 && (
         <PhoneList
-          phone={profile.phoneNumber}  
-          // uncaught typeerror : Cannot read properties of undefined (reading 'length')
+          phone={profile.phoneNumber}
           isLoggedInUser={!profileId && true}
         />
       )}
       <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <PhoneForm profileId={profile._id} />
-      </div>
+      </div> */}
       <div style={styles.goBack}>
         <BackButton />
       </div>

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import CardExample from '../components/Bootstrap/card';
-//import Drop from '../components/Bootstrap/dropdown';
-//import SearchModal from '../components/Bootstrap/searchModal';
+import Drop from '../components/Bootstrap/dropdown';
+import SearchModal from '../components/Bootstrap/searchModal';
 import Header from "../components/Header";
 import Auth from '../utils/auth';
 import Member from '../components/Bootstrap/addMemberModal';
-//import Profile from './Profile'
+import Profile from './Profile'
 import HomeFooter from '../components/Footer/homefoot'
 import { Container } from 'react-bootstrap';
 
@@ -39,21 +39,20 @@ const TeamPage = () => {
 
     const team = profile.team;
     localStorage.setItem('team', JSON.stringify(team));
-    if (!team[0]?.name) {  
-        (
-            <div>
-                <Header />
-                <div className="flex-row justify-center">
-                    <div className="col-12 col-md-10 my-3 text-center">
-                        <h4>
-                            You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        );
-        return team // moved return from line 43 and added team
-    }
+    // if (!team[0]?.name) {
+    //     return (
+    //         <div>
+    //             <Header />
+    //             <div className="flex-row justify-center">
+    //                 <div className="col-12 col-md-10 my-3 text-center">
+    //                     <h4>
+    //                         You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
+    //                     </h4>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     );
+    // }
 
 const styles = {
     navbarStyle:{
