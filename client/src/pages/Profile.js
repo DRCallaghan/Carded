@@ -13,8 +13,19 @@ import BackButton from '../components/Bootstrap/backButton';
 import Team from '../components/Bootstrap/addTeamModal';
 
 
+
+//        FOR TEAM SEARCH BELOW
+        // import Teams from '../Teams';
+        // import { QUERY_SINGLE_TEAM } from '../../utils/queries';
+
+
+
+
 const Profile = () => {
   const { profileId } = useParams();
+
+  //        FOR TEAM SEARCH BELOW
+  // const { teamName } = useParams();
 
   // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
   const { loading, data } = useQuery(
@@ -23,6 +34,7 @@ const Profile = () => {
       variables: { profileId: profileId },
     }
   );
+
   //Set up logout button to send the user back to the homepage after signing out
   const logout = (event) => {
     event.preventDefault();
@@ -101,6 +113,18 @@ const Profile = () => {
       <div style={styles.goBack}>
         <BackButton />
       </div>
+
+              {/* FOR TEAM SEARCH BELOW called it loadingB initially because loading was taken as a const already above */}
+              {/* <div className="col-12 col-md-8 mb-3">
+                        {loadingB ? (
+                          <div>Loading...</div>
+                        ) : (
+                          <Teams
+                            teams={teams}
+                          />
+                        )}
+                      </div> */}
+
       <Footer />
     </div>
   );
