@@ -70,6 +70,16 @@ function Team() {
     };
 
     // returning the add team button which displays the modal with form inside
+    const styles = {
+        textStyle: {
+            color: 'red',
+            fontSize: 'large'
+        },
+        buttonStyle:{
+            color: '#14397d'
+        }
+    }
+
     return (
         <>
             <Button variant="btn btn-md btn-light m-2" onClick={handleShow}>
@@ -115,7 +125,7 @@ function Team() {
                             />
 
                         </Form.Group>
-                        <div>
+                        <div style={styles.textStyle}>
                             {errorMessage && (<div className="error-text">{errorMessage}</div>)}
                         </div>
                         <Modal.Footer className='buttons'>
@@ -123,7 +133,7 @@ function Team() {
                                 Close
                             </Button>
                             <Button className='button-save btn btn-light m-2' variant="primary" onClick={handleSubmit}>
-                                <Link to="/team">Save Changes</Link>
+                                <Link style={styles.buttonStyle} to="/team">Save Changes</Link>
                             </Button>
                         </Modal.Footer>
                     </Form>
