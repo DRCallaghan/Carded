@@ -50,7 +50,7 @@ const Footer = () => {
 
       <div className='logo'>
         <img style={styles.logoIcon} src={logo} alt="logo" className="logo" />
-        <h4 style={styles.logoStyle}>Carded</h4>
+        <h1 style={styles.logoStyle}>Carded</h1>
       </div>
 
       <div style={styles.extLinks} className='center'>

@@ -550,7 +550,7 @@ END NORMALIZE CSS
 /*       management section       */
 
 .managers {
-  padding-top:20vh;
+  padding-top:10%;
   display: flex;
   justify-content: center;
 
@@ -559,8 +559,11 @@ END NORMALIZE CSS
 .management {
   display:flex;
   justify-content: space-evenly;
-  align-items: center;
-  height: 50vh;
+  height: 20%;
+}
+
+.teamManagers {
+  display: block;
 }
 
 *,
