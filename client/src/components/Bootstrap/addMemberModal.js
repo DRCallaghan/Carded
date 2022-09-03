@@ -69,6 +69,13 @@ function Member() {
         );
     };
 
+    const styles = {
+        textStyle:{
+            color: 'red',
+            fontSize: 'large'
+        }
+    }
+
     return (
         <>
             <Button variant="btn btn-md btn-light m-2" onClick={handleShow}>
@@ -122,7 +129,7 @@ function Member() {
                                 </CollapsibleLabelDivider>
                             </div>
                         </Form.Group>
-                        <div>
+                        <div style={styles.textStyle}>
                             {errorMessage && (<div className="error-text">{errorMessage}</div>)}
                         </div>
                         <Modal.Footer className='buttons '>

@@ -21,16 +21,16 @@ function Drop() {
 
         const styles= {
             dividerPadding:{
-                paddingBottom:'10px'
+                paddingBottom:'20px'
             }
         }
 
     return (
         <DropdownButton className='btn-dropdown m-2' variant='btn btn-md btn-light m-2' align="end" title="My Teams" id="dropdown-menu-align-end">
-            <Dropdown.Item eventKey="1"></Dropdown.Item>
-            <div style={styles.dividerPadding}>
+            <Dropdown.Item  eventKey="1"></Dropdown.Item>
+            
             <Dropdown.Divider />
-            </div>
+            
             <Dropdown.Item eventKey="4">{profile.team[0] ? (
                 <Link to="/team">{profile.team[0].name}</Link>
             ) : (
