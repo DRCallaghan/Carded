@@ -21,6 +21,19 @@ body {
   margin: 0;
 }
 
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+@keyframes floater {
+  0%{transform: translateY(-10%);transition: ease 0.5s;}
+  50%{transform: translateY(10%);transition: ease 0.5s;}
+}
 /**
  * Render the `main` element consistently in IE.
  */
@@ -313,6 +326,7 @@ textarea {
  */
 details {
   display: block;
+  
 }
 
 /*
@@ -369,6 +383,9 @@ END NORMALIZE CSS
 
 .summary1-pic {
   align-self: flex-end;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .summary2 {
@@ -393,6 +410,9 @@ END NORMALIZE CSS
 
 .summary2-pic {
   align-self: flex-start;
+  animation: fadeInAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 /*         examples section         */
@@ -413,12 +433,18 @@ END NORMALIZE CSS
   align-self: flex-end;
   display: flex;
   padding-bottom: 20px;
+  animation: fadeInAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .example2 {
   align-self: flex-start;
   padding-top: 20px;
   display: flex;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .example3 {
@@ -426,6 +452,9 @@ END NORMALIZE CSS
   display: flex;
   padding-bottom: 20px;
   padding-top: 20px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .img {
@@ -440,6 +469,10 @@ END NORMALIZE CSS
   justify-content: space-around;
   align-items: flex-end;
   height: 300px;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  
 }
 
 .in-depth p {  
@@ -455,6 +488,9 @@ END NORMALIZE CSS
   justify-content: space-around;
   color: #031b43;
   height: 100px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   
   
 }
@@ -463,6 +499,7 @@ END NORMALIZE CSS
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding-bottom: 4%;
  
 }
 
@@ -550,9 +587,13 @@ END NORMALIZE CSS
 /*       management section       */
 
 .managers {
-  padding-top:10%;
+  padding-top:5%;
+  padding-bottom: 4%;
   display: flex;
   justify-content: center;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 
 
 }
@@ -560,6 +601,7 @@ END NORMALIZE CSS
   display:flex;
   justify-content: space-evenly;
   height: 20%;
+  padding-bottom: 4%;
 }
 
 .teamManagers {
