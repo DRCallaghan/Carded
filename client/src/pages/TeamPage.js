@@ -12,6 +12,8 @@ import Profile from './Profile'
 import HomeFooter from '../components/Footer/homefoot'
 import { Container } from 'react-bootstrap';
 
+
+
 const TeamPage = () => {
     const logout = (event) => {
         event.preventDefault();
@@ -87,7 +89,7 @@ const styles = {
                     Logout
                 </button>
                 <div className='m-2'>
-                    <Member />
+                    <Member/>
                 </div>
             </nav>
             {/* <div className="flex-row justify-center">
