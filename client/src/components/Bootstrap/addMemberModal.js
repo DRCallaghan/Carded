@@ -7,6 +7,7 @@ import { ADD_MEMBER } from '../../utils/mutations';
 import { QUERY_PROFILE_BY_NAME } from '../../utils/queries';
 import { CollapsibleLabelDivider, LabelDivider } from "mui-label-divider";
 import Auth from '../../utils/auth';
+import SearchMember from  './searchMember'
 
 function Member() {
     // state variables for whether to show the modal or close it
@@ -86,7 +87,9 @@ function Member() {
                     <Form className='textbox'>
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Label className='team-info'>Add a Team Member</Form.Label>
-                            <Form.Control className='input'
+                            <SearchMember placeholder= 'Member name' data={Auth}/>
+                            {/* MOVED TO SEARCHMEMBER.JS */}
+                            {/* <Form.Control className='input'
                                 type="text"
                                 placeholder="Member Name"
                                 autoFocus
@@ -94,7 +97,7 @@ function Member() {
                                 name='name'
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                            />
+                            /> */}  
                         </Form.Group>
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Label className='team-info'>What is their position?</Form.Label>
