@@ -26,10 +26,10 @@ function CardExample() {
   );
   console.log(data.me.team)
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "23rem" }}>
       <Card.Body>
         <Card.Title>Name: {data.me.name}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Position</Card.Subtitle>
+        <Card.Subtitle className="text-muted">Position:</Card.Subtitle>
         <Card.Subtitle className="mb-2 text-muted">Team:</Card.Subtitle>
         <Card.Text>
           Some quick example text to build on the card title and make up the
