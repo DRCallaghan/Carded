@@ -101,11 +101,12 @@ const TeamPage = () => {
 
                 </div>
             </div> */}
-            <div style={styles.headerStyle} className="flex-row justify-center">
+            <div style={styles.headerStyle} className="flex-row justify-center header-style">
                 <div className="col-12 col-md-10 my-3 text-center">
                     <h2 style={styles.nameStyle}>{team[0].name}</h2>
-                    <h4>{team[0].address} {team[0].website}</h4>
+                   
                 </div>
+                <div className="text-center2"><h4>{team[0].address}</h4> <h4>{team[0].website}</h4></div> 
             </div>
             <div style={styles.paddingStyle}>
 
