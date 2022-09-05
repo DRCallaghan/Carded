@@ -11,7 +11,7 @@ function SearchMember({ placeholder, data }) {
             return value.name.toLowerCase().includes(searchName.toLowerCase());
         });
         if (searchName === "") {
-            setFilteredData = ([])
+            setFilteredData([]);
         } else {
             setFilteredData(newFilter);
         }
@@ -25,8 +25,8 @@ function SearchMember({ placeholder, data }) {
                 <div className='results'>
                     {filteredData.slice(0, 5).map((value, key) => {
                         return (
-                            <a className="dataName" href={value.link} target="??"> 
-                            {/* possible redirect to user page?
+                            <a className="dataName" href={value.link} target="??">
+                                {/* possible redirect to user page?
                          with additional add to team button? or basic request to that user? will they need to confirm? */}
                                 <p>{value.name}</p>
                             </a>
