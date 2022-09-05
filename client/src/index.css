@@ -477,7 +477,7 @@ END NORMALIZE CSS
 
 .in-depth p {  
   font-size: 3rem;
-  color: #14397d;
+  color: #3c5ff7;
   height: 100px;
   
 }
@@ -1139,6 +1139,13 @@ a:hover {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-center2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width:100%;
 }
 
 .text-justify {
