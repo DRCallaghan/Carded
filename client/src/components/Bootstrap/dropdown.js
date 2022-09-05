@@ -34,7 +34,7 @@ function Drop() {
             <Dropdown.Item eventKey="4">{profile.team[0] ? (
                 <Link to="/team">{profile.team[0].name}</Link>
             ) : (
-                <p>Add a team above!</p>
+                <p>Add a Team</p>
             )}
             </Dropdown.Item>
         </DropdownButton>

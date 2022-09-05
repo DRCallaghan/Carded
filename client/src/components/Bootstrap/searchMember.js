@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './modal.css';
 
+
 function SearchMember({ placeholder, data }) {
 
     const [filteredData, setFilteredData] = useState([]);

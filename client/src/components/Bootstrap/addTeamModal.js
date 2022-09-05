@@ -134,8 +134,8 @@ function Team() {
                             <Button className='button-close btn btn-danger m-2' variant="secondary" onClick={handleClose}>
                                 Close
                             </Button>
-                            <Button className='button-save btn btn-light m-2' variant="primary" onClick={handleSubmit}>
-                                Save Changes
+                            <Button style={styles.buttonStyle} className='button-save btn btn-light m-2 ' variant="primary" onClick={handleSubmit}>
+                              Save Changes
                             </Button>
                         </Modal.Footer>
                     </Form>

@@ -64,6 +64,7 @@ const TeamPage = () => {
     const team = profile.team;
     console.log(team);
     localStorage.setItem('team', JSON.stringify(team));
+
     if (!team[0]?.name) {
         return (
             <div>
@@ -85,11 +86,11 @@ const TeamPage = () => {
 
     return (
         <div>
-            <nav style={styles.navbarStyle} className='header'>
+            <nav style={styles.navbarStyle} className='header justify-center'>
                 <Link className="btn btn-md btn-light m-2" to='/profiles'>
                     Back to Profile
                 </Link>
-                <button className="btn btn-md btn-light m-2" onClick={logout}>
+                <button className="btn btn-md btn-light m-2 justify-center" onClick={logout}>
                     Logout
                 </button>
                 <div className='m-2'>
@@ -103,13 +104,8 @@ const TeamPage = () => {
             </div> */}
             <div style={styles.headerStyle} className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3 text-center">
-                    <h1>{team[0].name}</h1>
-                </div>
-                <div className="flex-row justify-content my-3 text-left">
-                    <h4 className='col-12'>{team[0].address}</h4>
-                </div>
-                <div className="flex-row justify-content my-3 text-right">
-                    <h4 className='col-12'>{team[0].website}</h4>
+                    <h2 style={styles.nameStyle}>{team[0].name}</h2>
+                    <h4>{team[0].address} {team[0].website}</h4>
                 </div>
             </div>
             <div style={styles.paddingStyle}>
