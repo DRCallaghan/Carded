@@ -65,28 +65,22 @@ const TeamPage = () => {
     console.log(team);
     localStorage.setItem('team', JSON.stringify(team));
     if (!team[0]?.name) {
-        // this solution sucks. fix later
-        setTimeout(() => {
-            window.location.reload();
-        }, 1000);
-        if (!team[0]?.name) {
-            return (
-                <div>
-                    <Header />
-                    <div className="flex-row justify-center">
-                        <div className="col-12 col-md-10 my-3 text-center">
-                            <h4>
-                                Loading your team...
-                            </h4>
-                            <p>If your team does not load, there was an error. Please go back to your profile and try again.</p>
-                            <Button className='button-save btn btn-light m-2' variant="primary">
-                                <Link style={styles.buttonStyle} to="/profiles">My Profile</Link>
-                            </Button>
-                        </div>
+        return (
+            <div>
+                <Header />
+                <div className="flex-row justify-center">
+                    <div className="col-12 col-md-10 my-3 text-center">
+                        <h4>
+                            Loading your team...
+                        </h4>
+                        <p>If your team does not load, there was an error. Please go back to your profile and try again.</p>
+                        <Button className='button-save btn btn-light m-2' variant="primary">
+                            <Link style={styles.buttonStyle} to="/profiles">My Profile</Link>
+                        </Button>
                     </div>
                 </div>
-            );
-        };
+            </div>
+        );
     };
 
     return (

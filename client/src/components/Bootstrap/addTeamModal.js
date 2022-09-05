@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { ADD_TEAM } from '../../utils/mutations';
 import Auth from '../../utils/auth';
+import { FaWindowRestore } from 'react-icons/fa';
 
 
 function Team() {
@@ -45,6 +46,7 @@ function Team() {
         } catch (e) {
             console.error(e);
         };
+        window.location.reload();
     };
 
     // handle blur function to display error messages in case the user navigates to another app while inputting data
@@ -75,7 +77,7 @@ function Team() {
             color: 'red',
             fontSize: 'large'
         },
-        buttonStyle:{
+        buttonStyle: {
             color: '#14397d'
         }
     }
@@ -133,7 +135,7 @@ function Team() {
                                 Close
                             </Button>
                             <Button className='button-save btn btn-light m-2' variant="primary" onClick={handleSubmit}>
-                                <Link style={styles.buttonStyle} to="/team">Save Changes</Link>
+                                Save Changes
                             </Button>
                         </Modal.Footer>
                     </Form>
