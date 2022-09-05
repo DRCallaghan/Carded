@@ -79,10 +79,6 @@ const resolvers = {
           address: address,
           website: website,
           manager: { _id: managerId }
-        },
-        {
-          new: true,
-          runValidators: true,
         });
       await Profile.findOneAndUpdate(
         { _id: managerId },
