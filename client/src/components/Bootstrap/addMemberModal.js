@@ -87,7 +87,7 @@ function Member() {
                     <Form className='textbox'>
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Label className='team-info'>Add a Team Member</Form.Label>
-                            <SearchMember placeholder= 'Member name' data={Auth}/>
+                            <SearchMember placeholder= 'Member name' data={ADD_MEMBER}/>
                             {/* MOVED TO SEARCHMEMBER.JS */}
                             {/* <Form.Control className='input'
                                 type="text"

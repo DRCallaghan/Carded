@@ -56,40 +56,45 @@ const TeamPage = () => {
     //     );
     // }
 
-const styles = {
-    navbarStyle:{
-        background: 'linear-gradient(20deg, #14397d, #77b5d9, #d7eaf3, #d7eaf3, #77b5d9, #14397d)',
-      height: '10vh',
-      width: '100%',
-      position: 'sticky',
-      top: '0',
-      boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
-      zIndex: '400'
+    const styles = {
+        navbarStyle: {
+            background: 'linear-gradient(20deg, #14397d, #77b5d9, #d7eaf3, #d7eaf3, #77b5d9, #14397d)',
+            height: '10vh',
+            width: '100%',
+            position: 'sticky',
+            top: '0',
+            boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+            zIndex: '400'
 
-    },
-    headerStyle:{
-     background: '#3c5ff7'
-    },
-    paddingStyle:{
-        background: "#77b5d9",
-        height: '2vh',
-        width: '100%',
-        marginBottom: '18px'
+        },
+        headerStyle: {
+            background: '#d7eaf3'
+        },
+        paddingStyle: {
+            background: "#77b5d9",
+            height: '2vh',
+            width: '100%',
+            marginBottom: '18px'
+        },
+        nameStyle: {
+            marginBottom: '50px',
+            marginTop: '20px'
+        },
+
     }
-}
 
 
     return (
         <div>
-            <nav style={styles.navbarStyle} className='header'>
-                <Link  className="btn btn-md btn-light m-2" to='/profiles'>
+            <nav style={styles.navbarStyle} className='header justify-center'>
+                <Link className="btn btn-md btn-light m-2" to='/profiles'>
                     Back to Profile
                 </Link>
-                <button className="btn btn-md btn-light m-2" onClick={logout}>
+                <button className="btn btn-md btn-light m-2 justify-center" onClick={logout}>
                     Logout
                 </button>
                 <div className='m-2'>
-                    <Member/>
+                    <Member />
                 </div>
             </nav>
             {/* <div className="flex-row justify-center">
@@ -99,32 +104,27 @@ const styles = {
             </div> */}
             <div style={styles.headerStyle} className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3 text-center">
-                    <h1>{team[0].name}</h1>
-                </div>
-                <div className="flex-row justify-content my-3 text-left">
-                    <h4 className='col-12'>{team[0].address}</h4>
-                </div>
-                <div className="flex-row justify-content my-3 text-right">
-                    <h4 className='col-12'>{team[0].website}</h4>
+                    <h2 style={styles.nameStyle}>{team[0].name}</h2>
+                    <h4>{team[0].address} {team[0].website}</h4>
                 </div>
             </div>
             <div style={styles.paddingStyle}>
 
             </div>
             <Container>
-               <div>
-                <CardExample/>
-               </div>
+                <div>
+                    <CardExample />
+                </div>
             </Container>
             <div style={styles.paddingStyle}>
 
             </div>
             <Container>
-                 <div>
-                <CardExample/>
-               </div>
+                <div>
+                    <CardExample />
+                </div>
             </Container>
-            <HomeFooter/>
+            <HomeFooter />
         </div>
     );
 };
