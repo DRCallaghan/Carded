@@ -62,7 +62,6 @@ const TeamPage = () => {
     }
 
     const team = profile.team;
-    console.log(team);
     localStorage.setItem('team', JSON.stringify(team));
 
     if (!team[0]?.name) {
