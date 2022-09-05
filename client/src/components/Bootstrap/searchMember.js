@@ -7,9 +7,10 @@ function SearchMember({ placeholder, data }) {
     const [filteredData, setFilteredData] = useState([]);
 
     const handleFilter = (event) => {
-        const searchName = event.target.value;
-        const newFilter = data.filter((value) => {
-            return value.name.toLowerCase().includes(searchName.toLowerCase());
+        let searchName = event.target.value;
+        searchName = searchName.toLowerCase();
+        const newFilter = data.map((value) => {
+            return value.name.toLowerCase();
         });
         if (searchName === "") {
             setFilteredData([]);

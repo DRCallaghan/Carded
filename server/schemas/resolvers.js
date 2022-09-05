@@ -73,22 +73,35 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     addTeam: async (parent, { name, address, website, managerId }) => {
-      const team = await Team.create({ name: name, address: address, website: website, manager: { _id: managerId } });
+      const team = await Team.create(
+        {
+          name: name,
+          address: address,
+          website: website,
+          manager: { _id: managerId }
+        },
+        {
+          new: true,
+          runValidators: true,
+        });
       await Profile.findOneAndUpdate(
         { _id: managerId },
         { $push: { team: team } }
       );
       return team;
     },
-    addMember: async (parent, { teamId, memberName }) => {
+    addMember: async (parent, { teamId, profileName }) => {
+      const member = await Profile.findOneAndUpdate(
+        { name: profileName },
+        { $push: { team: teamId } }
+      );
       const updatedTeam = await Team.findOneAndUpdate(
         { _id: teamId },
-        { $push: { members: memberName } },
-        { new: true },
-      );
-      await Profile.findOneAndUpdate(
-        { name: memberName },
-        { $push: { team: updatedTeam } }
+        { $push: { members: member } },
+        {
+          new: true,
+          runValidators: true,
+        }
       );
       return updatedTeam;
     },

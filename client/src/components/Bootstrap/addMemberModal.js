@@ -4,10 +4,9 @@ import Form from 'react-bootstrap/Form';
 import modal from './modal.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { ADD_MEMBER } from '../../utils/mutations';
-import { QUERY_PROFILE_BY_NAME } from '../../utils/queries';
 import { CollapsibleLabelDivider, LabelDivider } from "mui-label-divider";
 import Auth from '../../utils/auth';
-import SearchMember from  './searchMember'
+import SearchMember from './searchMember'
 
 function Member() {
     // state variables for whether to show the modal or close it
@@ -16,9 +15,10 @@ function Member() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [addMember, { error, data }] = useMutation(ADD_MEMBER);
-    const [formState, setFormState] = useState({ name: '', position: '' });
+    const [formState, setFormState] = useState({ name: '' });
     const [errorMessage, setErrorMessage] = useState('');
 
+    // setting form input states on any change to the form input fields
     const handleChange = (e) => {
         e.preventDefault();
         const { name, value } = e.target;
@@ -29,6 +29,7 @@ function Member() {
         });
     };
 
+    // giving the user an error message if they unfocus from a required form field
     const handleBlur = (e) => {
         e.preventDefault();
 
@@ -44,15 +45,18 @@ function Member() {
         };
     };
 
+    // fetching the user's team from local storage to display the team info on the page
     const team = JSON.parse(localStorage.getItem('team'));
     const teamId = team[0]._id;
 
+    // setting up the addMember mutation to trigger when the user submits a new team member
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(formState);
         try {
             await addMember({
                 variables: {
-                    ...formState,
+                    profileName: formState.name,
                     teamId: teamId
                 }
             });
@@ -61,21 +65,29 @@ function Member() {
         };
     };
 
-    const useSearch = async (e) => {
-        useQuery(
-            QUERY_PROFILE_BY_NAME,
-            {
-                variables: { profileName: formState.name }
-            }
-        );
-    };
-
+    // defining styles before returning
     const styles = {
-        textStyle:{
+        textStyle: {
             color: 'red',
             fontSize: 'large'
         }
     }
+
+    // defining the search function to put existing members on the page after submitting a search query
+    const [filteredData, setFilteredData] = useState([]);
+
+    const handleFilter = (event) => {
+        let searchName = event.target.value;
+        searchName = searchName.toLowerCase();
+        const newFilter = data.map((value) => {
+            return value.name.toLowerCase();
+        });
+        if (searchName === "") {
+            setFilteredData([]);
+        } else {
+            setFilteredData(newFilter);
+        }
+    };
 
     return (
         <>
@@ -87,9 +99,7 @@ function Member() {
                     <Form className='textbox'>
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Label className='team-info'>Add a Team Member</Form.Label>
-                            <SearchMember placeholder= 'Member name' data={ADD_MEMBER}/>
-                            {/* MOVED TO SEARCHMEMBER.JS */}
-                            {/* <Form.Control className='input'
+                            <Form.Control className='input'
                                 type="text"
                                 placeholder="Member Name"
                                 autoFocus
@@ -97,9 +107,9 @@ function Member() {
                                 name='name'
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                            /> */}  
+                            />
                         </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlInput1">
+                        {/* <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Label className='team-info'>What is their position?</Form.Label>
                             <Form.Control className='input'
                                 type="text"
@@ -110,7 +120,7 @@ function Member() {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
-                        </Form.Group>
+                        </Form.Group> */}
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <div className='collapse'>
                                 <Form.Label className='team-info'>Additional Information</Form.Label>
