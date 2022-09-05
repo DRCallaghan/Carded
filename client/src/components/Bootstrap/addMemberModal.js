@@ -63,6 +63,7 @@ function Member() {
         } catch (e) {
             console.error(e);
         };
+        window.location.reload();
     };
 
     // defining styles before returning
