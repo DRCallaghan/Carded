@@ -10,11 +10,33 @@ import Auth from '../utils/auth';
 import Member from '../components/Bootstrap/addMemberModal';
 import Profile from './Profile'
 import HomeFooter from '../components/Footer/homefoot'
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
 
 
 const TeamPage = () => {
+    const styles = {
+        navbarStyle: {
+            background: 'linear-gradient(20deg, #14397d, #77b5d9, #d7eaf3, #d7eaf3, #77b5d9, #14397d)',
+            height: '10vh',
+            width: '100%',
+            position: 'sticky',
+            top: '0',
+            boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+            zIndex: '400'
+
+        },
+        headerStyle: {
+            background: '#3c5ff7'
+        },
+        paddingStyle: {
+            background: "#77b5d9",
+            height: '2vh',
+            width: '100%',
+            marginBottom: '18px'
+        }
+    }
+
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
@@ -40,49 +62,27 @@ const TeamPage = () => {
     }
 
     const team = profile.team;
+    console.log(team);
     localStorage.setItem('team', JSON.stringify(team));
-    // if (!team[0]?.name) {
-    //     return (
-    //         <div>
-    //             <Header />
-    //             <div className="flex-row justify-center">
-    //                 <div className="col-12 col-md-10 my-3 text-center">
-    //                     <h4>
-    //                         You must be part of a team to view the team page! You can either find a team you are currently part of or add your own team on your profile page.
-    //                     </h4>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-    // }
 
-    const styles = {
-        navbarStyle: {
-            background: 'linear-gradient(20deg, #14397d, #77b5d9, #d7eaf3, #d7eaf3, #77b5d9, #14397d)',
-            height: '10vh',
-            width: '100%',
-            position: 'sticky',
-            top: '0',
-            boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
-            zIndex: '400'
-
-        },
-        headerStyle: {
-            background: '#d7eaf3'
-        },
-        paddingStyle: {
-            background: "#77b5d9",
-            height: '2vh',
-            width: '100%',
-            marginBottom: '18px'
-        },
-        nameStyle: {
-            marginBottom: '50px',
-            marginTop: '20px'
-        },
-
-    }
-
+    if (!team[0]?.name) {
+        return (
+            <div>
+                <Header />
+                <div className="flex-row justify-center">
+                    <div className="col-12 col-md-10 my-3 text-center">
+                        <h4>
+                            Loading your team...
+                        </h4>
+                        <p>If your team does not load, there was an error. Please go back to your profile and try again.</p>
+                        <Button className='button-save btn btn-light m-2' variant="primary">
+                            <Link style={styles.buttonStyle} to="/profiles">My Profile</Link>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        );
+    };
 
     return (
         <div>
