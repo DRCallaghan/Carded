@@ -15,8 +15,8 @@ import Team from '../components/Bootstrap/addTeamModal';
 
 
 //        FOR TEAM SEARCH BELOW
-        // import Teams from '../Teams';
-        // import { QUERY_SINGLE_TEAM } from '../../utils/queries';
+// import Teams from '../Teams';
+// import { QUERY_SINGLE_TEAM } from '../../utils/queries';
 
 
 
@@ -89,7 +89,6 @@ const Profile = () => {
       <div>
         <nav style={styles.navbar} className='header'>
           <div>
-            <SearchModal />
             <Team />
           </div>
           <button className="btn btn-md btn-light m-2" onClick={logout}>
@@ -114,8 +113,8 @@ const Profile = () => {
         <BackButton />
       </div>
 
-              {/* FOR TEAM SEARCH BELOW called it loadingB initially because loading was taken as a const already above */}
-              {/* <div className="col-12 col-md-8 mb-3">
+      {/* FOR TEAM SEARCH BELOW called it loadingB initially because loading was taken as a const already above */}
+      {/* <div className="col-12 col-md-8 mb-3">
                         {loadingB ? (
                           <div>Loading...</div>
                         ) : (
@@ -126,7 +125,7 @@ const Profile = () => {
                       </div> */}
 
       <Footer />
-     
+
     </div>
   );
 };
