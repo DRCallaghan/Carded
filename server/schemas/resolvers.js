@@ -33,8 +33,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, phoneNumber, position, password }) => {
-      const profile = await Profile.create({ name, email, phoneNumber, position, password });
+    addProfile: async (parent, { name, email, phoneNumber, password }) => {
+      const profile = await Profile.create({ name, email, phoneNumber, password });
       const token = signToken(profile);
 
       return { token, profile };
@@ -86,9 +86,10 @@ const resolvers = {
       );
       return team;
     },
-    addMember: async (parent, { teamId, profileName }) => {
+    addMember: async (parent, { teamId, profileName, position }) => {
       const member = await Profile.findOneAndUpdate(
         { name: profileName },
+        { position: position },
         { $push: { team: teamId } }
       );
       const updatedTeam = await Team.findOneAndUpdate(
