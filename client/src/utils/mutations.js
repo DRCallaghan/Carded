@@ -9,7 +9,6 @@ export const ADD_PROFILE = gql`
         name
         email
         phoneNumber
-        position
       }
     }
   }
