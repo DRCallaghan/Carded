@@ -64,7 +64,7 @@ function Member() {
         } catch (e) {
             console.error(e);
         };
-        window.location.reload();
+        // window.location.reload();
     };
 
     // defining styles before returning
