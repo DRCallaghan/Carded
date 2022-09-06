@@ -110,7 +110,7 @@ function Member() {
                                 onBlur={handleBlur}
                             />
                         </Form.Group>
-                        {/* <Form.Group controlId="exampleForm.ControlInput1">
+                        <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Label className='team-info'>What is their position?</Form.Label>
                             <Form.Control className='input'
                                 type="text"
@@ -121,7 +121,7 @@ function Member() {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
-                        </Form.Group> */}
+                        </Form.Group>
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <div className='collapse'>
                                 <Form.Label className='team-info'>Additional Information</Form.Label>

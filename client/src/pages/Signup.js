@@ -11,7 +11,6 @@ const Signup = () => {
     name: '',
     email: '',
     phoneNumber: '',
-    position: '',
     password: '',
     confirm: ''
   });

@@ -7,7 +7,6 @@ const typeDefs = gql`
     email: String
     password: String
     phoneNumber: String
-    position: String
     team: [Team]
   }
 
