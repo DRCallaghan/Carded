@@ -40,7 +40,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addPhone(profileId: ID!, phone: String!): Profile
     addTeam(name: String!, address: String!, website: String! managerId: ID!): Team
-    addMember(teamId: ID!, profileName: String!): Team
+    addMember(teamId: ID!, profileName: String!, position: String!): Team
     updateTeamAddress(teamId: ID!, address: String!): Team
     updateTeamWebsite(teamId: ID!, website: String!): Team
     removeProfile: Profile

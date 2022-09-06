@@ -28,7 +28,7 @@ const profileSchema = new Schema(
     },
     position: {
       type: String,
-      required: true
+      required: false
     },
     team: [
       {

@@ -70,8 +70,8 @@ export const UPDATE_TEAM_WEBSITE = gql`
 `;
 
 export const ADD_MEMBER = gql`
-  mutation addMember($teamId: ID!, $profileName: String!) {
-    addMember(teamId: $teamId, profileName: $profileName) {
+  mutation addMember($teamId: ID!, $profileName: String!, $position: String!) {
+    addMember(teamId: $teamId, profileName: $profileName, position: $position) {
       _id
       name
       address
@@ -81,6 +81,7 @@ export const ADD_MEMBER = gql`
         name
         email
         phoneNumber
+        position
       }
     }
   }
