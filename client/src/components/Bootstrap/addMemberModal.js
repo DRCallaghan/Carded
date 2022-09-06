@@ -15,7 +15,7 @@ function Member() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [addMember, { error, data }] = useMutation(ADD_MEMBER);
-    const [formState, setFormState] = useState({ name: '' });
+    const [formState, setFormState] = useState({ name: '', position: '' });
     const [errorMessage, setErrorMessage] = useState('');
 
     // setting form input states on any change to the form input fields
@@ -56,8 +56,9 @@ function Member() {
         try {
             await addMember({
                 variables: {
+                    teamId: teamId,
                     profileName: formState.name,
-                    teamId: teamId
+                    position: formState.position
                 }
             });
         } catch (e) {

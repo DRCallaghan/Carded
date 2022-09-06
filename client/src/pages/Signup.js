@@ -96,7 +96,7 @@ const Signup = () => {
           <div className="card">
             <h4 style={styles.cardStyle} className="card-header bg-custom text-sign-in p-2">Sign Up</h4>
             <div className="card-body">
-              {data ? ( <p> Success! </p> ) : (
+              {data ? (<p> Success! </p>) : (
                 <form onSubmit={handleFormSubmit}>
                   <input
                     className="form-input"
