@@ -28,7 +28,8 @@ const TeamPage = () => {
 
         },
         headerStyle: {
-            background: '#d7eaf3'
+            background: '#d7eaf3',
+            paddingBottom: '5px'
         },
         paddingStyle: {
             background: "#77b5d9",
@@ -108,8 +109,8 @@ const TeamPage = () => {
                     <h2 style={styles.nameStyle}>{team[0].name}</h2>
                 </div>
                 <div className="text-center2">
-                    <h3>{team[0].address}</h3>
-                    <h3>{team[0].website}</h3>
+                    <h5>{team[0].address}</h5>
+                    <h5>{team[0].website}</h5>
                 </div>
             </div>
             <div style={styles.paddingStyle}>
