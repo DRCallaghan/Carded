@@ -80,7 +80,6 @@ export const ADD_MEMBER = gql`
         name
         email
         phoneNumber
-        position
       }
     }
   }
