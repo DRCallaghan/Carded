@@ -70,6 +70,7 @@ export const QUERY_ME = gql`
       name
       email
       phoneNumber
+      position
       team {
         _id
         name
