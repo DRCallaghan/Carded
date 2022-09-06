@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css'
 import Auth from '../../utils/auth';
-import logo from '../../images/logo.png';
+import logo from '../../images/Carded-business-card.png';
 
 
 const Header = () => {

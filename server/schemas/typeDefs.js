@@ -7,7 +7,6 @@ const typeDefs = gql`
     email: String
     password: String
     phoneNumber: String
-    position: String
     team: [Team]
   }
 
@@ -36,11 +35,11 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addProfile(name: String!, email: String!, phoneNumber: String!, position: String!, password: String!): Auth
+    addProfile(name: String!, email: String!, phoneNumber: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addPhone(profileId: ID!, phone: String!): Profile
     addTeam(name: String!, address: String!, website: String! managerId: ID!): Team
-    addMember(teamId: ID!, profileName: String!): Team
+    addMember(teamId: ID!, profileName: String!, position: String!): Team
     updateTeamAddress(teamId: ID!, address: String!): Team
     updateTeamWebsite(teamId: ID!, website: String!): Team
     removeProfile: Profile

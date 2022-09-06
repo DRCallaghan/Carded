@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/logo.png';
+import logo from '../../images/Carded-business-card.png';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './footer.css'
 

@@ -12,7 +12,6 @@ const Signup = () => {
     name: '',
     email: '',
     phoneNumber: '',
-    position: '',
     password: '',
     confirm: ''
   });
@@ -121,14 +120,6 @@ const Signup = () => {
                     name="phoneNumber"
                     type="text"
                     value={formState.phoneNumber}
-                    onChange={handleChange}
-                  />
-                  <input
-                    className="form-input"
-                    placeholder="Your Position"
-                    name="position"
-                    type="text"
-                    value={formState.position}
                     onChange={handleChange}
                   />
                   <input
