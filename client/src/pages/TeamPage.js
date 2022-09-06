@@ -85,6 +85,7 @@ const TeamPage = () => {
     };
 
     return (
+
         <div>
             <nav style={styles.navbarStyle} className='header justify-center'>
                 <Link className="btn btn-md btn-light m-2" to='/profiles'>
@@ -105,17 +106,16 @@ const TeamPage = () => {
             <div style={styles.headerStyle} className="flex-row justify-center header-style">
                 <div className="col-12 col-md-10 my-3 text-center">
                     <h2 style={styles.nameStyle}>{team[0].name}</h2>
-
                 </div>
-                <div className="text-center2"><h3>{team[0].address}</h3> <h3>{team[0].website}</h3></div>
+                <div className="text-center2">
+                    <h3>{team[0].address}</h3>
+                    <h3>{team[0].website}</h3>
+                </div>
             </div>
             <div style={styles.paddingStyle}>
-
             </div>
-
-            <Container>
-                <MemberCard />
-            </Container>
+            <MemberCard />
+            <div></div>
             <HomeFooter />
         </div>
     );
