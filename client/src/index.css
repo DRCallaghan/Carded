@@ -361,7 +361,7 @@ template {
   display: none;
 }
 
-/* 
+/*
 =================
 END NORMALIZE CSS
 =================
@@ -1312,6 +1312,7 @@ a:hover {
 
 .btn:hover {
   background-color: #cecece;
+  cursor: pointer;
 }
 
 .btn.btn-squared {
@@ -1421,7 +1422,7 @@ a:hover {
 .card {
   border: 3px solid #14397d;
   border-radius: 25px;
-  box-shadow: 0 0px 10px 5px rgba(0,0,0,.2);
+  box-shadow: 0 0px 10px 5px rgba(0, 0, 0, .2);
   margin-bottom: 1rem;
 
 }
@@ -1454,7 +1455,7 @@ a:hover {
 }
 
 .cardParent {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
