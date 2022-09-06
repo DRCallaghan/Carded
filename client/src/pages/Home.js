@@ -23,12 +23,10 @@ const Home = () => {
   const styles = {
     cardImage: {
       position: 'absolute',
-      top: '28px',
-      left: '23px',
-      height: '80px',
-      width: '221.5px',
+      height: '64px',
+      width: '196px',
       zIndex: '1',
-      paddingLeft: '81.25px',
+      paddingLeft: '84.25px',
       marginTop: "112px",
       borderBottomRightRadius: '90px',
     },
