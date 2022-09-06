@@ -95,28 +95,43 @@ export const QUERY_TEAMS = gql`
       website
       manager {
         _id
+        name
+        email
+        phoneNumber
+        position
       }
       members {
         _id
+        name
+        email
+        phoneNumber
+        position
       }
     }
   }
 `;
 
 export const QUERY_SINGLE_TEAM = gql`
-  query singleTeam($teamId: ID!) {
-    team(teamId: $teamId) {
+query singleTeam($teamId: ID!) {
+  team(teamId: $teamId) {
+    _id
+    name
+    address
+    website
+    manager {
       _id
       name
-      address
-      website
-      manager {
-        _id
-      }
-      members {
-        _id
-      }
-
+      email
+      phoneNumber
+      position
+    }
+    members {
+      _id
+      name
+      email
+      phoneNumber
+      position
     }
   }
+}
 `;
