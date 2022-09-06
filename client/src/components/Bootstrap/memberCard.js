@@ -97,9 +97,21 @@ function MemberCard() {
       <div className=" cardManager">
         <Card style={{ width: "23rem" }}>
           <Card.Body>
-            <Card.Title>Name: {manager.name}</Card.Title>
-            <Card.Subtitle className="text-muted">Position: {manager.position}</Card.Subtitle>
-            <Card.Subtitle className="mb-2 text-muted">Team: {team.name}</Card.Subtitle>
+            <Card.Title>
+              <h3>
+              Name: {manager.name}
+              </h3>
+              </Card.Title>
+            <Card.Subtitle className="text-muted">
+              <h4>
+              Position: {manager.position}
+              </h4>
+              </Card.Subtitle>
+            <Card.Subtitle className="mb-2 text-muted">
+              <h4>
+              Team: {team.name}
+              </h4>
+              </Card.Subtitle>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -118,9 +130,21 @@ function MemberCard() {
             <div className="cardMember">
               <Card style={{ width: "30rem" }}>
                 <Card.Body>
-                  <Card.Title>Name: {el.name}</Card.Title>
-                  <Card.Subtitle className="text-muted">Position: {el.position}</Card.Subtitle>
-                  <Card.Subtitle className="mb-2 text-muted">Team: {team.name}</Card.Subtitle>
+                  <Card.Title>
+                    <h3>
+                    Name: {el.name}
+                    </h3>
+                    </Card.Title>
+                  <Card.Subtitle className="text-muted">
+                    <h4>
+                    Position: {el.position}
+                    </h4>
+                    </Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    <h4>
+                    Team: {team.name}
+                    </h4>
+                    </Card.Subtitle>
                   <Card.Text>
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.
