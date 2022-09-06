@@ -606,6 +606,8 @@ END NORMALIZE CSS
 
 .teamManagers {
   display: block;
+  padding-top: 10%;
+  padding-bottom: 5%;
 }
 
 *,

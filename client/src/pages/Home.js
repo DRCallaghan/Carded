@@ -121,10 +121,10 @@ const Home = () => {
         <div className="outer-circle">
 
 
-          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
-          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "225%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "175%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "175%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "175%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
+          <span className="material-symbols-sharp">  <img src={logo} style={{ width: "175%", border: "none", backgroundColor: "white" }} alt="card" className="" /></span>
 
 
         </div>

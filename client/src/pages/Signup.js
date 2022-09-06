@@ -25,6 +25,7 @@ const Signup = () => {
       ...formState,
       [name]: value,
     });
+    event.preventDefault();
 
 
   };
@@ -33,6 +34,35 @@ const Signup = () => {
   // submit form
   const handleFormSubmit = async (event) => {
     if (formState.password !== formState.confirm) {
+
+      event.preventDefault();
+
+      // const { password, confirm } = event.target
+     
+      // setFormState({
+      //   ...formState,
+      //   [password]: '',
+      //   [confirm]: '',
+      // });
+
+      // setFormState({
+      //   password: "",
+      //   confirm: "",
+      // })
+
+      // event.target.reset();
+
+      // const passReset = {...formState, password: '', confirm: ''}
+      // setFormState([...formState, passReset])
+
+
+      // setFormState([...formState, {password: ''}, {confirm: ''}])
+
+      // setFormState((formState.password = ''));
+
+      // formState.password = '';
+      // formState.confirm = '';
+
       alert("Passwords don't match.");
       return;
     }
