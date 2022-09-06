@@ -21,6 +21,13 @@ function CardExample() {
     QUERY_ME
   );
   console.log(data.me);
+
+  if (data.me.team.length === 0) {
+    return (
+      <h4>Please create a team or have your manager add you to their team in order to see a business card.</h4>
+    )
+  };
+
   return (
     <div className="cardManager">
       <Card style={{ width: "23rem" }}>
