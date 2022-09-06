@@ -26,11 +26,24 @@ function CardExample() {
   );
   console.log(data.me.team)
   return (
+    <div className="cardManager">
     <Card style={{ width: "23rem" }}>
       <Card.Body>
-        <Card.Title>Name: {data.me.name}</Card.Title>
-        <Card.Subtitle className="text-muted">Position:</Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted">Team:</Card.Subtitle>
+        <Card.Title>
+          <h3>
+        Name: {data.me.name}
+          </h3>
+        </Card.Title>
+        <Card.Subtitle className="text-muted">
+          <h4>
+          Position:
+          </h4>
+          </Card.Subtitle>
+        <Card.Subtitle className="mb-2 text-muted">
+          <h4>
+          Team:
+          </h4>
+          </Card.Subtitle>
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
@@ -41,6 +54,7 @@ function CardExample() {
         </a>
       </Card.Body> 
     </Card>
+    </div>
   );
 }
 
