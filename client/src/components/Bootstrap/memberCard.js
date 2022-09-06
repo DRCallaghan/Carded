@@ -11,7 +11,27 @@ import { Navigate } from "react-router-dom";
 
 
 function MemberCard() {
+  const styles = {
+    navbarStyle: {
+      background: 'linear-gradient(20deg, #14397d, #77b5d9, #d7eaf3, #d7eaf3, #77b5d9, #14397d)',
+      height: '10vh',
+      width: '100%',
+      position: 'sticky',
+      top: '0',
+      boxShadow: '0 2px 6px -2px rgba(0,0,0,.2)',
+      zIndex: '400'
 
+    },
+    headerStyle: {
+      background: '#d7eaf3'
+    },
+    paddingStyle: {
+      background: "#77b5d9",
+      height: '1vh',
+      width: '100%',
+      marginBottom: '18px'
+    }
+  }
 
 
   //          BELOW TO RENDER DATA ON THE CARD
@@ -66,21 +86,47 @@ function MemberCard() {
 
   // return for the actual cards
   return (
-    <Card style={{ width: "23rem" }}>
-      <Card.Body>
-        <Card.Title>Name: {data.me.name}</Card.Title>
-        <Card.Subtitle className="text-muted">Position:</Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted">Team:</Card.Subtitle>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        {/* <Card.Link href="#">LinkedIn</Card.Link> */}
-        <a style={{ fontSize: "2rem" }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
-          <FaLinkedin />
-        </a>
-      </Card.Body>
-    </Card>
+    <div className='cardMember'>
+      <div className="flex-row flex-wrap justify-center">
+        <Card style={{ width: "23rem" }}>
+          <Card.Body>
+            <Card.Title>Name: {manager.name}</Card.Title>
+            <Card.Subtitle className="text-muted">Position: {manager.position}</Card.Subtitle>
+            <Card.Subtitle className="mb-2 text-muted">Team: {team.name}</Card.Subtitle>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            {/* <Card.Link href="#">LinkedIn</Card.Link> */}
+            <a style={{ fontSize: "2rem" }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
+              <FaLinkedin />
+            </a>
+          </Card.Body>
+        </Card>
+      </div>
+      {/* <div style={styles.paddingStyle}></div> */}
+      {member.map((el) => {
+        return (
+          <div className="flex-row justify-center">
+            <Card style={{ width: "23rem" }}>
+              <Card.Body>
+                <Card.Title>Name: {el.name}</Card.Title>
+                <Card.Subtitle className="text-muted">Position: {el.position}</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">Team: {team.name}</Card.Subtitle>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+                {/* <Card.Link href="#">LinkedIn</Card.Link> */}
+                <a style={{ fontSize: "2rem" }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
+                  <FaLinkedin />
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 

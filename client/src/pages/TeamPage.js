@@ -104,26 +104,17 @@ const TeamPage = () => {
             </div> */}
             <div style={styles.headerStyle} className="flex-row justify-center header-style">
                 <div className="col-12 col-md-10 my-3 text-center">
-                    <h2 style={styles.nameStyle }>{team[0].name}</h2>
-                   
+                    <h2 style={styles.nameStyle}>{team[0].name}</h2>
+
                 </div>
-                <div className="text-center2"><h3>{team[0].address}</h3> <h3>{team[0].website}</h3></div> 
+                <div className="text-center2"><h3>{team[0].address}</h3> <h3>{team[0].website}</h3></div>
             </div>
             <div style={styles.paddingStyle}>
 
             </div>
-            <Container>
-                <div className ="cardManager">
-                    <CardExample />
-                </div>
-            </Container>
-            <div style={styles.paddingStyle}>
 
-            </div>
             <Container>
-                <div className='cardMember'>
-                    <MemberCard/>
-                </div>
+                <MemberCard />
             </Container>
             <HomeFooter />
         </div>
