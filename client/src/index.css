@@ -23,17 +23,26 @@ body {
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
+
   100% {
-      opacity: 1;
-   }
+    opacity: 1;
+  }
 }
 
 @keyframes floater {
-  0%{transform: translateY(-10%);transition: ease 0.5s;}
-  50%{transform: translateY(10%);transition: ease 0.5s;}
+  0% {
+    transform: translateY(-10%);
+    transition: ease 0.5s;
+  }
+
+  50% {
+    transform: translateY(10%);
+    transition: ease 0.5s;
+  }
 }
+
 /**
  * Render the `main` element consistently in IE.
  */
@@ -48,7 +57,7 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-  font-style: italic; 
+  font-style: italic;
 }
 
 /* Grouping content
@@ -326,7 +335,7 @@ textarea {
  */
 details {
   display: block;
-  
+
 }
 
 /*
@@ -374,11 +383,11 @@ END NORMALIZE CSS
   justify-content: flex-end;
   align-items: center;
   height: 500px;
-  width:  40%;
+  width: 40%;
 }
 
-.summary-text h3{
- line-height: 1.8;
+.summary-text h3 {
+  line-height: 1.8;
 }
 
 .summary1-pic {
@@ -401,11 +410,11 @@ END NORMALIZE CSS
   justify-content: flex-end;
   align-items: center;
   height: 500px;
-  width:  40%;
+  width: 40%;
 }
 
-.summary-text2 h3{
- line-height: 1.8;
+.summary-text2 h3 {
+  line-height: 1.8;
 }
 
 .summary2-pic {
@@ -426,7 +435,7 @@ END NORMALIZE CSS
   align-items: center;
   background-color: #e6f0f7;
   height: 60vh;
-  width:  100%
+  width: 100%
 }
 
 .example1 {
@@ -472,14 +481,14 @@ END NORMALIZE CSS
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  
+
 }
 
-.in-depth p {  
+.in-depth p {
   font-size: 3rem;
   color: #3c5ff7;
   height: 100px;
-  
+
 }
 
 .in-depth-title {
@@ -491,8 +500,8 @@ END NORMALIZE CSS
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  
-  
+
+
 }
 
 .in-depth-text {
@@ -500,7 +509,7 @@ END NORMALIZE CSS
   flex-direction: row;
   justify-content: space-around;
   padding-bottom: 4%;
- 
+
 }
 
 .in-depth-text p {
@@ -587,7 +596,7 @@ END NORMALIZE CSS
 /*       management section       */
 
 .managers {
-  padding-top:5%;
+  padding-top: 5%;
   padding-bottom: 4%;
   display: flex;
   justify-content: center;
@@ -597,8 +606,9 @@ END NORMALIZE CSS
 
 
 }
+
 .management {
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
   height: 20%;
   padding-bottom: 4%;
@@ -653,10 +663,14 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+  margin-left: 26%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 h4 {
   font-size: 1.5rem;
+  margin-left: 5%;
 }
 
 h5 {
@@ -698,7 +712,7 @@ a {
 
 a:hover {
   color: #14397d;
- 
+
 }
 
 /* HEIGHT / WIDTH UTILS */
@@ -1149,28 +1163,27 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width:100%;
+  width: 100%;
   color: #14397d;
 }
 
 .cardManager {
   padding-top: 5%;
   padding-bottom: 5%;
-  display:flex;
+  display: flex;
   align-content: center;
   justify-content: space-evenly
 }
 
 .cardMember {
   padding-top: 10%;
-
-  padding-bottom: 7%;
-  display: block;
-
+  padding-bottom: 5%;
+  display: flex;
   align-content: center;
   justify-content: space-evenly;
-  
+
 }
+
 .text-justify {
   text-align: justify !important;
 }
@@ -1333,7 +1346,7 @@ a:hover {
   border-color: #ac0f0f;
   background-color: #e64c66;
   color: #741515;
-  font-size:calc(4px + .8vw);
+  font-size: calc(4px + .8vw);
 }
 
 .btn.btn-danger:hover {
@@ -1353,19 +1366,19 @@ a:hover {
   border-color: #77b5d9;
   background-color: #77b5d9;
   color: #14397d;
-  font-size:calc(4px + .8vw);
-  
- 
-  
+  font-size: calc(4px + .8vw);
+
+
+
 }
 
 .btn-dropdown {
-  font-size:calc(6px + 1.0vw);
+  font-size: calc(6px + 1.0vw);
 }
 
 
 .btn.btn-light:hover {
-  background-color:  #d7eaf3;
+  background-color: #d7eaf3;
 }
 
 .btn.btn-dark {
@@ -1409,7 +1422,7 @@ a:hover {
   border-radius: 25px;
   box-shadow: 0 0px 5px 2px rgba(91, 86, 86, 0.2);
   margin-bottom: 1rem;
-  
+
 }
 
 .card .card-header {
@@ -1664,90 +1677,115 @@ label form [type='radio'] {
     flex-grow: 1;
     flex-basis: 0;
   }
+
   .col-sm-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
+
   .col-sm-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
+
   .col-sm-3 {
     flex: 0 0 25%;
     max-width: 25%;
   }
+
   .col-sm-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
+
   .col-sm-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
+
   .col-sm-6 {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   .col-sm-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
+
   .col-sm-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
+
   .col-sm-9 {
     flex: 0 0 75%;
     max-width: 75%;
   }
+
   .col-sm-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
+
   .col-sm-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
+
   .col-sm-12 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .justify-space-between-sm {
     justify-content: space-between;
   }
+
   .justify-space-around-sm {
     justify-content: space-around;
   }
+
   .justify-flex-start-sm {
     justify-content: flex-start;
   }
+
   .justify-flex-end-sm {
     justify-content: flex-end;
   }
+
   .justify-center-sm {
     justify-content: center;
   }
+
   .align-start-sm {
     align-items: flex-start;
   }
+
   .align-stretch-sm {
     align-items: stretch;
   }
+
   .align-end-sm {
     align-items: flex-end;
   }
+
   .align-center-sm {
     align-items: center;
   }
+
   .align-content-start-sm {
     align-content: flex-start;
   }
+
   .align-content-stretch-sm {
     align-content: stretch;
   }
+
   .align-content-end-sm {
     align-content: flex-end;
   }
+
   .align-content-center-sm {
     align-content: center;
   }
@@ -1759,90 +1797,115 @@ label form [type='radio'] {
     flex-grow: 1;
     flex-basis: 0;
   }
+
   .col-md-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
+
   .col-md-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
+
   .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%;
   }
+
   .col-md-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
+
   .col-md-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
+
   .col-md-6 {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   .col-md-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
+
   .col-md-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
+
   .col-md-9 {
     flex: 0 0 75%;
     max-width: 75%;
   }
+
   .col-md-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
+
   .col-md-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
+
   .col-md-12 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .justify-space-between-md {
     justify-content: space-between;
   }
+
   .justify-space-around-md {
     justify-content: space-around;
   }
+
   .justify-flex-start-md {
     justify-content: flex-start;
   }
+
   .justify-flex-end-md {
     justify-content: flex-end;
   }
+
   .justify-center-md {
     justify-content: center;
   }
+
   .align-start-md {
     align-items: flex-start;
   }
+
   .align-stretch-md {
     align-items: stretch;
   }
+
   .align-end-md {
     align-items: flex-end;
   }
+
   .align-center-md {
     align-items: center;
   }
+
   .align-content-start-md {
     align-content: flex-start;
   }
+
   .align-content-stretch-md {
     align-content: stretch;
   }
+
   .align-content-end-md {
     align-content: flex-end;
   }
+
   .align-content-center-md {
     align-content: center;
   }
@@ -1854,90 +1917,115 @@ label form [type='radio'] {
     flex-grow: 1;
     flex-basis: 0;
   }
+
   .col-lg-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
+
   .col-lg-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
+
   .col-lg-3 {
     flex: 0 0 25%;
     max-width: 25%;
   }
+
   .col-lg-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
+
   .col-lg-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
+
   .col-lg-6 {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   .col-lg-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
+
   .col-lg-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
+
   .col-lg-9 {
     flex: 0 0 75%;
     max-width: 75%;
   }
+
   .col-lg-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
+
   .col-lg-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
+
   .col-lg-12 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .justify-space-between-lg {
     justify-content: space-between;
   }
+
   .justify-space-around-lg {
     justify-content: space-around;
   }
+
   .justify-flex-start-lg {
     justify-content: flex-start;
   }
+
   .justify-flex-end-lg {
     justify-content: flex-end;
   }
+
   .justify-center-lg {
     justify-content: center;
   }
+
   .align-start-lg {
     align-items: flex-start;
   }
+
   .align-stretch-lg {
     align-items: stretch;
   }
+
   .align-end-lg {
     align-items: flex-end;
   }
+
   .align-center-lg {
     align-items: center;
   }
+
   .align-content-start-lg {
     align-content: flex-start;
   }
+
   .align-content-stretch-lg {
     align-content: stretch;
   }
+
   .align-content-end-lg {
     align-content: flex-end;
   }
+
   .align-content-center-lg {
     align-content: center;
   }
@@ -1949,86 +2037,110 @@ label form [type='radio'] {
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
+
   .col-xl-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
+
   .col-xl-3 {
     flex: 0 0 25%;
     max-width: 25%;
   }
+
   .col-xl-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
+
   .col-xl-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
+
   .col-xl-6 {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   .col-xl-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
+
   .col-xl-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
+
   .col-xl-9 {
     flex: 0 0 75%;
     max-width: 75%;
   }
+
   .col-xl-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
+
   .col-xl-11 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .col-xl-12 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .justify-space-between-xl {
     justify-content: space-between;
   }
+
   .justify-space-around-xl {
     justify-content: space-around;
   }
+
   .justify-flex-start-xl {
     justify-content: flex-start;
   }
+
   .justify-flex-end-xl {
     justify-content: flex-end;
   }
+
   .justify-center-xl {
     justify-content: center;
   }
+
   .align-start-xl {
     align-items: flex-start;
   }
+
   .align-stretch-xl {
     align-items: stretch;
   }
+
   .align-end-xl {
     align-items: flex-end;
   }
+
   .align-center-xl {
     align-items: center;
   }
+
   .align-content-start-xl {
     align-content: flex-start;
   }
+
   .align-content-stretch-xl {
     align-content: stretch;
   }
+
   .align-content-end-xl {
     align-content: flex-end;
   }
+
   .align-content-center-xl {
     align-content: center;
   }
@@ -2040,11 +2152,11 @@ label form [type='radio'] {
   }
 
   .example1 {
-   display: flex;
+    display: flex;
   }
-  
+
   .img {
-   max-width: 250px;
+    max-width: 250px;
   }
 
   .summary {
