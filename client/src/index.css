@@ -1141,6 +1141,7 @@ a:hover {
 
 .text-center {
   text-align: center !important;
+  color: #14397d;
 }
 
 .text-center2 {
@@ -1148,6 +1149,7 @@ a:hover {
   flex-direction: row;
   justify-content: space-evenly;
   width:100%;
+  color: #14397d;
 }
 
 .text-justify {
