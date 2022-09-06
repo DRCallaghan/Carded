@@ -48,8 +48,7 @@ const Home = () => {
 
         <div className="summary-text">
           <h5 style={{ lineHeight: "1.8", color: "#143976" }}>
-            Carded is your online solution to creating teams of individuals
-            based upon any grouping that fits your needs.
+            Carded is your online business card solution; with team creation to keep your business organized and your connections expanding.
           </h5>
         </div>
         <div className="summary1-pic ">
@@ -128,8 +127,8 @@ const Home = () => {
         </div>
 
         <div className="inner-circle">
-          <img style={styles.cardImage} src={sponge} alt='tangybobbysauce'/>
-          <img src={hand} style={{ width: "100%" }} alt="card"/>         
+          <img style={styles.cardImage} src={sponge} alt='tangybobbysauce' />
+          <img src={hand} style={{ width: "100%" }} alt="card" />
 
         </div>
       </div>

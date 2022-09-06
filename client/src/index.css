@@ -1154,8 +1154,8 @@ a:hover {
 }
 
 .cardManager {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   display:flex;
   align-content: center;
   justify-content: space-evenly
@@ -1163,10 +1163,13 @@ a:hover {
 
 .cardMember {
   padding-top: 10%;
-  padding-bottom: 10%;
+
+  padding-bottom: 7%;
   display: block;
+
   align-content: center;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+  
 }
 .text-justify {
   text-align: justify !important;

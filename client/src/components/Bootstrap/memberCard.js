@@ -30,6 +30,13 @@ function MemberCard() {
       height: '1vh',
       width: '100%',
       marginBottom: '18px'
+    },
+    memberCard: {
+      position: 'relative',
+      width: '22vw',
+      height: '22vh',
+      display: 'flex',
+      flex: 'wrap'
     }
   }
 
@@ -86,8 +93,8 @@ function MemberCard() {
 
   // return for the actual cards
   return (
-    <div className='cardMember'>
-      <div className="flex-row flex-wrap justify-center">
+    <div className=''>
+      <div className=" cardManager">
         <Card style={{ width: "23rem" }}>
           <Card.Body>
             <Card.Title>Name: {manager.name}</Card.Title>
@@ -104,25 +111,27 @@ function MemberCard() {
           </Card.Body>
         </Card>
       </div>
-      {/* <div style={styles.paddingStyle}></div> */}
+      <div style={styles.paddingStyle}></div>
       {member.map((el) => {
         return (
-          <div className="flex-row justify-center">
-            <Card style={{ width: "23rem" }}>
-              <Card.Body>
-                <Card.Title>Name: {el.name}</Card.Title>
-                <Card.Subtitle className="text-muted">Position: {el.position}</Card.Subtitle>
-                <Card.Subtitle className="mb-2 text-muted">Team: {team.name}</Card.Subtitle>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                {/* <Card.Link href="#">LinkedIn</Card.Link> */}
-                <a style={{ fontSize: "2rem" }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
-                  <FaLinkedin />
-                </a>
-              </Card.Body>
-            </Card>
+          <div>
+            <div className="cardMember">
+              <Card style={{ width: "30rem" }}>
+                <Card.Body>
+                  <Card.Title>Name: {el.name}</Card.Title>
+                  <Card.Subtitle className="text-muted">Position: {el.position}</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">Team: {team.name}</Card.Subtitle>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                  </Card.Text>
+                  {/* <Card.Link href="#">LinkedIn</Card.Link> */}
+                  <a style={{ fontSize: "2rem" }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
+                    <FaLinkedin />
+                  </a>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
         );
       })}
