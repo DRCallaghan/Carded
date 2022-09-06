@@ -87,14 +87,28 @@ const resolvers = {
       return team;
     },
     addMember: async (parent, { teamId, profileName, position }) => {
-      const member = await Profile.findOneAndUpdate(
-        { name: profileName },
-        { position: position },
-        { $push: { team: teamId } }
+      const member = await Profile.findOne(
+        { name: profileName }
       );
       const updatedTeam = await Team.findOneAndUpdate(
         { _id: teamId },
         { $push: { members: member } },
+        {
+          new: true,
+          runValidators: true,
+        }
+      ).populate('members');
+      await Profile.findOneAndUpdate(
+        { name: profileName },
+        { $push: { team: updatedTeam } },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+      await Profile.findOneAndUpdate(
+        { name: profileName },
+        { $set: { position: position } },
         {
           new: true,
           runValidators: true,
@@ -105,14 +119,14 @@ const resolvers = {
     updateTeamAddress: async (parent, { teamId, address }) => {
       return await Team.findOneAndUpdate(
         { _id: teamId },
-        { address: address },
+        { $set: { address: address } },
         { new: true }
       );
     },
     updateTeamWebsite: async (parent, { teamId, website }) => {
       return await Team.findOneAndUpdate(
         { _id: teamId },
-        { website: website },
+        { $set: { website: website } },
         {
           new: true,
           runValidators: true,
