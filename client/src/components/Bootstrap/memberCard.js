@@ -17,18 +17,18 @@ function MemberCard() {
   //          BELOW TO RENDER DATA ON THE CARD
 //     BASIC LOGIC IS SET UP - CURRENLTY WILL RENDER USER NAME AND ANY USER PROPERTY ATTACTHED IF IT IS PRESENT - ID, ADDRESS, TEAM ...  THIS IS NOT COMING OFF OF THE ADD A TEAM MEMBER MODAL HOWEVER.  IT CAN BE REFACTORED TO TAKE THAT INFO ONCE IT IS ACCESSIBLE, OR THAT INFO CAN BE REFACTGORED TO COME IN FROM ANOTHER SIGN UP AREA TO BE USED HERE...
 
-  const { profileId } = useParams();
+  const { profileName } = useParams();
   const { loading, data } = useQuery(
-    profileId ? QUERY_SINGLE_PROFILE : QUERY_PROFILE_BY_NAME,
+    profileName ? QUERY_SINGLE_PROFILE : QUERY_PROFILE_BY_NAME,
     {
-      variables: { profileId: profileId },
+      variables: { profileName: profileName },
     }
   );
-  console.log(data.me.team)
+  //console.log(data.name.team)
   return (
     <Card style={{ width: "23rem" }}>
       <Card.Body>
-        <Card.Title>Name: {data.me.name}</Card.Title>
+        {/* <Card.Title>Name: {data.name.name}</Card.Title> */}
         <Card.Subtitle className="text-muted">Position:</Card.Subtitle>
         <Card.Subtitle className="mb-2 text-muted">Team:</Card.Subtitle>
         <Card.Text>

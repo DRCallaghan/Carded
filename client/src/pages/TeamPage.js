@@ -11,6 +11,7 @@ import Member from '../components/Bootstrap/addMemberModal';
 import Profile from './Profile'
 import HomeFooter from '../components/Footer/homefoot'
 import { Container, Button } from 'react-bootstrap';
+import MemberCard from '../components/Bootstrap/memberCard';
 
 
 
@@ -121,7 +122,7 @@ const TeamPage = () => {
             </div>
             <Container>
                 <div>
-                    <CardExample />
+                    <MemberCard/>
                 </div>
             </Container>
             <HomeFooter />
