@@ -1,31 +1,43 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import HomeFooter from '../components/Footer/homefoot';
+import Footer from '../components/Footer/index'
 import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
 import BackButton from '../components/Bootstrap/backButton';
 import Auth from '../utils/auth';
+import { validateEmail } from '../utils/helpers';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
     phoneNumber: '',
-    position: '',
     password: '',
     confirm: ''
   });
+
+  const [errorMessage, setErrorMessage] = useState('')
   const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
 
   // update state based on form input changes
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    if (event.target.name === 'email') {
+      const isValid = validateEmail(event.target.value)
 
+        if (!isValid) {
+          setErrorMessage('please enter a valid email!')
+        }else {
+          setErrorMessage('')
+        }
+    }
+    const { name, value } = event.target;
     setFormState({
       ...formState,
       [name]: value,
     });
+
     event.preventDefault();
+
 
 
   };
@@ -85,6 +97,8 @@ const Signup = () => {
   const styles = {
     borderStyle: {
       borderRadius: '50px',
+      paddingTop: '5vh',
+      paddingRight: '2vw',
     },
     buttonStyle: {
       margin: 'auto',
@@ -105,7 +119,7 @@ const Signup = () => {
   }
 
   return (
-    <div className='backBtn'>
+    <div style={styles.goBack} className='backBtn'>
 
       <BackButton style={styles.goBack} />
       <main style={styles.borderStyle} className="flex-row justify-center">
@@ -113,7 +127,7 @@ const Signup = () => {
           <div className="card">
             <h4 style={styles.cardStyle} className="card-header bg-custom text-sign-in p-2">Sign Up</h4>
             <div className="card-body">
-              {data ? ( <p> Success! </p> ) : (
+              {data ? (<p> Success! </p>) : (
                 <form onSubmit={handleFormSubmit}>
                   <input
                     className="form-input"
@@ -137,14 +151,6 @@ const Signup = () => {
                     name="phoneNumber"
                     type="text"
                     value={formState.phoneNumber}
-                    onChange={handleChange}
-                  />
-                  <input
-                    className="form-input"
-                    placeholder="Your Position"
-                    name="position"
-                    type="text"
-                    value={formState.position}
                     onChange={handleChange}
                   />
                   <input
@@ -182,7 +188,7 @@ const Signup = () => {
             </div>
           </div>
         </div>
-        <HomeFooter />
+        <Footer />
       </main>
     </div>
   );

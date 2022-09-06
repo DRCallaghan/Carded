@@ -2,18 +2,28 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/index'
 import Auth from '../utils/auth';
 import BackButton from '../components/Bootstrap/backButton';
+import { validateEmail } from '../utils/helpers';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
+const [errorMessage, setErrorMessage] = useState('')
 
   // update state based on form input changes
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    if (event.target.name === 'email') {
+      const isValid = validateEmail(event.target.value)
 
+        if (!isValid) {
+          setErrorMessage('please enter a valid email!')
+        }else {
+          setErrorMessage('')
+        }
+    }
+    const { name, value } = event.target;
     setFormState({
       ...formState,
       [name]: value,
