@@ -27,7 +27,7 @@ function MemberCard() {
     },
     paddingStyle: {
       background: "#77b5d9",
-      height: '1vh',
+      height: '.5vh',
       width: '100%',
       marginBottom: '18px'
     },
@@ -112,9 +112,9 @@ function MemberCard() {
         </Card>
       </div>
       <div style={styles.paddingStyle}></div>
+      <div className="cardParent">
       {member.map((el) => {
-        return (
-          <div>
+        return ( 
             <div className="cardMember">
               <Card style={{ width: "30rem" }}>
                 <Card.Body>
@@ -132,9 +132,10 @@ function MemberCard() {
                 </Card.Body>
               </Card>
             </div>
-          </div>
+         
         );
       })}
+      </div>
     </div>
   );
 }
