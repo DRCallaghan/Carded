@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import "./footer.css"
-import logo from '../../images/logo.png';
+import logo from '../../images/Carded-business-card.png';
 
 const Footer = () => {
   const styles = {

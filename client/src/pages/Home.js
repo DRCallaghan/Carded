@@ -7,7 +7,7 @@ import carded2 from "../images/carded2.png";
 import carded3 from "../images/carded3.png";
 import team from "../images/team.jpeg";
 import handing from "../images/handing.jpeg";
-import logo from "../images/logo.png";
+import logo from "../images/Carded-horizontal.png";
 import hand from "../images/hand.jpeg";
 import { QUERY_PROFILES } from "../utils/queries";
 import "../index.css";
