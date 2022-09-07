@@ -3,70 +3,70 @@
     "name": "Brian Kernighan",
     "email": "bkernighan@techfriends.dev",
     "password": "password01",
-    "phoneNumber": "+1 (727) 2850968",
+    "phoneNumber": "+1 (727) 2850333",
     "position": "Software Engineer"
   },
   {
     "name": "Max Kanat-Alexander",
     "email": "mkanatalexander@techfriends.dev",
     "password": "password02",
-    "phoneNumber": "+1 (727) 3850968",
+    "phoneNumber": "+1 (727) 3850333",
     "position": "Software Engineer"
   },
   {
     "name": "Amiko",
     "email": "amiko@techfriends.dev",
     "password": "password03",
-    "phoneNumber": "+1 (727) 4850968",
+    "phoneNumber": "+1 (727) 4850333",
     "position": "Software Engineer"
   },
   {
     "name": "Kent Beck",
     "email": "kbeck@techfriends.dev",
     "password": "password04",
-    "phoneNumber": "+1 (727) 5850968",
+    "phoneNumber": "+1 (727) 5850333",
     "position": "Software Engineer"
   },
   {
     "name": "Edward V. Berard",
     "email": "evberard@techfriends.dev",
     "password": "password05",
-    "phoneNumber": "+1 (727) 6850968",
+    "phoneNumber": "+1 (727) 6850333",
     "position": "Software Engineer"
   },
   {
     "name": "Alan Kay",
     "email": "akay@techfriends.dev",
     "password": "password06",
-    "phoneNumber": "+1 (727) 7850968",
+    "phoneNumber": "+1 (727) 7850333",
     "position": "Software Engineer"
   },
   {
     "name": "C.A.R. Hoare",
     "email": "choare@techfriends.dev",
     "password": "password07",
-    "phoneNumber": "+1 (727) 8850968",
+    "phoneNumber": "+1 (727) 8850333",
     "position": "Software Engineer"
   },
   {
     "name": "David Thomas",
     "email": "dthomas@techfriends.dev",
     "password": "password08",
-    "phoneNumber": "+1 (727) 9850968",
+    "phoneNumber": "+1 (727) 9850333",
     "position": "Software Engineer"
   },
   {
     "name": "Donald Knuth",
     "email": "dknuth@techfriends.dev",
     "password": "password09",
-    "phoneNumber": "+1 (727) 0850968",
+    "phoneNumber": "+1 (727) 0850333",
     "position": "Software Engineer"
   },
   {
     "name": "Lernantino",
     "email": "lernantino@techfriends.dev",
     "password": "password10",
-    "phoneNumber": "+1 (727) 1850968",
+    "phoneNumber": "+1 (727) 1850333",
     "position": "Software Engineer"
   }
 ]
