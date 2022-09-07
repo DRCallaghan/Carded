@@ -151,15 +151,22 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removeMember: async (parent, { teamId, memberId }) => {
+    removeMember: async (parent, { teamId, profileId }) => {
       const updatedTeam = await Team.findOneAndUpdate(
         { _id: teamId },
-        { $pull: { members: memberId } },
-        { new: true },
-      );
+        { $pull: { members: profileId } },
+        {
+          new: true,
+          runValidators: true,
+        }
+      ).populate('members');
       await Profile.findOneAndUpdate(
-        { _id: memberId },
-        { $pull: { team: updatedTeam } }
+        { _id: profileId },
+        { $pull: { team: teamId } },
+        {
+          new: true,
+          runValidators: true,
+        }
       );
       return updatedTeam;
     },

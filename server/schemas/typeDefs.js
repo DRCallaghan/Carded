@@ -45,7 +45,7 @@ const typeDefs = gql`
     updateTeamWebsite(teamId: ID!, website: String!): Team
     removeProfile: Profile
     removePhone(phone: String!): Profile
-    removeMember(teamId: ID!, memberId: ID!): Team
+    removeMember(teamId: ID!, profileId: ID!): Team
   }
 `;
 
