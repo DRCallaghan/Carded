@@ -52,7 +52,7 @@ function CardExample() {
             bulk of the card's content.
           </Card.Text>
           {/* <Card.Link href="#">LinkedIn</Card.Link> */}
-          <a style={{ fontSize: "2rem" }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
+          <a style={{ fontSize: "2rem", hover:{color:"white"} }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
             <FaLinkedin />
           </a>
         </Card.Body>
