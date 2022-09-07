@@ -36,7 +36,8 @@ function MemberCard() {
       width: '22vw',
       height: '22vh',
       display: 'flex',
-      flex: 'wrap'
+      flex: 'wrap',
+     
     }
   }
 
@@ -95,8 +96,8 @@ function MemberCard() {
   return (
     <div className=''>
       <div className=" cardManager">
-        <Card style={{ width: "23rem" }}>
-          <Card.Body>
+        <Card style={{ width: "23rem"}}  className = "cardManager2">
+          <Card.Body style ={{border: "gold 1px solid", borderRadius: "22px"}}>
             <Card.Title>
               <h3>
               Name: {manager.name}
@@ -128,8 +129,8 @@ function MemberCard() {
       {member.map((el) => {
         return ( 
             <div className="cardMember">
-              <Card style={{ width: "30rem" }}>
-                <Card.Body>
+              <Card style={{ width: "30rem" }} className = "cardMember2">
+                <Card.Body style = {{border: "gold 1px solid", borderRadius: "22px"}}>
                   <Card.Title>
                     <h3>
                     Name: {el.name}

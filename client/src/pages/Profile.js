@@ -96,7 +96,8 @@ const Profile = () => {
           </button>
           <Drop />
         </nav>
-        <div style={styles.cardSection}>
+        <div style={styles.cardSection} >
+          
           <CardExample />
         </div>
       </div>
