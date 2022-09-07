@@ -48,7 +48,7 @@ const Home = () => {
 
         <div className="summary-text">
           <h5 style={{ lineHeight: "1.8", color: "#143976" }}>
-            Carded is your online business card solution; with team creation to keep your business organized and your connections expanding.
+            Carded is your online business card solution with team creation to keep your business organized and your connections expanding.
           </h5>
         </div>
         <div className="summary1-pic ">

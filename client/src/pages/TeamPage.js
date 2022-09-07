@@ -70,6 +70,7 @@ const TeamPage = () => {
                     profileId: profile._id
                 }
             });
+            <Navigate to="/profiles" />
         } catch (error) {
             console.error(e);
         }
@@ -136,7 +137,7 @@ const TeamPage = () => {
             </div>
             <div style={styles.paddingStyle}>
             </div>
-            <MemberCard />
+            <MemberCard managerText='Carded is your virtual business card solution!' memberText='Carded is your virtual business card solution!' />
             <div></div>
             <HomeFooter />
         </div>

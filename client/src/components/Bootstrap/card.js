@@ -30,8 +30,8 @@ function CardExample() {
 
   return (
     <div className="cardManager">
-      <Card style={{ width: "23rem" }} className = "profileCard">
-        <Card.Body style ={{border: "gold 1px solid", borderRadius: "22px"}}>
+      <Card style={{ width: "23rem" }} className="profileCard">
+        <Card.Body style={{ border: "gold 1px solid", borderRadius: "22px" }}>
           <Card.Title>
             <h3>
               Name: {data.me.name}
@@ -47,12 +47,18 @@ function CardExample() {
               Team: {data.me.team[0].name}
             </h4>
           </Card.Subtitle>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
+          <Card.Subtitle className="mb-2 text-muted">
+            <h4>
+              Business Address: {data.me.team[0].address}
+            </h4>
+          </Card.Subtitle>
+          <Card.Subtitle className="mb-2 text-muted">
+            <h4>
+              Phone: {data.me.phoneNumber}
+            </h4>
+          </Card.Subtitle>
           {/* <Card.Link href="#">LinkedIn</Card.Link> */}
-          <a style={{ fontSize: "2rem", hover:{color:"white"} }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
+          <a style={{ fontSize: "2rem", hover: { color: "white" } }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
             <FaLinkedin />
           </a>
         </Card.Body>
