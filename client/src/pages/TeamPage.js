@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Link, Navigate, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 import CardExample from '../components/Bootstrap/card';
 import Drop from '../components/Bootstrap/dropdown';
@@ -12,6 +12,7 @@ import Profile from './Profile'
 import HomeFooter from '../components/Footer/homefoot'
 import { Container, Button } from 'react-bootstrap';
 import MemberCard from '../components/Bootstrap/memberCard';
+import { REMOVE_MEMBER } from '../utils/mutations';
 
 
 
@@ -54,6 +55,26 @@ const TeamPage = () => {
     );
     // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
     const profile = data?.me || data?.profile || {};
+
+    const team = profile.team;
+    localStorage.setItem('team', JSON.stringify(team));
+
+    // defining the mutation to connect the button to remove oneself from a team to that backend route
+    const [removeSelf] = useMutation(REMOVE_MEMBER);
+    const handleRemove = async (e) => {
+        e.preventDefault();
+        try {
+            await removeSelf({
+                variables: {
+                    teamId: team[0]._id,
+                    profileId: profile._id
+                }
+            });
+        } catch (error) {
+            console.error(e);
+        }
+    }
+
     // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
     if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
         return <Navigate to="/team" />;
@@ -62,9 +83,6 @@ const TeamPage = () => {
     if (loading) {
         return <div>Loading...</div>;
     }
-
-    const team = profile.team;
-    localStorage.setItem('team', JSON.stringify(team));
 
     if (!team[0]?.name) {
         return (
@@ -94,6 +112,9 @@ const TeamPage = () => {
                 </Link>
                 <button className="btn btn-md btn-light m-2 justify-center" onClick={logout}>
                     Logout
+                </button>
+                <button className="btn btn-md btn-danger m-2 justify-center" onClick={handleRemove}>
+                    Remove Me from Team
                 </button>
                 <div className='m-2'>
                     <Member />

@@ -124,8 +124,8 @@ export const REMOVE_PHONE = gql`
 `;
 
 export const REMOVE_MEMBER = gql`
-  mutation removeMember($teamId: ID!, $memberId: ID!) {
-    removeMember(teamId: $teamId, memberId: $memberId) {
+  mutation removeMember($teamId: ID!, $profileId: ID!) {
+    removeMember(teamId: $teamId, profileId: $profileId) {
       _id
       name
       members {
