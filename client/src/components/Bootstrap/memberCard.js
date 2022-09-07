@@ -37,7 +37,7 @@ function MemberCard() {
       height: '22vh',
       display: 'flex',
       flex: 'wrap',
-     
+
     }
   }
 
@@ -96,27 +96,33 @@ function MemberCard() {
   return (
     <div className=''>
       <div className=" cardManager">
-        <Card style={{ width: "23rem"}}  className = "cardManager2">
-          <Card.Body style ={{border: "gold 1px solid", borderRadius: "22px"}}>
+        <Card style={{ width: "23rem" }} className="cardManager2">
+          <Card.Body style={{ border: "gold 1px solid", borderRadius: "22px" }}>
             <Card.Title>
               <h3>
-              Name: {manager.name}
+                Name: {manager.name}
               </h3>
-              </Card.Title>
+            </Card.Title>
             <Card.Subtitle className="text-muted">
               <h4>
-              Position: {manager.position}
+                Position: {manager.position}
               </h4>
-              </Card.Subtitle>
+            </Card.Subtitle>
             <Card.Subtitle className="mb-2 text-muted">
               <h4>
-              Team: {team.name}
+                Team: {team.name}
               </h4>
-              </Card.Subtitle>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
+            </Card.Subtitle>
+            <Card.Subtitle className="mb-2 text-muted">
+              <h4>
+                Business Address: {team.address}
+              </h4>
+            </Card.Subtitle>
+            <Card.Subtitle className="mb-2 text-muted">
+              <h4>
+                Phone: {manager.phoneNumber}
+              </h4>
+            </Card.Subtitle>
             {/* <Card.Link href="#">LinkedIn</Card.Link> */}
             <a style={{ fontSize: "2rem" }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
               <FaLinkedin />
@@ -126,30 +132,36 @@ function MemberCard() {
       </div>
       <div style={styles.paddingStyle}></div>
       <div className="cardParent">
-      {member.map((el) => {
-        return ( 
+        {member.map((el) => {
+          return (
             <div className="cardMember">
-              <Card style={{ width: "30rem" }} className = "cardMember2">
-                <Card.Body style = {{border: "gold 1px solid", borderRadius: "22px"}}>
+              <Card style={{ width: "30rem" }} className="cardMember2">
+                <Card.Body style={{ border: "gold 1px solid", borderRadius: "22px" }}>
                   <Card.Title>
                     <h3>
-                    Name: {el.name}
+                      Name: {el.name}
                     </h3>
-                    </Card.Title>
+                  </Card.Title>
                   <Card.Subtitle className="text-muted">
                     <h4>
-                    Position: {el.position}
+                      Position: {el.position}
                     </h4>
-                    </Card.Subtitle>
+                  </Card.Subtitle>
                   <Card.Subtitle className="mb-2 text-muted">
                     <h4>
-                    Team: {team.name}
+                      Team: {team.name}
                     </h4>
-                    </Card.Subtitle>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
+                  </Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    <h4>
+                      Business Address: {team.address}
+                    </h4>
+                  </Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    <h4>
+                      Phone: {el.phone}
+                    </h4>
+                  </Card.Subtitle>
                   {/* <Card.Link href="#">LinkedIn</Card.Link> */}
                   <a style={{ fontSize: "2rem" }} href=" https://www.linkedin.com/in/pete-wang-SWE" target="blank">
                     <FaLinkedin />
@@ -157,9 +169,9 @@ function MemberCard() {
                 </Card.Body>
               </Card>
             </div>
-         
-        );
-      })}
+
+          );
+        })}
       </div>
     </div>
   );
