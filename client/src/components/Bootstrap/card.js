@@ -30,8 +30,8 @@ function CardExample() {
 
   return (
     <div className="cardManager">
-      <Card style={{ width: "23rem" }}>
-        <Card.Body>
+      <Card style={{ width: "23rem" }} className = "profileCard">
+        <Card.Body style ={{border: "gold 1px solid", borderRadius: "22px"}}>
           <Card.Title>
             <h3>
               Name: {data.me.name}

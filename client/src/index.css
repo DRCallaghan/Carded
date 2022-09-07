@@ -1176,6 +1176,18 @@ a:hover {
   max-width: 100%;
 }
 
+ .cardManager2 {
+  background-color: #14397d;
+  color: #ffffff;
+  border-radius: 22px;
+ }
+ 
+ .profileCard {
+    background-color: #14397d;
+    color: #ffffff;
+    border-radius: 22px;
+  
+ }
 .cardMember {
   padding-top: 10%;
   padding-bottom: 5%;
@@ -1183,6 +1195,12 @@ a:hover {
   justify-content: space-evenly;
   max-width: 100%;
 
+}
+
+.cardMember2 {
+  background-color: #14397d;
+  color: #ffffff;
+  border-radius: 22px;
 }
 
 .text-justify {
@@ -1431,15 +1449,14 @@ a:hover {
   padding: 0.375rem;
   background-color: #77b5d9;
   color: #d9e9e8;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .card .card-body {
   padding: 0.375rem;
-  background-color: #14397d;
-  color: #ffffff;
-  border-radius: 22px;
-  border: gold 1.5px solid;
 }
+
 
 .card .card-footer {
   border-top: 1px solid #14397d;
